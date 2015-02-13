@@ -1,0 +1,39 @@
+header{
+	color: red;
+}
+
+#helloworld{
+	text-align: center;
+	font-size: 50px;
+	color: green;
+	background-color: red;
+}
+
+.tabla{
+	  width: 250px; 
+	  border: 1px solid #000;
+}
+
+.tabla tr, .tabla td{
+	   border: 1px solid #000;	
+	   text-align: center;
+}
+
+#fondo{
+	background-color: blue;
+}
+
+
+#div-uno{
+	float: left;
+}
+
+#div-dos{
+	margin-left: 15%;
+	float: left;
+}
+
+#div-tres{
+	margin-left: 15%;
+	float: left;
+}
