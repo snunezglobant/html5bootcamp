@@ -13,7 +13,8 @@ aside,
 footer {
   margin: 0 1.5% 24px 1.5%;
 }
-section {
+#section {
+  display: none;
   float: left;
   width: 45%;
   text-align: center;
@@ -26,8 +27,4 @@ aside {
 footer {
   clear: both;
   margin-bottom: 0;
-}
-#object{
-  display: none;
-
 }
