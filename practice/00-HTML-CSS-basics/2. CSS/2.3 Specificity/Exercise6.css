@@ -1,0 +1,60 @@
+/*
+To add weight to this declaration block, first we must apply it directly to the elements we wish to style,
+otherwise its properties will be inherited, and overridden by the local declarations.
+
+By setting the font-size property of the HTML element, all the other elements of the document are going to
+inherit it, but no matter how much weight we gave to the declaration, the values specified using the class
+selector will act directly on the specified elements with the given class, and have a higher priority.
+
+However, if we were to use a different selector, like 'html *', we would be targeting every descendant of
+the HTML element directly.
+Now we'd have two declarations applied to the same element, but the latter would have a higher specificity
+and still take precedence.
+
+To increase the specificity of the first one we could add a class to the HTML element, and have a selector
+such as 'html.my-document *'.
+This declaration would now have a higher specificity and be applied to every element in the document tree.
+
+Other alternatives to increase the specificity consist of using a pseudo-class in the selector, such as
+'html:root *', which would be redundant but would serves its purpose, use an id selector.
+
+We could also use the '!important' keyword, and we wouldn't have to worry about specificity, but of course
+the selector must be applied directly to the element as well, as said earlier.
+*/
+
+html * {
+  font-family: "Comic Sans MS";
+  font-size: 14px !important;
+}
+
+header,
+footer,
+aside,
+nav {
+  background-color: #ff0;
+}
+
+header,
+footer {
+  text-align: center;
+}
+
+.header {
+  font-size: 46px;
+}
+
+.footer {
+  font-size: 10px;
+}
+
+.content {
+  font-size: 14px;
+}
+
+.navigation {
+  font-size: 12px;
+}
+
+.sidebar {
+  font-size: 10px;
+}

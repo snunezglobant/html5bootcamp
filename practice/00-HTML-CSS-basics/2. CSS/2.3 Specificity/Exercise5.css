@@ -1,0 +1,3 @@
+[class*="a"]:not([class$="r"]) {
+  background-color: blue;
+}
