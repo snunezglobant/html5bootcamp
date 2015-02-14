@@ -1,0 +1,39 @@
+header{
+	color: red;
+}
+
+#helloworld{
+	text-align: center;
+	font-size: 5rem;
+	color: green;
+	background-color: red;
+}
+
+.table{
+	  width: 25rem; 
+	  border: 0.1rem solid #000;
+}
+
+.table tr, .table td{
+	   border: 0.1rem solid #000;	
+	   text-align: center;
+}
+
+#back{
+	background-color: blue;
+}
+
+
+#div-one{
+	float: left;
+}
+
+#div-two{
+	margin-left: 15%;
+	float: left;
+}
+
+#div-three{
+	margin-left: 15%;
+	float: left;
+}

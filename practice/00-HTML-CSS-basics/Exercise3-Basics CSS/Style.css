@@ -1,0 +1,76 @@
+#container{
+	width: 70%;
+	height: 32rem;
+	background-color: #000000;
+	margin-left: 15%;
+	border-radius: 1.1rem;
+}
+header, article{
+	width: 90%;
+	height: 4rem;
+	background-color: #696969;
+	margin-left: 5%;
+	border-radius: 1.1rem;
+}
+
+p{
+	text-align: center;
+	font-family: Georgia;
+	font-size: 1rem;
+}
+nav{
+	background-color: #696969;
+	float: left;
+	width: 20%;
+	height: 20rem;
+	border-radius: 1.1rem;
+	margin-left: 5%;
+	margin-top: 1%;
+}
+
+aside{
+	background-color: #696969;
+	float: left;
+	width: 20%;
+	height: 20rem;
+	border-radius: 1.1rem;
+	margin-left: 1%;
+	margin-top: 1%;
+}
+
+footer{
+	width: 90%;
+	height: 4rem;
+	background-color: #696969;
+	margin-left: 5%;
+	border-radius: 1.1rem;
+    margin-top: 36%;
+
+}
+
+section{
+	width: 48%;
+	height: 20rem;
+	float: left;
+	background-color: #696969;
+	margin-left: 1%;
+	margin-top: 1%;
+	border-radius: 1.1rem;
+}
+
+#head{
+	background-color: #DCDCDC;
+	height: 2.5rem;
+}
+
+#art{
+	background-color: #DCDCDC;
+	height: 7.5rem;
+}
+
+#fot{
+	background-color: #DCDCDC;
+	height: 2.5rem;
+	margin-top: 2%;
+}
+
