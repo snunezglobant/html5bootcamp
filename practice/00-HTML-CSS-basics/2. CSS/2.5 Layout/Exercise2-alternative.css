@@ -1,0 +1,51 @@
+/*
+This example uses the child's position property to place the text inside
+the box.
+The space between the parent's edge and the text is set by the child's
+left, rigth, top and bottom properties. 
+*/
+.wrapper {
+  width: 80%;
+  max-width: 1048px; /* (box width * 4) + (box margin * 8) */
+  margin: 20px auto; /* auto makes it horizontally centered */
+  text-align: center; /* makes the content horizontally centered */
+}
+
+div.box {
+  /* parent element must be positioned (position != static), because the
+  child's position: absolute is relative to the nearest positioned ancestor */
+  position: relative; /* has no effect on the element because no extra properties are set */
+  display: inline-block;
+  width: 250px;
+  height: 200px;
+  margin: 6px;
+  background: #D22828; /* fallback */
+ 
+  background: -webkit-gradient(linear, left top, left bottom, from(#D22828), to(#601515));
+  background: -webkit-linear-gradient(top, #D22828, #601515);
+  background: linear-gradient(to bottom, #D22828, #601515);
+}
+
+div.box > p {
+  position: absolute;
+
+  left: 25px;
+  right: 25px;
+  top: 40px;
+  bottom: 40px;
+  margin: 0px;
+  color: white;
+  font-size: 1.8em;
+  font-weight: bold;
+
+  /* background: transparent; is default */
+  opacity: 0;
+  cursor: pointer;
+}
+
+div.box > p:hover {
+  opacity: 1;
+
+  -webkit-transition: opacity 800ms;
+  transition: opacity 800ms;
+}
