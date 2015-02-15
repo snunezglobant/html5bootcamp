@@ -15,6 +15,7 @@ html {
     font-size: 14px;
     font-family: helvetica;
     line-height: 1.4;
+    font-weight: bold;
 }
 
 /*
@@ -116,28 +117,61 @@ nav {
 
 .header {
   font-size: 46px;
-  background-color: #FF00FF;
+  background-color: magenta;
+  padding: 1rem;
+  margin: 1rem 1rem 1rem 1rem;
+  border-radius: 1rem;
 }
 
 .footer {
   font-size: 10px;
-  background-color: #FF00FF;
+  background-color: magenta;
+  padding: 1rem;
+  margin: 1rem 1rem 1rem 1rem;
+  border-radius: 1rem;
 }
 
 .content {
  font-size: 14px;
+ padding: 1rem;
+ margin: 1rem 1rem 1rem 1rem;
+ border-radius: 1rem; 
+}
+
+.clearfix {
+  overflow: auto;
 }
 
 .navigation {
   font-size: 12px;
-  background-color: #2E2EFE;
+  background-color: blue;
+  padding: 1rem;
+  margin: 1rem 1rem 1rem 1rem;
+  border-radius: 1rem;
+  height: 14rem;
 }
 
 .sidebar {
   font-size: 10px;    
-  background-color: #FF00FF;
+  background-color: magenta;
+  padding: 1rem;
+  margin: 1rem 1rem 1rem 1rem;
+  border-radius: 1rem;
+  height: 14rem;
 }
 
+.float-left {
+  float: left;
+}
+
+.float-right {
+  float: right;
+}
+
+/* Exercise 2.3.7 (Override inline styles) 
+.oh-no-inline-styles[style] {
+  background-color: yellow !important;
+} */
 
 
 
