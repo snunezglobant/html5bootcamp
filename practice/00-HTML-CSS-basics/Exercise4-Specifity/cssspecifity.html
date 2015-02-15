@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html class="no-js" lang="EN">
+<head>
+	<title>Exercise 4 specifity</title>
+	<link rel="stylesheet" type="text/css" href="Style.css">
+	<!--add weight to the global font definition to win over the classes added by point 3
+	<style type="text/css">
+			*{
+				font-size: 5rem !important;
+			}
+	</style>-->
+</head>
+<body style="font-size:5rem">
+<section >
+<header class="header">
+	<p>HEADER<p>
+</header>
+<nav class="navigation">
+	<P>NAV</P>
+</nav>
+<section class="content">
+<p>SECTION</p>
+	<header>
+		<P>HEADER SECTION</P>
+	</header>
+	<article style="background-color:red;">
+		<P>ARTICLE SECTION</P>
+	</article>
+	<footer>
+		<P>FOOTER SECTION</P>
+	</footer>
+</section>
+<aside class="sidebar">
+	<P>ASIDE</P>
+</aside>
+<footer class="footer">
+	<P>FOOTER</P>
+</footer>  
+</section>
+</body>
+</html>
