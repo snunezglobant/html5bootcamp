@@ -26,35 +26,3 @@ html * {
   font-family: "Comic Sans MS";
   font-size: 14px !important;
 }
-
-header,
-footer,
-aside,
-nav {
-  background-color: #ff0;
-}
-
-header,
-footer {
-  text-align: center;
-}
-
-.header {
-  font-size: 46px;
-}
-
-.footer {
-  font-size: 10px;
-}
-
-.content {
-  font-size: 14px;
-}
-
-.navigation {
-  font-size: 12px;
-}
-
-.sidebar {
-  font-size: 10px;
-}
