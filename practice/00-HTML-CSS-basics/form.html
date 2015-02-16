@@ -1,0 +1,56 @@
+<!DOCTYPE html> <!-- If this tag is missing, I just see that the upper margin is reduced. Must see the efect in the other documents -->
+<html>
+	<head>
+		<title>Form Page</title>
+		<meta charset="UTF-8">
+	</head>
+
+	<body>
+		<h1>Personal data</h1>
+		<!-- Missing: ADD RELEVANT VALIDATION RULES -->
+		<form method="get" action="#">
+			<p>
+				<label for="first-name">First name(s):</label>
+				<input type="text" name="first-name">
+			</p>
+
+			<p>
+				<label for="last-name">Last name:</label>
+				<input type="text" name="last-name">
+			</p>
+
+			<p>
+				<label for="email">E-mail:</label>
+				<input type="email" name="email">
+			</p>
+			
+			<p>
+				<label for="birthday">Birthday:</label>
+				<input type="date" name="birthday">
+			</p>
+			
+			<p>
+				<label for="fav-sport">Favourite sport:</label>
+				<select type="list" name="fav-sport">
+					<option>---Select one---</option>
+					<option value="Football">Football</option>
+					<option value="Basquet">Basquet</option>
+					<option value="Voley">Voley</option>
+					<option value="Tenis">Tenis</option>
+					<option value="Chess">Chess</option>
+					<option value="Ping-Pong">Ping-Pong</option>
+				</select>
+			</p>
+			
+			<p>
+				<label for="bio">Short bio (500 characters max):</label>
+				<textarea name="bio" rows="10" columns="30" maxlength="500"></textarea>
+			</p>
+
+			<p>
+				<input type="submit" value="Submit" name="submit" />
+				<input type="clear" value="Clear" name="clear" />
+			</p>
+		</form>
+	</body>
+</html>
