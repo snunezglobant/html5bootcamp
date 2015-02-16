@@ -1,14 +1,13 @@
 code {
-  background: rgb(120,120,120);
+  
   border-radius: 6px;
   color: rgb(0,0,0);
   display: block;
-  font: 14px/24px "Source Code Pro", Inconsolata, "Lucida Console", Terminal, "Courier New", Courier;
   padding: 24px 15px;
   text-align: center;
 }
-*{
-  background-color: rgb(40,40,40);
+.body{
+  background: rgb(40,40,40);
 }
 header,
 nav,
@@ -18,40 +17,56 @@ aside,
 footer {
   margin: 1.5% 1.5% 23px 1.5%;
 }
-#nav{
+.header{
+  font-size: 46px;
+}
+.footer{
+  font-size: 10px;
+}
+.content{
+  background: rgb(120,120,120);
+  font-size: 14px;
+  float: left;
+  width: 30%;
+}
+.navigation{
+  font-size: 12px;
   background: rgb(120,120,120);
   border-radius: 6px;
   float: left;
   width: 30%;
-  height: 265px;
+  height: 240px;
 }
-section {
-  float: left;
-  width: 30%;
-  
-}
-#header{
-  background: rgb(192,192,192);
-  border-radius: 5px;
-  padding: 5px 1px;
-}
-#article{
-  background: rgb(192,192,192);
-  border-radius: 5px;
-  padding: 24px 15px;
-}
-#footer{
-  background: rgb(192,192,192);
-  border-radius: 5px;
-  padding: 5px 1px;
-}
-#aside {
+.sidebar{
+  font-size: 10px;
   background: rgb(120,120,120);
   border-radius: 6px;
   float: right;
   width: 30%;
-  height: 265px;
-  
+  height: 240px;  
+}
+
+#color{
+  background: magenta;
+}
+
+.content header{
+  background: rgb(192,192,192);
+  border-radius: 5px;
+  padding: 5px 1px;
+}
+.content article{
+  background: rgb(192,192,192);
+  border-radius: 5px;
+  padding: 24px 15px;
+}
+.content footer{
+  background: rgb(192,192,192);
+  border-radius: 5px;
+  padding: 5px 1px;
+}
+.ctype1{
+  background: rgb(255,0,);
 }
 
 footer {
