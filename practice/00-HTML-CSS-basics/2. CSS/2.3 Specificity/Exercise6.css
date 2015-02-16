@@ -16,9 +16,9 @@ such as 'html.my-document *'.
 This declaration would now have a higher specificity and be applied to every element in the document tree.
 
 Other alternatives to increase the specificity consist of using a pseudo-class in the selector, such as
-'html:root *', which would be redundant but would serves its purpose, use an id selector.
+'html:root *', which would be redundant but would serve its purpose, or we could use an id selector.
 
-We could also use the '!important' keyword, and we wouldn't have to worry about specificity, but of course
+We could also add the '!important' keyword, and we wouldn't have to worry about specificity, but of course
 the selector must be applied directly to the element as well, as said earlier.
 */
 
