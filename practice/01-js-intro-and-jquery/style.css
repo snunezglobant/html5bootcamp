@@ -1,0 +1,13 @@
+body {
+  margin: 25px;
+}
+
+/* Exercise 2 */
+.welcome {
+  text-align: center;
+}
+
+/* Exercise 3 */
+.hidden {
+  display: none;
+}
