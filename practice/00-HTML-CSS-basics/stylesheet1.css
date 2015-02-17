@@ -1,0 +1,26 @@
+div {
+	border: 2px solid #6495ED;
+
+	margin: 50px 10px 50px 10px;
+	background-color: #81F7F3;
+	width: 250px;
+}
+
+h3{
+
+	margin-top: 20px;
+	margin-bottom: 20px;
+	text-indent: 5px;
+	color: blue; 
+	text-decoration: underline;
+
+}
+
+h1{
+	margin-bottom: 20px;
+	text-align: auto;
+	text-decoration: underline;
+	font-style: italic;
+	text-indent: 40px;
+
+}
