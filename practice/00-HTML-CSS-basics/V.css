@@ -22,7 +22,7 @@ h2{
 
 img{
 
-	border: 0.2rem solid blue
+	border: 0.2rem solid blue;
 	width:50rem;
 	height: 60rem;
 	border-radius: 15%;
