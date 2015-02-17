@@ -5,9 +5,59 @@ body {
 /* Exercise 2 */
 .welcome {
   text-align: center;
+  margin: 30px auto;
 }
 
 /* Exercise 3 */
 .hidden {
   display: none;
+}
+
+.columns-container {
+  min-width: 40em;
+}
+
+.column-half {
+  box-sizing: border-box;
+  padding: 0 25px;
+  float: left;
+  width: 50%;
+}
+
+input[type=text] {
+  width: 12em;
+}
+
+.album-container {
+  margin: 25px 0px;
+}
+
+.album-info {
+  overflow: auto; /* prevents floating images from overlapping */
+  margin: 4px 0px;
+  color: #606060;
+}
+
+.album-info > .image-container {
+  float: left;
+  text-align: center;
+  width: 64px;
+}
+
+.album-info > .image-container > img {
+  width: auto;
+  height: 64px;
+}
+
+.album-info > p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-left: 70px; /* image width included, removed from document flow due to float */
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+
+.album-info a {
+  text-decoration: none;
 }
