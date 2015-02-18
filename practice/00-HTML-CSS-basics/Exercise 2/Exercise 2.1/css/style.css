@@ -1,0 +1,77 @@
+header {
+  background-color: #6E6E6E; 
+  text-align: center;    
+}
+
+footer {
+  background-color: #6E6E6E;
+  text-align: center;
+  font-size: 10px;
+}
+
+aside {
+  background-color: #6E6E6E;
+}
+
+nav {
+  background-color: #6E6E6E; 
+}
+
+.header {
+  font-size: 46px;
+  background-color: magenta;
+  padding: 1rem;
+  margin: 1rem 1rem 1rem 1rem;
+  border-radius: 1rem;
+}
+
+.footer {
+  font-size: 10px;
+  background-color: magenta;
+  padding: 1rem;
+  margin: 1rem 1rem 1rem 1rem;
+  border-radius: 1rem;
+}
+
+.content {
+ font-size: 14px;
+ padding: 1rem;
+ margin: 1rem 1rem 1rem 1rem;
+ border-radius: 1rem; 
+ height: 14rem;
+}
+
+.clearfix {
+  overflow: auto;
+}
+
+.navigation {
+  font-size: 12px;
+  background-color: blue;
+  padding: 1rem;
+  margin: 1rem 1rem 1rem 1rem;
+  border-radius: 1rem;
+  height: 14rem;
+}
+
+.sidebar {
+  font-size: 10px;    
+  background-color: blue;
+  padding: 1rem;
+  margin: 1rem 1rem 1rem 1rem;
+  border-radius: 1rem;
+  height: 14rem;
+}
+
+.float-left {
+  float: left;
+}
+
+.float-right {
+  float: right;
+}
+
+/* Exercise 2.3.7 (Override inline styles) 
+.oh-no-inline-styles[style] {
+  background-color: yellow !important;
+} */
