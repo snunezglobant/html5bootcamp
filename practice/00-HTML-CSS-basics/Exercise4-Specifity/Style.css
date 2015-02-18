@@ -28,6 +28,10 @@ nav, aside{
 	background-color: blue;
 }
 
-article[style] {
-   background: yellow !important;
+#newfont{
+  font-size: 5rem;
+}
+
+.art[style]{
+	background-color: yellow !important;
 }

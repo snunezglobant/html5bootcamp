@@ -27,9 +27,8 @@
 
 #cont{
 	display: table;
-	border-spacing: 5px;
+	border-spacing: 0.5rem;
 	background-color: transparent;
-	/*border: 0.1rem solid blue;*/
 	position: relative;
 	top: 5rem;
 }
@@ -40,10 +39,10 @@
 	display: table-row;
 }
 #coltable1, #coltable2 {
-  display: table-cell;
+  	display: table-cell;
 }
 #coltable1, #coltable2 {
-  width: 20%;
+  	width: 20%;
 }
 
 #coltable1>header{
@@ -92,41 +91,41 @@ a:hover{
 }
 
 .screen:hover {
-opacity: 1;
+	opacity: 1;
 }
 .screen {
-background-color: rgba(0,0,0,0.5);
-top: 0;
-border-radius: 0;
-height: 10.5rem;
-width: 18.7rem;
-position: absolute;
-opacity: 0;
-z-index: 1000;
--webkit-transition: all 0.3s ease-in-out;
--moz-transition: all 0.3s ease-in-out;
--o-transition: all 0.3s ease-in-out;
--ms-transition: all 0.3s ease-in-out;
-transition: all 0.3s ease-in-out;
+	background-color: rgba(0,0,0,0.5);
+	top: 0;
+	border-radius: 0;
+	height: 10.5rem;
+	width: 18.7rem;
+	position: absolute;
+	opacity: 0;
+	z-index: 1000;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
 }
 
 .screen:hover .title {
-margin-left: 0;
+	margin-left: 0;
 }
 .title {
-color: #fff;
-font-family: arial, helvetica, sans-serif;
-font-weight: bold;
--webkit-transition: all 0.3s ease-in-out;
--moz-transition: all 0.3s ease-in-out;
--o-transition: all 0.3s ease-in-out;
--ms-transition: all 0.3s ease-in-out;
-transition: all 0.3s ease-in-out;
-margin-left: -30px;
+	color: #fff;
+	font-family: arial, helvetica, sans-serif;
+	font-weight: bold;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+	margin-left: -30px;
 }
 .title p {
-font-size: 2em;
-padding: 5%;
+	font-size: 2em;
+	padding: 5%;
 }
 
 .one{
@@ -175,7 +174,7 @@ padding: 5%;
 
 #cont{
 	display: table;
-	border-spacing: 5px;
+	border-spacing: 0.5rem;
 	background-color: transparent;
 	/*border: 0.1rem solid blue;*/
 	position: relative;
@@ -188,10 +187,10 @@ padding: 5%;
 	display: table-row;
 }
 #coltable1, #coltable2 {
-  display: table-cell;
+  	display: table-cell;
 }
 #coltable1, #coltable2 {
-  width: 10%;
+  	width: 10%;
 }
 
 #coltable1>header{
@@ -241,41 +240,41 @@ a:hover{
 }
 
 .screen:hover {
-opacity: 1;
+	opacity: 1;
 }
 .screen {
-background-color: rgba(0,0,0,0.5);
-top: 0;
-border-radius: 0;
-height: 10.5rem;
-width: 18.7rem;
-position: absolute;
-opacity: 0;
-z-index: 1000;
--webkit-transition: all 0.3s ease-in-out;
--moz-transition: all 0.3s ease-in-out;
--o-transition: all 0.3s ease-in-out;
--ms-transition: all 0.3s ease-in-out;
-transition: all 0.3s ease-in-out;
+	background-color: rgba(0,0,0,0.5);
+	top: 0;
+	border-radius: 0;
+	height: 10.5rem;
+	width: 18.7rem;
+	position: absolute;
+	opacity: 0;
+	z-index: 1000;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
 }
 
 .screen:hover .title {
-margin-left: 0;
+	
 }
 .title {
-color: #fff;
-font-family: arial, helvetica, sans-serif;
-font-weight: bold;
--webkit-transition: all 0.3s ease-in-out;
--moz-transition: all 0.3s ease-in-out;
--o-transition: all 0.3s ease-in-out;
--ms-transition: all 0.3s ease-in-out;
-transition: all 0.3s ease-in-out;
-margin-left: -30px;
+	color: #fff;
+	font-family: arial, helvetica, sans-serif;
+	font-weight: bold;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+	margin-left: -30px;
 }
 .title p {
-font-size: 2em;
-padding: 5%;
+	font-size: 2em;
+	padding: 5%;
 }
 
 .one{
@@ -290,9 +289,6 @@ padding: 5%;
 	top: 21.6rem;
 }
 
-.fil2{
-	top: 173px;
-}
 
 
 
