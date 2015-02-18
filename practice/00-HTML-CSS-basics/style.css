@@ -36,7 +36,7 @@ body{
 }
 .navigation li {
   display: inline;
-  padding-right: 20px;
+  padding-right: 2rem;
   font-size: 100%;
 }
 .navigation li:last-child {
@@ -49,7 +49,7 @@ body{
   display: block;
   float: left;
   width: 100%;
-  padding: 8px;
+  padding: 0.8rem;
 }
 .gallery.columns {
 	margin-right:0;
@@ -57,11 +57,11 @@ body{
 
 .pimg {
   box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.3);
-  width: -ms-calc(33.3333% - 16px);
-  width: -moz-calc(33.3333% - 16px);
-  width: -webkit-calc(33.3333% - 16px);
-  width: calc(33.3333% - 16px);
-  margin: 8px;
+  width: -ms-calc(33.3333% - 1.6rem);
+  width: -moz-calc(33.3333% - 1.6rem);
+  width: -webkit-calc(33.3333% - 1.6rem);
+  width: calc(33.3333% - 1.6rem);
+  margin: 0.8rem;
   height: auto;
   position: relative;
   float: left;
@@ -97,24 +97,24 @@ body{
           transition: all 0.3s ease-in-out;
 }
 .screen:hover {
-  opacity: 1
+  opacity: 1;
 }
 .title {
   color: #fff;
-  font-family: arial, helvetica, sans-serif;
+  font-family: Times, sans-serif;
   font-weight: bold;
   -webkit-transition: all 0.3s ease-in-out;
     -moz-transition: all 0.3s ease-in-out;
       -o-transition: all 0.3s ease-in-out;
         -ms-transition: all 0.3s ease-in-out;
           transition: all 0.3s ease-in-out;
-  margin-left: -30px;
+  margin-left: -3rem;
 }
 .screen:hover .title {
   margin-left: 0;
 }
 p {
-  font-size: 2em;
+  font-size: 3.2rem;
   padding: 5%;
 }
 .screen.fade-in .title {
