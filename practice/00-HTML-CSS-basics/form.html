@@ -1,13 +1,14 @@
 <!DOCTYPE html> <!-- If this tag is missing, I just see that the upper margin is reduced. Must see the efect in the other documents -->
-<html>
+<html lang="en">
 	<head>
 		<title>Form Page</title>
 		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	</head>
 
 	<body>
 		<h1>Personal data</h1>
-		<!-- Missing: ADD RELEVANT VALIDATION RULES -->
+		<!-- Validation rules are accomplished via HTML5's type property (email, date, etc.)-->
 		<form method="get" action="#">
 			<p>
 				<label for="first-name">First name(s):</label>
@@ -48,8 +49,8 @@
 			</p>
 
 			<p>
-				<input type="submit" value="Submit" name="submit" />
-				<input type="clear" value="Clear" name="clear" />
+				<input type="submit" value="Submit" name="submit" action="submit"/>
+				<inpt type="submit" value="Clear" name="clear" action="clear"/>
 			</p>
 		</form>
 	</body>
