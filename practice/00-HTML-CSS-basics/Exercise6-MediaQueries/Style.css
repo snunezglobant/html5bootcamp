@@ -1,0 +1,296 @@
+#container{
+	background-color: transparent;
+	width: 83rem;
+	height: 40rem;
+}
+
+.column{
+	background-color: transparent;
+	position: absolute;
+	width: 15rem;
+	height: 40rem;
+	border-right: 0.001rem solid lightgrey;
+}
+
+.col2{
+	left: 15.6rem;
+}
+.col3{
+	left: 30.8rem;
+}
+.col4{
+	left: 46rem;
+}
+.col5{
+	left: 61.2rem;
+}
+
+#cont{
+	display: table;
+	border-spacing: 0.5rem;
+	background-color: transparent;
+	position: relative;
+	top: 5rem;
+}
+.c2{
+	top:10rem !important;
+}
+#content{
+	display: table-row;
+}
+#coltable1, #coltable2 {
+  	display: table-cell;
+}
+#coltable1, #coltable2 {
+  	width: 20%;
+}
+
+#coltable1>header{
+	margin-left: 5rem;
+}
+
+#coltable2>article{
+	margin-left: -11rem;
+	text-align: justify;
+	
+}
+
+a{
+	text-decoration: none;
+	color: black;
+}
+a:hover{
+	text-decoration: underline;
+}
+#hdr{
+	margin-left: -6rem;
+}
+#hdr2{
+	margin-left: 10rem !important;
+	display: inline;
+}
+.images1{
+	background-color: transparent;
+	position: relative;
+	top: 15rem;
+}
+.images1 article{
+	float: left;
+}
+
+#art1{
+	margin-left: 7rem;
+}
+
+#art2{
+	margin-left: 5rem;
+}
+
+#art3{
+	margin-left: 5rem;
+}
+
+.screen:hover {
+	opacity: 1;
+}
+.screen {
+	background-color: rgba(0,0,0,0.5);
+	top: 0;
+	border-radius: 0;
+	height: 10.5rem;
+	width: 18.7rem;
+	position: absolute;
+	opacity: 0;
+	z-index: 1000;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+
+.screen:hover .title {
+	margin-left: 0;
+}
+.title {
+	color: #fff;
+	font-family: arial, helvetica, sans-serif;
+	font-weight: bold;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+	margin-left: -30px;
+}
+.title p {
+	font-size: 2em;
+	padding: 5%;
+}
+
+.one{
+	left: 7rem;
+}
+.two{
+	left: 30.8rem;
+}
+.three{
+	left: 54.5rem;
+}
+
+.fil2{
+	top: 173px;
+}
+
+
+@media (max-width : 480px) {
+
+#container{
+	background-color: transparent;
+	width: 29rem;
+	height: 61.5rem;
+}
+
+.column{
+	background-color: transparent;
+	position: absolute;
+	width: 3rem;
+	height: 61.5rem;
+	border-right: 0.001rem solid lightgrey;
+}
+
+.col2{
+	left: 4.6rem;
+}
+.col3{
+	left: 8.8rem;
+}
+.col4{
+	left: 13rem;
+}
+.col5{
+	left: 18.2rem;
+}
+
+#cont{
+	display: table;
+	border-spacing: 0.5rem;
+	background-color: transparent;
+	/*border: 0.1rem solid blue;*/
+	position: relative;
+	top: 5rem;
+}
+.c2{
+	top:7rem !important;
+}
+#content{
+	display: table-row;
+}
+#coltable1, #coltable2 {
+  	display: table-cell;
+}
+#coltable1, #coltable2 {
+  	width: 10%;
+}
+
+#coltable1>header{
+	margin-left: 3rem;
+}
+
+#coltable2>article{
+	margin-left: -9rem;
+	text-align: justify;
+	
+}
+
+a{
+	text-decoration: none;
+	color: black;
+}
+a:hover{
+	text-decoration: underline;
+}
+#hdr{
+	margin-left: -2rem;
+}
+#hdr2{
+	margin-left: 2.6rem !important;
+	display: inline;
+}
+.images1{
+	background-color: transparent;
+	position: relative;
+	top: 10rem;
+}
+.images1 article{
+	float: left;
+}
+
+#art1{
+	margin-left: 5rem;
+	top: -2rem;
+}
+
+#art2{
+	margin-left: 5rem;
+}
+
+#art3{
+	margin-left: 5rem;
+}
+
+.screen:hover {
+	opacity: 1;
+}
+.screen {
+	background-color: rgba(0,0,0,0.5);
+	top: 0;
+	border-radius: 0;
+	height: 10.5rem;
+	width: 18.7rem;
+	position: absolute;
+	opacity: 0;
+	z-index: 1000;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+
+.screen:hover .title {
+	
+}
+.title {
+	color: #fff;
+	font-family: arial, helvetica, sans-serif;
+	font-weight: bold;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+	margin-left: -30px;
+}
+.title p {
+	font-size: 2em;
+	padding: 5%;
+}
+
+.one{
+	left: 5rem;
+}
+.two{
+	left: 5rem;
+	top: 10.8rem;
+}
+.three{
+	left: 5rem;
+	top: 21.6rem;
+}
+
+
+
+
+}
+
