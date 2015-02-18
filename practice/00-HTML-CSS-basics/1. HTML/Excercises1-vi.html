@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercises: 1. The Basics of HTML. vi.</title>
+  </head>
+  <body>
+    <form>
+      <table>
+        <tr>
+          <td>
+            <label for="first-name">First name: <span title="This field is required.">*</span></label>
+          </td>
+          <td>
+            <input type="text" name="first-name" id="first-name" value="" required>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="last-name">Last name: <span title="This field is required.">*</span></label>
+          </td>
+          <td>
+            <input type="text" name="last-name" id="last-name" value="" required>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="email">E-Mail: <span title="This field is required.">*</span></label>
+          </td>
+          <td>
+            <input type="email" name="email" id="email" value="" required>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="birthday">Birthday:</label>
+          </td>
+          <td>
+            <input type="date" name="birthday" id="birthday" value="">
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="favourite-sport">Favourite sport:</label>
+          </td>
+          <td>
+            <select name="favourite-sport" id="favourite-sport">
+              <option value="" disabled selected>Select a sport</option>
+              <option value="baseball">Baseball</option>
+              <option value="basketball">Basketball</option>
+              <option value="football">Football</option>
+              <option value="hockey">Hockey</option>
+              <option value="other">Other</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="bio">Brief biography:</label>
+          </td>
+          <td>
+            <textarea name="bio" id="bio"></textarea>
+          </td>
+        </tr>
+        <tr>
+          <td colspan=2>
+            <input type="submit" name="submit" id="submit" value="Submit">
+            <input type="reset" name="reset" id="reset" value="Reset">
+          </td>
+        </tr>
+      </table>
+    </form>
+  </body>
+</html>

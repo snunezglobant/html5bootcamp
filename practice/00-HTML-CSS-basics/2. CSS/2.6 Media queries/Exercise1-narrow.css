@@ -1,0 +1,33 @@
+body {
+  background-color: #404040;
+  color: #FFFFFF;
+  font-size: 1.2em;
+}
+
+header,
+nav,
+section,
+article,
+footer,
+aside
+{
+  margin: 8px;
+  background-color: #707070;
+  text-align: center;
+  line-height: 50px;
+}
+
+section {
+  overflow: auto;
+}
+
+section > header,
+section > article,
+section > footer {
+  background-color: #A0A0A0; 
+}
+
+article {
+  height: 200px;
+  line-height: 200px;
+}
