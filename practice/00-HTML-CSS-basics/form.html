@@ -1,0 +1,43 @@
+<!DOCTYPE html> <!-- If this tag is missing, I just see that the upper margin is reduced. Must see the efect in the other documents -->
+<html lang="en">
+	<head>
+		<title>Form Page</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+
+	<body>
+		<h1>Personal data</h1>
+		<!-- Validation rules are accomplished via HTML5's type property (email, date, etc.)-->
+		<form method="get" action="#">
+			<label for="first-name">First name(s):</label>
+			<input id="first-name" type="text" name="first-name">
+		
+			<label for="last-name">Last name:</label>
+			<input id="last-name" type="text" name="last-name">
+		
+			<label for="email">E-mail:</label>
+			<input id="email" type="email" name="email">
+		
+			<label for="birthday">Birthday:</label>
+			<input id="birthday" type="date" name="birthday">
+		
+			<label for="fav-sport">Favourite sport:</label>
+			<select id="fav-sport" type="list" name="fav-sport">
+				<option>---Select one---</option>
+				<option value="Football">Football</option>
+				<option value="Basquet">Basquet</option>
+				<option value="Voley">Voley</option>
+				<option value="Tenis">Tenis</option>
+				<option value="Chess">Chess</option>
+				<option value="Ping-Pong">Ping-Pong</option>
+			</select>
+		
+			<label for="bio">Short bio (500 characters max):</label>
+			<textarea id="bio" name="bio" rows="10" columns="30" maxlength="500"></textarea>
+		
+			<input type="submit" value="Submit" name="submit" action="submit"/>
+			<inpt type="submit" value="Clear" name="clear" action="clear"/>
+		</form>
+	</body>
+</html>
