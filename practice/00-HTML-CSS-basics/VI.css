@@ -1,0 +1,21 @@
+h2{
+	font-family: cursive;
+	font-size: 30;
+	border: 0.3rem solid blue;
+	height: 3rem;
+	border-radius: 50%;
+	text-align: center;
+	color: blue;
+
+}
+
+
+.signup
+{
+	float: center;
+	border: 0.2rem solid black;
+	padding: 3rem 3rem 3rem 3rem;
+	font-family: Arial;
+	font-size: 2rem;
+	background-color: lightblue;
+}

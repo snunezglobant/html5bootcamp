@@ -1,0 +1,29 @@
+h1{
+	color:blue;
+	font-family: Times;
+	font-size: 3rem;
+	background-color: lightblue;
+	text-align:center;
+}
+video{
+
+	border-radius: 5%;
+	width: 40rem;
+	height: 20rem;
+	border: 0.2rem solid red;
+}
+h2{
+	background-color: pink;
+	font-family: Times;
+	font-size: 3rem;
+	text-align: center;
+	color:red;
+}
+
+img{
+
+	border: 0.2rem solid blue;
+	width:50rem;
+	height: 60rem;
+	border-radius: 15%;
+}
