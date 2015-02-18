@@ -1,0 +1,48 @@
+html{
+	background-color: #58ACFA;
+}
+
+.title{
+	text-decoration: underline;
+}
+
+h1{
+	text-align: center;
+}
+
+div{
+	
+	border: 2px solid black;
+	border-radius: 5px;
+
+}
+
+video{
+	width: 70%;
+	margin-left: 80px;
+}
+
+#container {
+  display: table;
+  border-spacing: 15px;
+}
+#content {
+  display: table-row;
+}
+#one, #two, #three {
+  display: table-cell;
+}
+#one {
+  width: 20%;
+}
+#three {
+  width: 5%;
+}
+
+#two{
+	width: 75%;
+}
+
+h3{
+	text-align: center;
+}
