@@ -1,0 +1,49 @@
+textarea{
+width: 1050px;
+height: 50px;
+}
+
+html{
+	background-color: #E6E6E6;
+}
+.one{
+width: 500px;
+}
+
+.first{
+	display: inline-block;
+	margin-bottom: 20px;
+
+}
+
+.second{
+	display: inline-block;
+	margin-bottom: 20px;
+	margin top: 20px;
+}
+
+select{
+	width: 200px;
+}
+
+article{
+border-spacing: 20px;
+margin-right: 30px;
+}
+
+#birthday{
+	width:260px;
+}
+
+#button{
+	margin-top: 30px;
+	margin-left: 500px;
+}
+
+.title{
+	text-decoration: underline;
+}
+
+h1{
+	margin-left: 500px;
+}
