@@ -1,20 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-		<meta charset="utf-8">
+	<meta charset="utf-8">
     <meta name="keywords" content="image, audio, video">
     <meta name="description" content="fifth excercise: image, audio, video">
     <meta name="author" content="Gabriel Bazán">
-    <meta http-equiv="refresh" content="30">
 <title> Imagen</title>
 </head>
 <body>
 	<figure>
-		<img src="html5.jpg" alt="Image of robot ">
+		<img src="html5.jpg" alt="Image of robot " style="width:300px;height:200px">
 	</figure>
-	<audio controls>
-  <source src="blink%20182%20-%20always.mp3" alt="Blink 182 - always">
+	<audio controls id="Music">
+  <source src="blink%20182%20-%20always.mp3">
 	</audio>
-	<video id="Muse%20Video" src="Muse%20-%20Uprising.mp4" alt="Muse video - uprising" controls></video>
+	<label for="Music">Cancion de blink182</label>
+		<video  src="Muse%20-%20Uprising.mp4" controls preload width="300" height="200" id="Muse Video">
+			<track kind="captions" src="captions.vtt" type="text/vtt" srclang="en" label="English Captions" default />
+	 Your browser does not support the <code>video</code> element.
+	</video>
+	<label for="Muse Video">Video of Muse</label>
 </body>
 </html>
