@@ -1,0 +1,18 @@
+
+header{
+	text-align: center;
+	display: block;
+}
+
+section>article>p{
+	text-align: center;
+	display: block;
+}
+
+#button{
+	text-align: center;
+}
+
+#hidden{
+	visibility: hidden;
+}
