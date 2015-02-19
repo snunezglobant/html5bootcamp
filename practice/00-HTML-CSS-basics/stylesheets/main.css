@@ -68,7 +68,9 @@ footer {
 .ctype1{
   background: rgb(255,0,);
 }
-
+#bot{
+  font-size: 82.5%;
+}
 footer {
   clear: both;
   margin-bottom: 0;
