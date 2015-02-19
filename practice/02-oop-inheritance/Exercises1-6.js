@@ -51,7 +51,7 @@ Movie.prototype.set = function(attr, value) {
   if (i === -1) { /* attr not found */
     this.attributes.push({attrName: attr, attrValue: value});
   }
-}
+};
 
 Movie.prototype.get = function(attr) {
   // return this[attr]; /* using simple object attributes */
@@ -65,7 +65,7 @@ Movie.prototype.get = function(attr) {
   }
 
   return "Attribute not found.";
-}
+};
 
 
 /* 2) Instantiate some of your favorite movies and play with them in the console. */
@@ -90,30 +90,30 @@ theMatrix.set("release date", 1999);
 
 var MovieObserver = {}
 
-$(MovieObserver).on("playing", function(event, params) {
+$.subscribe("playing", function(event, params) {
   MovieObserver.eventPlaying(params);
-
 });
 
-$(MovieObserver).on("stopped", function(event) {
+$.subscribe("stopped", function(event) {
   MovieObserver.eventStopped();
 });
 
 
 /* 4) Publish "playing" event on Movie.play(). */
 Movie.prototype.play = function() {
-  $(MovieObserver).trigger("playing", [{title: this.get("title")}]);
-}
+  $.publish("playing", [{title: this.get("title")}]);
+};
 
 /* 5) Publish "stopped" event on Movie.stop(). */
 
 Movie.prototype.stop = function() {
-  $(MovieObserver).trigger("stopped");
-}
+  $.publish("stopped");
+};
 
 
 /* Declare the methods that will be triggered by the events */
 /* 6) Log to console when each event is fired. */
+
 MovieObserver.eventPlaying = function(params) {
   console.log("Playing \""+params.title+"\"...");
 }
