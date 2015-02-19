@@ -50,6 +50,7 @@ a{
 	color: black;
 }
 
+
 .header{
 	border-radius: 10px;
 	display: block;
@@ -100,6 +101,13 @@ a{
 	margin-bottom: 10px;
 }
 
+.sidebar img{
+		
+	display: block;
+    margin:  0 auto;
+	text-align: center;
+
+}
 [class*="a"]{
   background-color: blue;
  
@@ -107,4 +115,36 @@ a{
 
 [class$="r"]{
  background-color: magenta;
+}
+
+
+@media screen  and (max-width:768px){
+		.header{
+			display: block;
+			margin: 0px auto;
+			font-size: 14px;
+		}
+		.content{
+			display: block;
+			margin: 0px auto;
+			width: auto;
+			height: auto;
+		}
+		.navigation{
+			display: block;
+			width: inherit;
+			height:auto;
+		}
+		.sidebar{
+			display: block;
+			width: auto;
+			height:auto;
+			font-size: 10px;
+		}
+		.footer{
+			display: block;
+			width: auto;
+			font-size: 6px;
+		}
+
 }
