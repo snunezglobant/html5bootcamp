@@ -30,7 +30,7 @@
 
 #cont{
 	display: table;
-	border-spacing: 5px;	
+	border-spacing: 0.357rem;	
 	position: relative;
 	top: 5rem;
 }

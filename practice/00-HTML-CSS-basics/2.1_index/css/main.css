@@ -1,6 +1,6 @@
 html{
 	font-family: Courier;
-	font-size: 14;
+	font-size: 1rem;
 }
 #Content{	
 	background-color: #323232;		
@@ -8,7 +8,7 @@ html{
 	height: 31rem;
 	color: white;
 	border-radius: 1rem 1rem 1rem 1rem;
-	padding: 1px;
+	padding: 0.07rem;
 	margin: 1rem;	
 }
 #Header{	

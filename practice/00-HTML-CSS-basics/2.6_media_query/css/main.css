@@ -30,7 +30,7 @@
 
 #cont{
 	display: table;
-	border-spacing: 5px;	
+	border-spacing: 0.35rem;	
 	position: relative;
 	top: 5rem;
 }
@@ -135,7 +135,7 @@ a:hover{
 }
 
 
-@media (max-width : 480px) {
+@media (max-width : 34.30rem) {
 
 #Container{
 	width: 29rem;
@@ -169,7 +169,7 @@ a:hover{
 
 #cont{
 	display: table;
-	border-spacing: 5px;	
+	border-spacing: 0.35rem;	
 	position: relative;
 	top: 5rem;
 }
@@ -252,7 +252,7 @@ a:hover{
 .title {
 	color: #fff;		
 	transition: all 0.3s ease-in-out;
-	margin-left: -30px;
+	margin-left: -2.14rem;
 }
 .title p {
 	font-size: 2em;

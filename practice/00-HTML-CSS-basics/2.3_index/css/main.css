@@ -1,6 +1,6 @@
 html{
 	font-family: Courier;
-	font-size: 14;
+	font-size: 1rem;
 }
 [class$="r"]{
  background-color: #FF00FF;
@@ -13,11 +13,11 @@ html{
 	height: 31rem;
 	color: white;
 	border-radius: 1rem 1rem 1rem 1rem;
-	padding: 1px;
+	padding: 0.07rem;
 	margin: 1rem;	
 }
 .Header{
-	font-size: 46px;					
+	font-size: 3.28rem;					
 	margin: 1rem auto;
 	vertical-align: middle;
 	height: 3rem;
@@ -27,7 +27,7 @@ html{
 	
 }
 .Navigation{	
-	font-size: 12px;
+	font-size: 0.86rem;
 	height: 20rem;	
 	text-align: center;	
 	margin-left: 1rem;	
@@ -38,7 +38,7 @@ html{
 }
 
 .Sidebar{
-	font-size: 10px;
+	font-size: 0.714rem;
 	height: 20rem;	
 	text-align: center;	
 	margin-right: 1rem;	
@@ -48,7 +48,7 @@ html{
 	
 }
 .Content{
-	font-size: 14px;
+	font-size: 1rem;
 	height: 20rem;	
 	text-align: center;	
 	margin-top:1rem;
@@ -83,7 +83,7 @@ html{
 
 }
 .Footer{	
-	font-size: 10px;	
+	font-size: 0.714rem;	
 	margin: 1rem;
 	vertical-align: middle;	
 	height: 3rem;
