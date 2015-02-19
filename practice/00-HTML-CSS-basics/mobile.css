@@ -1,0 +1,97 @@
+@media screen and(max-width: -width: 400px){
+
+.container{
+	width: 100%;
+	height: auto;
+
+}
+
+.gallery {
+  clear: both;
+  display: block;
+  float: left;
+  width: 100%;
+  padding: auto;
+  
+}
+.gallery.columns {
+	margin-right:0;
+} 
+
+.pimg {
+  box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.3);
+  width: -ms-calc(100% - 1.6rem);
+  width: -moz-calc(100% - 1.6rem);
+  width: -webkit-calc(100% - 1.6rem);
+  width: calc(100% - 2rem);
+  margin: 0.8rem;
+  position: relative;
+  float: left;
+  height:auto;
+
+}
+
+.pimg:last-of-type {
+  margin-right: 0;
+}
+.pimg a img{
+  position: relative;
+  width: 100%; 
+  height: auto;
+  border-radius: 10%;
+}
+
+
+.gallery a {
+  display: block;
+}
+.screen {
+	background-color: rgba(0,0,0,0.5);
+	left: 0;
+	top: 0;
+	border-radius: 5%;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	opacity: 0;
+	z-index: 1000;
+  -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+      -o-transition: all 0.3s ease-in-out;
+        -ms-transition: all 0.3s ease-in-out;
+          transition: all 0.3s ease-in-out;
+}
+.screen:hover {
+  opacity: 1;
+}
+.title {
+  color: #fff;
+  font-family: Times, sans-serif;
+  font-weight: bold;
+  -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+      -o-transition: all 0.3s ease-in-out;
+        -ms-transition: all 0.3s ease-in-out;
+          transition: all 0.3s ease-in-out;
+  margin-left: -3rem;
+}
+.screen:hover .title {
+  margin-left: 0;
+}
+p {
+  font-size: 3.2rem;
+  padding: 5%;
+}
+.screen.fade-in .title {
+  margin-left: 0;
+}
+.screen.fade-in:hover {
+  font-size: 100%;
+
+}
+.gallery p{
+  font-size: 100%;
+
+	}
+
+}
