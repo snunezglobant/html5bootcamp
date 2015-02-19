@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Signup Form</title>
+	<meta charset="utf-8" />
+ 	<meta name="description" content="A register form">
+ 	<meta http-equiv="content-Type" content="text/html; charset=UTF-8">
+ 	<meta name="viewport" content="width=device-width, user-scalable=no">
+</head>
+<body>
+	<h1>Sign up</h1>
+	<form>
+		<p>
+		<label>First Name:</label> <br>
+		<input type="text" id="fname"  required aria-required="true"/><br>
+		</p>
+		<p>
+		<label>Last Name:</label><br>
+		<input type="text" id="lname"  required aria-required="true"/>
+		</p>
+		<p>
+			<label>Email:</label><br>
+			<input type="email" id="email" required aria-required="true"/>
+		</p>
+		<p>
+			<label>Enter a small bio:</label><br>
+			<textarea id="area" required aria-required="true">
+			</textarea>
+		</p>
+		<p>
+			<select id="combo" required aria-required="true">
+				<option value=0>Choose your sport</option> 
+				<option value=1>Football</option>
+				<option value=2>Rugby</option>
+				<option value=3>Swimming</option>
+				<option value=4>Basketball</option>
+			</select>
+		</p>
+		<p>
+			<button type="submit"/>Register</button><p>		
+			<button type="button" onclick="javascript:limpiar()">Clear form</button> 
+		</p>		
+		
+		</form>	
+		<script type="text/javascript">
+			function limpiar(){
+				email.value="";
+				fname.value ="";
+				lname.value ="";
+				fname.focus();
+				document.getElementById("area").value = "";
+				document.getElementById("combo").value =0;				
+			}
+		</script>
+</body>
+</html>
