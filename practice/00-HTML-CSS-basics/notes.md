@@ -41,3 +41,7 @@
 	6. Client-side image maps shall be provided instead of server-side image maps except where the regions cannot be defined with an available geometric shape. --> **WHAT DOES IT MEAN?**
 	7. Row and column headers shall be identified for data tables.
 	8. Markup shall be used to associate data cells and header cells for data tables that have two or more logical levels of row or column headers.
+
+	##Reset CSS
+	- The goal of a reset stylesheet is to reduce browser inconsistencies in things like default line heights, margins and font sizes of headings, and so on.
+	

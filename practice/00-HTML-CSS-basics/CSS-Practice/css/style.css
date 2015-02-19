@@ -1,0 +1,84 @@
+*{
+	font-family: Arial, Helvetica;
+	font-size: 14px;
+}
+
+header, footer, aside, nav{
+	/*background: #0000ff;*/
+	display: block;
+}
+
+header, footer{
+	text-align: center;
+}
+
+header{
+	float: left;
+	width: 100%;
+	background: black;
+	color: white;
+}
+
+nav{
+	display: inline-block;
+	clear: both;
+	float: left;
+	width: 25%;
+	background: #0000ff;
+}
+
+section{
+	display: inline-block;
+	float: left;
+	width: 50%;
+	background: #00ff00;
+}
+
+section header{
+	background: #00ff00;
+	color: black;
+}
+
+aside{
+	display: inline-block;
+	float: right;
+	width: 25%;
+	background: #ff0000;
+}
+
+footer{
+	display: block;
+	clear: both;
+	text-align: center;
+}
+
+/*Classes*/
+
+.header{
+	font-size: 46px;
+}
+
+.footer{
+	font-size: 10px;
+}
+
+.content{
+	font-size: 14px;
+}
+
+.navigation{
+	font-size: 12px;
+}
+
+.sidebar{
+	font-size: 10px;
+}
+
+[class$="r"]{
+	background: magenta;
+}
+
+/*If the class attribute contains an a (example nav) but do NOT finish with r, the background must be blue.*/
+[class*="a"]:not([class$="r"]){
+	background: blue;
+}
