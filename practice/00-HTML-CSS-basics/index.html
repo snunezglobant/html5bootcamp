@@ -3,37 +3,44 @@
     <head>
         <style type="text/css">
             #body 
-                {background-color:lightgray;}
+                {background-color:lightgray;
+                    display: block; }
 
             
             .header{background-color:darkgray;
                 text-align: center;
-                 font-size: 46px;}
+                 font-size: 46px;
+                 display: block; }
              .footer {
                 background-color:darkgray;
                 text-align: center;
-                 font-size: 10px;}
+                 font-size: 10px;
+                 display: block; }
             
-            #href{background-color:black;}
+            #href{background-color:black;
+                display: block; }
             h1 {color:black;}
             p{color:black;}
             .aside{
                 background-color:red;
-                font-size: 10px}
+                font-size: 10px;
+                display: block; }
 
-            .nav #navigation{
-                background-color:black;
-                font-size: 12px}
+            nav{
+                background-color:gray; 
+                font-size: 12px;
+                display: block}
+            #navigation{background-color: magenta}
             .html *{
-                font-size: 14px;
+                font-size: 14px; 
                 color: #000 ;
-                font-family: Andale%20Mono;}
+                font-family: Andale%20Mono important!;
+                display: block;}
 
             [class$="r"]{
                 background-color:magenta;}
 
-            [class*="a"]:not([class$="r"]) { background-color: blue;
-            }
+            [class*="a"]:not([class$="r"]) { background-color: blue;}
             
 
 
@@ -74,24 +81,28 @@
         </script>
         <p><a href="http://ref.openweb.io/CSS/">CSS References</a></p>
         <p><a href="workflower.fi/vocabs/css/en">CSS Vocabulary</a> </p>
-    </div>
-        <aside>            
-            <div class="sidebar">
-                
-        <aside>
-        </div>       
+        </div>
+    <aside>            
+    <div class="sidebar">
+            <p>Content</p> 
+        </div>    
+    <aside>       
         <nav>        
             <div class="navigation">
-                
+                <p>Some fill text</p>
             </div>    
-        <nav>
+       <nav>
         <section>
-            <header>                
+            <header>      
+            <p><strong>Section</strong></p>          
             </header>
-            <article>
+            <article><p><strong>Some articles</strong></p>          
             </article>
 
             <footer>
+                <p>Posted by: Gonzalo Roncedo</p>
+                <p>Contact information: <a href="gonzalo.roncedo08@gmail.com">
+                gonzalo.roncedo08@gmail.com</a>.</p>
             </footer>
         <section>        
         <footer> 
