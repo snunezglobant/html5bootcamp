@@ -1,9 +1,9 @@
-* {
+/** {
 	
 	border-radius: 10px
 }
 
-/*div {
+div {
 	height: 50px;
 	width: 100px;
 	border: 2px solid black;
@@ -11,7 +11,7 @@
 	display: block;
 	text-align: center;
 	
-}*/
+}
 
 .header {
 	height: 50px;
@@ -91,3 +91,36 @@
 	background-color: #ff00ff;	
 }
 
+*/
+
+body {
+	width: 1000px;
+	margin: auto;
+}
+
+header {
+	width: 1000px;
+}
+
+nav {
+	width: 250px;
+}
+
+div {
+	width: 500px;
+}
+
+aside {
+	width: 250px;
+}
+
+footer {
+	width: 1000px;
+}
+
+header, nav, div, aside, footer {
+	border: 2px solid red;
+	float: left;
+	height: 250px;
+	box-sizing: border-box;
+}
