@@ -16,3 +16,7 @@ section>article>p{
 #hidden{
 	visibility: hidden;
 }
+
+.highlighttext{
+	background: yellow;
+}
