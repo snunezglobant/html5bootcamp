@@ -29,28 +29,19 @@
 		</p>
 		<p>
 			<select id="combo" required aria-required="true">
-				<option value=0>Choose your sport</option> 
-				<option value=1>Football</option>
-				<option value=2>Rugby</option>
-				<option value=3>Swimming</option>
-				<option value=4>Basketball</option>
+				<option value="0">Choose your sport</option> 
+				<option value="1">Football</option>
+				<option value="2">Rugby</option>
+				<option value="3">Swimming</option>
+				<option value="4">Basketball</option>
 			</select>
 		</p>
 		<p>
 			<button type="submit"/>Register</button><p>		
-			<button type="button" onclick="javascript:limpiar()">Clear form</button> 
+			<button type="reset">Clear form</button> 
 		</p>		
 		
-		</form>	
-		<script type="text/javascript">
-			function limpiar(){
-				email.value="";
-				fname.value ="";
-				lname.value ="";
-				fname.focus();
-				document.getElementById("area").value = "";
-				document.getElementById("combo").value =0;				
-			}
-		</script>
+	</form>	
+		
 </body>
 </html>
