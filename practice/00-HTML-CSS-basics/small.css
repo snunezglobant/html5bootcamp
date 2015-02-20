@@ -1,0 +1,251 @@
+@charset "utf-8";
+
+.container{
+  display: block;
+  width: 80%;
+  margin: auto;
+  background: blue url(http://thumbs.dreamstime.com/x/fondo-azul-del-mosaico-19949227.jpg) repeat;
+  border: .2rem solid blue;
+}
+
+header{
+  width: 100%;
+  height: auto;
+  margin-bottom: .5rem;
+}
+
+header img{
+  width: 100%;
+  height: auto;
+  position: relative;
+  float:center;
+  padding-bottom: 2rem;
+
+}
+
+#nav {
+  width: 50%;
+  height: auto;
+  margin: auto;
+  list-style-type: none;
+  font-weight: bold;
+  font-size: 95%;
+  height: auto;
+  margin: auto;
+  position: relative;
+  padding: 0;
+  
+
+}
+#nav li a {
+  width: 100%;
+  margin: 0 .1rem;
+
+}
+#nav li:last-child a {
+  margin-left: .1rem;
+}
+a {
+  color:#91784F;
+  font-weight:bold;
+  text-decoration:none;
+}
+a:hover, a:active, a:focus {
+  color:#B59D77;
+  text-decoration:underline;
+}
+
+
+  
+
+#nav li {
+  float: center;
+  border-radius:25%;
+  margin-bottom: .2rem;
+}
+#nav li a {
+  display: block;
+  width:auto;
+  text-align:center;
+  text-decoration: none;
+  color: #FFF;
+  background-color: #003;
+  -webkit-border-radius: 20%;
+  -moz-border-radius: 20%;
+  border-radius: 20%;
+}
+#nav a:hover, #nav a:active, #nav a:focus {
+  background-color:#26267F;
+}
+
+
+section{
+  width: 90%;
+  height: auto;
+  clear: both;
+  margin:auto;
+  float: center;
+  display: block;
+
+}
+.gallery {
+  clear: both;
+  display: block;
+  float: left;
+  width: 100%;
+  padding: auto;
+  
+}
+.gallery.columns {
+	margin-right:0;
+} 
+
+.pimg {
+  box-shadow: 0 0 .2rem 0 rgba(0, 0, 0, 0.3);
+  width: -ms-calc(100% - 1.6rem);
+  width: -moz-calc(100% - 1.6rem);
+  width: -webkit-calc(100% - 1.6rem);
+  width: calc(100% - 2rem);
+  margin: 0.8rem;
+  position: relative;
+  float: left;
+  height: calc(33.3333333% - 2rem);
+
+}
+
+.pimg:last-of-type {
+  margin-right: 0;
+}
+.pimg a img{
+  position: relative;
+  width: 100%; 
+  height: 33.333333%;
+  border-radius: 10%;
+}
+
+
+.gallery a {
+  display: block;
+}
+.screen {
+	background-color: rgba(0,0,0,0.5);
+	left: 0;
+	top: 0;
+	border-radius: 5%;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	opacity: 0;
+	z-index: 1000;
+  -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+      -o-transition: all 0.3s ease-in-out;
+        -ms-transition: all 0.3s ease-in-out;
+          transition: all 0.3s ease-in-out;
+}
+.screen:hover {
+  opacity: 1;
+}
+.title {
+  color: #fff;
+  font-family: Times, sans-serif;
+  font-weight: bold;
+  -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+      -o-transition: all 0.3s ease-in-out;
+        -ms-transition: all 0.3s ease-in-out;
+          transition: all 0.3s ease-in-out;
+  margin-left: -3rem;
+}
+.screen:hover .title {
+  margin-left: 0;
+}
+
+.screen.fade-in .title {
+  margin-left: 0;
+}
+.screen.fade-in:hover {
+  font-size: 20%;
+
+}
+.gallery p{
+  font-size: 100%;
+
+}
+
+aside{
+  
+  background-color: rgba(0,0,1,0.5);
+  position: relative;
+  clear: both;
+  display: block;
+  width: 80%;
+  height: auto;
+  border-radius: 15%;
+  padding:0.6%;
+  margin: auto;
+
+}
+.login{
+display: block;
+
+
+}
+.login h4{
+  font-family: Helvetica;
+  font-weight: bold;
+  color:white;
+  text-align: center;
+}
+#user,#psw
+{
+  width: 50%;
+  
+  
+}
+#user
+{
+  margin-left: 12.5%;
+
+}
+#blog{
+  clear: both;
+  float:center;
+  position: relative;
+  border-radius: 15%;
+  margin-left: 70%;
+}
+
+.login label{
+  margin-left: 3%;
+  margin-right:2%;
+  color:white;
+  font-weight: bold;
+
+}
+
+
+.login input{
+
+margin-right:0.5rem;
+
+}
+
+footer{
+  width: 100%;
+  bottom: 0;
+  position: relative;
+  padding-top: 0;
+  clear:both;
+  margin: auto;
+
+
+}
+
+footer img{
+  width: 100%;
+  position: relative;
+  margin: auto;
+  overflow: inherit;
+
+}
