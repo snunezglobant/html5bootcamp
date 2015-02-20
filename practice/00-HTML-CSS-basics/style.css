@@ -12,21 +12,21 @@ a.simple{border:0 !important;float:left;display:block;margin-right:20px}
 h1 a{color:inherit !important}
 h2,p{margin:1.75em 0}
 .header{background:blue;color:white;margin:0;padding:1.75em 0, font-size:46px;}
-nav a:link{color:white}
-nav a:visited{color:white}
+.navigation a:link{color:white}
+.navigation a:visited{color:white}
 h1{letter-spacing:1em;text-align:center;margin:0}
 h2{text-align:center;font-size:medium;line-height:2.154}
-article header,section header{background:white;color:black;margin:0;padding:0}
-article h1,section h1{letter-spacing:0;text-align:left;margin:1.75em 0}
+article header,.content header{background:white;color:black;margin:0;padding:0}
+article h1, .content h1{letter-spacing:0;text-align:left;margin:1.75em 0}
 #arc th,#arc td{list-style:none;margin:0;padding:0}
 #arc th,.r{text-align:right}
 #arc th{padding:0 1.75em 0 0;vertical-align:baseline}
 #arc{border-collapse:collapse}
-footer,.c{text-align:center;clear:both}
+.footer,.c{text-align:center;clear:both}
 time{float:right;font-size:small;margin:2px 0 0 0}
 .review time{float:none;font-size:inherit;margin:inherit}
-nav ul{margin:0;padding:0 1em 0 0;text-align:center}
-nav li{display:inline;padding-left:1em}
+.navigation ul{margin:0;padding:0 1em 0 0;text-align:center}
+.navigation li{display:inline;padding-left:1em}
 dt{clear:left;float:left;width:8em}
 dd{margin-left:8em}
 address{font-style:normal}
