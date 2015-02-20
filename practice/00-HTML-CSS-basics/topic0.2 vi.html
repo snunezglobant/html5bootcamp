@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+ <header>
+  <charset meta="UTF-8">
+  <title>Sign up</title>
+
+  <meta name="description" content="Topic 0 , Excercise 2: Metatags, viewport tag and W3C validator">
+  <meta name="keywords" content="Sign up Form">
+  <meta name="author" content="Gabriel Masclef">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+ </header>
+
+ <body>
+  <!--first name, last name, email, birthday, choise sports, biographie-->
+   <form id="sign-up" action="script.php" method="post">
+    <ul>
+     <li><label for="first-name">First Name:</label> <input type="text" name="first-name" id="first-name" value="" autofocus required/></li>
+     <li><label for="last-name">Last Name:</label> <input type="text" name="last-name" id="last-name" value="" required/></li>
+     <li><label for="email">Email:</label> <input type="email" name="email" id="email" value="" required/></li>
+     <li><label for="birthday">Date of birth:</label><input type="date" name="birthday" id="birthday" required/></li>
+     <li><label for="sports">Choose your favourite sport:</label>
+      <select name="sports" id="sports" required>
+          <option value="">Select sport</option>
+          <option value="basketball">Basketball</option>
+          <option value="cycling">Cycling</option>
+          <option value="fishing">Fishing</option>
+          <option value="football">Football</option>
+          <option value="golf">Golf</option>
+          <option value="hockey">Hockey</option>
+          <option value="running">Running</option>
+          <option value="soccer">Soccer</option>
+          <option value="other">Other</option>
+        </select></li>
+       <li><label for="biography">Biography:</label> <textarea name="biography" id="biography" cols="30" rows="4"></textarea></li>
+     <li>
+      <input type="reset" value="reset">
+      <input type="submit" value="submit">
+     </li>    
+
+    </ul>
+   </form>
+ </body>
+</html>

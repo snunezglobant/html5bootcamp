@@ -1,0 +1,23 @@
+*{
+ color: orange;
+ font-size : 90%;
+ font-family: "times new roman";
+}
+#header {
+ background-color: #500;
+ text-align: center;
+}
+#footer {
+ text-align: center;
+ background-color: #500;
+}
+#aside {
+ background-color: #500;
+}
+#nav {
+ background-color: #500;
+}
+
+
+y #idDelElmento es para un id en particular
+[13:08:56] Gabriel Bazán: ok jajaja
