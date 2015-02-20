@@ -1,0 +1,30 @@
+code {
+  background: rgb(255,255,77);
+  border-radius: 6px;
+  color: rgb(0,0,0);
+  display: block;
+  font: 14px/24px "Source Code Pro", Inconsolata, "Lucida Console", Terminal, "Courier New", Courier;
+  padding: 24px 15px;
+  
+}
+header,
+section,
+aside,
+footer {
+  margin: 0 1.5% 24px 1.5%;
+}
+#section {
+  display: none;
+  float: left;
+  width: 45%;
+  text-align: center;
+}
+aside {
+  float: right;
+  width: 45%;
+
+}
+footer {
+  clear: both;
+  margin-bottom: 0;
+}

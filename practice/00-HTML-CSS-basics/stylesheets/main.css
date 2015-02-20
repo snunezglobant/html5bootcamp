@@ -1,0 +1,77 @@
+code {
+  
+  border-radius: 6px;
+  color: rgb(0,0,0);
+  display: block;
+  padding: 24px 15px;
+  text-align: center;
+}
+.body{
+  background: rgb(40,40,40);
+}
+header,
+nav,
+section,
+article,
+aside,
+footer {
+  margin: 1.5% 1.5% 23px 1.5%;
+}
+.header{
+  font-size: 46px;
+}
+.footer{
+  font-size: 10px;
+}
+.content{
+  background: rgb(120,120,120);
+  font-size: 14px;
+  float: left;
+  width: 30%;
+}
+.navigation{
+  font-size: 12px;
+  background: rgb(120,120,120);
+  border-radius: 6px;
+  float: left;
+  width: 30%;
+  height: 240px;
+}
+.sidebar{
+  font-size: 10px;
+  background: rgb(120,120,120);
+  border-radius: 6px;
+  float: right;
+  width: 30%;
+  height: 240px;  
+}
+
+#color{
+  background: magenta;
+}
+
+.content header{
+  background: rgb(192,192,192);
+  border-radius: 5px;
+  padding: 5px 1px;
+}
+.content article{
+  background: rgb(192,192,192);
+  border-radius: 5px;
+  padding: 24px 15px;
+}
+.content footer{
+  background: rgb(192,192,192);
+  border-radius: 5px;
+  padding: 5px 1px;
+}
+.ctype1{
+  background: rgb(255,0,);
+}
+#bot{
+  font-size: 82.5%;
+}
+footer {
+  clear: both;
+  margin-bottom: 0;
+}

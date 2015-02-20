@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Globant Bootcamp</title>
+  <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css">
+  <link rel="stylesheet" type="text/css" href="stylesheets/main.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script>
+    function show() {
+      $("#section").fadeIn(6000);
+    }
+  </script>
+
+</head>
+<body onload ="show()">
+ <header>
+	<code>Parte superior</code>
+  </header>
+  <section id="section">
+    <code>
+	    <p id="p">Hello World!</p>
+    </code>
+  </section>
+  <aside>
+	  <code><p>aside</p></code>
+	</aside>
+  <footer>
+    
+    <code>
+      <button>Click
+      
+    </button>
+
+	</code>
+  </footer>
+</body>
+ <script>
+   var button = document.querySelector("button");
+   button.addEventListener("click", function() {
+   var req = new XMLHttpRequest();
+   req.open("GET", "http://bootcamp.aws.af.cm/welcome/yourname", false);
+   req.send(null); 
+   document.getElementById("p").innerHTML=req.responseText;
+   });
+ </script>
+</html>
