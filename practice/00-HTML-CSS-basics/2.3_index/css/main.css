@@ -2,8 +2,13 @@ html{
 	font-family: Courier;
 	font-size: 1rem;
 }
-#Content{	
-	background-color: #323232;		
+[class$="r"]{
+ background-color: #FF00FF;
+}
+[class*="a"]:not([class$="r"]) { 
+	background-color: blue;
+}
+#Section{			
 	width: 45rem;
 	height: 31rem;
 	color: white;
@@ -11,8 +16,8 @@ html{
 	padding: 0.07rem;
 	margin: 1rem;	
 }
-#Header{	
-	background-color: #696969;			
+.Header{
+	font-size: 3.28rem;					
 	margin: 1rem auto;
 	vertical-align: middle;
 	height: 3rem;
@@ -21,9 +26,9 @@ html{
 	border-radius: 1rem 1rem 1rem 1rem;
 	
 }
-#Nav{	
-	height: 20rem;
-	background-color: #696969;
+.Navigation{	
+	font-size: 0.86rem;
+	height: 20rem;	
 	text-align: center;	
 	margin-left: 1rem;	
 	float: left;
@@ -32,9 +37,9 @@ html{
 	
 }
 
-#Aside{
-	height: 20rem;
-	background-color: #696969;
+.Sidebar{
+	font-size: 0.714rem;
+	height: 20rem;	
 	text-align: center;	
 	margin-right: 1rem;	
 	float: right;
@@ -42,9 +47,9 @@ html{
 	border-radius: 1rem 1rem 1rem 1rem;
 	
 }
-#Section1{
-	height: 20rem;
-	background-color: #696969;
+.Content{
+	font-size: 1rem;
+	height: 20rem;	
 	text-align: center;	
 	margin-top:1rem;
 	margin-left: 10rem;
@@ -54,33 +59,33 @@ html{
 	border-radius: 1rem 1rem 1rem 1rem;
 		
 }
-#Header1{		
-	margin: 1rem;
-	background-color: #c3c3c3;
+#Header1{	
+	background-color: #696969;	
+	margin: 1rem;	
 	height: 3rem;
 	border-radius: 1rem 1rem 1rem 1rem;
 	
 }
-#Article{		
+#Article{	
+	background-color: #696969;	
 	padding-top: 1rem;
 	padding-bottom: 1rem;
-	margin: 1rem;
-	background-color: #c3c3c3;
+	margin: 1rem;	
 	height: 7rem;
 	border-radius: 1rem 1rem 1rem 1rem;
 	
 }
 #Footer1{	
-	margin: 1rem;
-	background-color: #c3c3c3;
+	background-color: #696969;
+	margin: 1rem;	
 	height: 3rem;
 	border-radius: 1rem 1rem 1rem 1rem;
 
 }
-#Footer{		
+.Footer{	
+	font-size: 0.714rem;	
 	margin: 1rem;
-	vertical-align: middle;
-	background-color: #696969;
+	vertical-align: middle;	
 	height: 3rem;
 	text-align: center;
 	border-radius: 1rem 1rem 1rem 1rem;

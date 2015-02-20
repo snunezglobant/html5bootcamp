@@ -1,0 +1,135 @@
+#Container{
+	width: 83rem;
+	height: 50rem;
+}
+
+.col2{
+	position: absolute;
+	width: 15rem;
+	height: 50rem;	
+	left: 15.6rem;
+}
+.col3{
+	position: absolute;
+	width: 15rem;
+	height: 50rem;	
+	left: 30.8rem;
+}
+.col4{
+	position: absolute;
+	width: 15rem;
+	height: 50rem;	
+	left: 46rem;
+}
+.col5{
+	position: absolute;
+	width: 15rem;
+	height: 50rem;	
+	left: 61.2rem;
+}
+
+#cont{
+	display: table;
+	border-spacing: 0.357rem;	
+	position: relative;
+	top: 5rem;
+}
+#container>.cont2{
+	top:10rem;
+}
+#content{
+	display: table-row;
+}
+#coltable1, #coltable2 {
+	font-size:1rem;
+  	display: table-cell;
+  	width: 20%;
+}
+
+#coltable1>header{
+	margin-left: 5rem;
+}
+
+#coltable2>article{
+	margin-left: -11rem;
+	text-align: justify;
+	
+}
+
+a{
+	text-decoration: none;
+	color: black;
+}
+a:hover{
+	text-decoration: underline;
+}
+#head{
+	font-size:1.4rem;
+	margin-left: -6rem;
+}
+#head2{
+	font-size:1rem;
+	margin-left: 10rem;
+	display: inline;
+}
+.images1{	
+	position: relative;
+	top: 15rem;
+}
+.images1 article{
+	float: left;
+}
+
+#art1{
+	margin-left: 7rem;
+}
+
+#art2{
+	margin-left: 5rem;
+}
+
+#art3{
+	margin-left: 5rem;
+}
+
+.screen:hover {
+	opacity: 1;
+}
+.screen {
+	background-color: rgba(0,0,0,0.5);
+	top: 0;
+	border-radius: 0;
+	height: 10.5rem;
+	width: 18.7rem;
+	position: absolute;
+	opacity: 0;
+	z-index: 1000;	
+	transition: all 0.3s ease-in-out;
+}
+
+.screen:hover .title {
+	margin-left: 0;
+}
+.title {
+	color: #fff;		
+	transition: all 0.3s ease-in-out;
+	margin-left: -3rem;
+}
+.title p {
+	font-size: 2em;
+	padding: 5%;
+}
+
+.one{
+	left: 7rem;
+}
+.two{
+	left: 30.8rem;
+}
+.three{
+	left: 54.5rem;
+}
+
+.fil2{
+	top: 10.8rem;
+}
