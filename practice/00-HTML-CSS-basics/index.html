@@ -29,9 +29,11 @@
                 color: #000 ;
                 font-family: Andale%20Mono;}
 
-            input[class$="r"]{
+            [class$="r"]{
                 background-color:magenta;}
-            
+
+            [class*="a"]:not([class$="r"]) { background-color: blue;
+            }
             
 
 
