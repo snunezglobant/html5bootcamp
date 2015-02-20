@@ -1,0 +1,150 @@
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html{
+ 	font-family: Arial, Helvetica, sans-serif;
+ 	font-size: 14px; 
+ 	color: black;
+}
+body{
+
+	background: black;
+	margin: 0 auto;
+}
+
+header {
+	
+	text-align: center;
+	background: #000000;
+	
+}
+
+footer{
+	color: white;
+	text-align: center;
+	background: #000000;
+
+}
+
+aside{
+	
+	background: #blue;
+}
+
+nav{
+	background: #blue;
+}
+
+h2{
+	color:white;
+}
+
+article{
+	text-align: center;
+}
+
+a{
+	color: black;
+}
+
+
+.header{
+	border-radius: 10px;
+	display: block;
+	font-size: 46px;
+	margin: 10px auto;
+	text-align: center;
+}
+
+.footer {
+	border-radius: 10px;
+	display: block;
+	color: #FFFFFF;
+	font-size: 10px;
+	
+}
+
+.navigation {
+	display: inline-block;
+	position: relative;
+	width: 24%;
+	font-size: 12px;
+	height: 400px;
+	border-radius: 10px;
+	vertical-align: top;
+	margin-bottom: 10px;
+}
+
+.content{
+	background: grey;
+	display: inline-block;
+	position: relative;
+	height: 400px;
+	width: 51%;
+	font-size: 14px;
+	border-radius: 10px;
+	vertical-align: top;
+	margin-bottom: 10px;
+} 
+
+.sidebar{
+	display: inline-block;
+	position: relative;
+	width: 24%;
+	height: 400px;
+	font-size: 10px;
+	border-radius: 10px;
+	vertical-align: top;
+	margin-bottom: 10px;
+}
+
+.sidebar img{
+		
+	display: block;
+    margin:  0 auto;
+	text-align: center;
+
+}
+[class*="a"]{
+  background-color: blue;
+ 
+}
+
+[class$="r"]{
+ background-color: magenta;
+}
+
+
+@media screen  and (max-width:768px){
+		.header{
+			display: block;
+			margin: 0px auto;
+			font-size: 14px;
+		}
+		.content{
+			display: block;
+			margin: 0px auto;
+			width: auto;
+			height: auto;
+		}
+		.navigation{
+			display: block;
+			width: inherit;
+			height:auto;
+		}
+		.sidebar{
+			display: block;
+			width: auto;
+			height:auto;
+			font-size: 10px;
+		}
+		.footer{
+			display: block;
+			width: auto;
+			font-size: 6px;
+		}
+
+}
