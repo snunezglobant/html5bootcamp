@@ -1,0 +1,42 @@
+            
+            body 
+                {background-color:lightgray;
+                    display: block; }
+
+            
+            .header{background-color:darkgray;
+                text-align: center;
+                 font-size: 46px;
+                 display: block; }
+            footer {
+                background-color:darkgray;
+                text-align: center;
+                 font-size: 10px;
+                 display: block; }
+            
+            #href{background-color:black;
+                display: block; }
+            h1 {color:black;}
+            p{color:black;}
+            .aside{
+                background-color:red;
+                font-size: 10px;
+                display: block; }
+
+            nav{
+                background-color:gray; 
+                font-size: 12px;
+                display: block}
+            #navigation{background-color: gray}
+            .html *{
+                font-size: 14px; 
+                color: #000 ;
+                font-family: Andale%20Mono important!;
+                display: block;}
+
+            [class$="r"]{
+                background-color:magenta;}
+
+            [class*="a"]:not([class$="r"]) { background-color: blue;}        
+
+
