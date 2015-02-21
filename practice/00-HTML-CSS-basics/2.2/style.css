@@ -1,16 +1,17 @@
-html{color:black;
-	font-family: Andale%20Mono;
+html{
+	font-family: Courier;
+	font-size: 1rem;
 }
-
-#Section{	
+#Content{	
 	background-color: lightgray;		
 	width: 45rem;
 	height: 31rem;
+	color: white;
 	border-radius: 1rem 1rem 1rem 1rem;
 	padding: 0.07rem;
 	margin: 1rem;	
 }
-#header1{	
+#Header{	
 	background-color: darkgray;			
 	margin: 1rem auto;
 	vertical-align: middle;
@@ -20,7 +21,7 @@ html{color:black;
 	border-radius: 1rem 1rem 1rem 1rem;
 	
 }
-#navigation{	
+#Nav{	
 	height: 20rem;
 	background-color: darkgray;
 	text-align: center;	
@@ -31,9 +32,9 @@ html{color:black;
 	
 }
 
-#sidebar{
+#Aside{
 	height: 20rem;
-	background-color: darkgray;
+	background-color: drakgray;
 	text-align: center;	
 	margin-right: 1rem;	
 	float: right;
@@ -41,9 +42,9 @@ html{color:black;
 	border-radius: 1rem 1rem 1rem 1rem;
 	
 }
-#sectiona{
+#Section1{
 	height: 20rem;
-	background-color: darkgray;
+	background-color: drakgray;
 	text-align: center;	
 	margin-top:1rem;
 	margin-left: 10rem;
@@ -53,35 +54,34 @@ html{color:black;
 	border-radius: 1rem 1rem 1rem 1rem;
 		
 }
-#header2{		
+#Header1{		
 	margin: 1rem;
-	background-color: lightgray;
+	background-color: gray;
 	height: 3rem;
 	border-radius: 1rem 1rem 1rem 1rem;
 	
 }
-#article{		
+#Article{		
 	padding-top: 1rem;
 	padding-bottom: 1rem;
 	margin: 1rem;
-	background-color: lightgray;
+	background-color: gray;
 	height: 7rem;
 	border-radius: 1rem 1rem 1rem 1rem;
 	
 }
-#footer2{	
+#Footer1{	
 	margin: 1rem;
-	background-color: lightgray;
+	background-color: gray;
 	height: 3rem;
 	border-radius: 1rem 1rem 1rem 1rem;
 
 }
-#footer1{		
+#Footer{		
 	margin: 1rem;
 	vertical-align: middle;
 	background-color: darkgray;
-	height: 2rem;
-	width: 43rem;
+	height: 3rem;
 	text-align: center;
 	border-radius: 1rem 1rem 1rem 1rem;
 	
