@@ -1,0 +1,26 @@
+body{
+
+	width: 80%;
+	margin: auto;
+}
+
+section{
+	margin: auto;
+	background-color: lightblue;
+	display: none;
+
+}
+
+
+h1{
+
+	font-size: 3rem;
+	text-align: center;
+
+
+}
+button{
+	position:relative;
+	margin-left: 50%;
+
+}
