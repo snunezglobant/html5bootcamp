@@ -1,17 +1,17 @@
-html{
-	font-family: Courier;
+html{color:black;
+	font-family: Andale%20Mono;
 	font-size: 1rem;
 }
-#Content{	
+
+#Section{	
 	background-color: lightgray;		
 	width: 45rem;
 	height: 31rem;
-	color: white;
 	border-radius: 1rem 1rem 1rem 1rem;
 	padding: 0.07rem;
 	margin: 1rem;	
 }
-#Header{	
+#header1{	
 	background-color: darkgray;			
 	margin: 1rem auto;
 	vertical-align: middle;
@@ -21,7 +21,7 @@ html{
 	border-radius: 1rem 1rem 1rem 1rem;
 	
 }
-#Nav{	
+#navigation{	
 	height: 20rem;
 	background-color: darkgray;
 	text-align: center;	
@@ -32,9 +32,9 @@ html{
 	
 }
 
-#Aside{
+#sidebar{
 	height: 20rem;
-	background-color: drakgray;
+	background-color: darkgray;
 	text-align: center;	
 	margin-right: 1rem;	
 	float: right;
@@ -42,9 +42,9 @@ html{
 	border-radius: 1rem 1rem 1rem 1rem;
 	
 }
-#Section1{
+#sectiona{
 	height: 20rem;
-	background-color: drakgray;
+	background-color: darkgray;
 	text-align: center;	
 	margin-top:1rem;
 	margin-left: 10rem;
@@ -54,34 +54,35 @@ html{
 	border-radius: 1rem 1rem 1rem 1rem;
 		
 }
-#Header1{		
+#header2{		
 	margin: 1rem;
-	background-color: gray;
+	background-color: lightgray;
 	height: 3rem;
 	border-radius: 1rem 1rem 1rem 1rem;
 	
 }
-#Article{		
+#article{		
 	padding-top: 1rem;
 	padding-bottom: 1rem;
 	margin: 1rem;
-	background-color: gray;
+	background-color: lightgray;
 	height: 7rem;
 	border-radius: 1rem 1rem 1rem 1rem;
 	
 }
-#Footer1{	
+#footer2{	
 	margin: 1rem;
-	background-color: gray;
+	background-color: lightgray;
 	height: 3rem;
 	border-radius: 1rem 1rem 1rem 1rem;
 
 }
-#Footer{		
+#footer1{		
 	margin: 1rem;
 	vertical-align: middle;
 	background-color: darkgray;
-	height: 3rem;
+	height: 2rem;
+	width: 43rem;
 	text-align: center;
 	border-radius: 1rem 1rem 1rem 1rem;
 	
