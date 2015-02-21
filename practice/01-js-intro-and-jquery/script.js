@@ -1,12 +1,12 @@
 $(document).ready(function(){
 
-	$('.alias').focus(function(){
+	$('section').fadeIn('slow', function(){
 
-			$('section').fadeIn(3000);
+			$('.alias').focus();
 		});
 
+
 	/*
-	
 	$('button').click( function(){
 		$.ajax('http://bootcamp.aws.af.cm/welcome/yourname',
 
