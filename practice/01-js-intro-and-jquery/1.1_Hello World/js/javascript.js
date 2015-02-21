@@ -1,0 +1,1 @@
+$("section").fadeIn(2000);
