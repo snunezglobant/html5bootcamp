@@ -1,1 +1,1 @@
-$("section").hide("slow");
+$("section").fadeIn(2000);
