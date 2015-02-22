@@ -1,5 +1,5 @@
 html{color:black;
-	font-family: Andale%20Mono;
+	font-family: sans-serif;
 	font-size: 1rem;
 }
 
@@ -21,6 +21,9 @@ html{color:black;
 	width: 43rem;
 	border-radius: 1rem 1rem 1rem 1rem;
 	
+}
+.oh-no-inline-style{
+	background-color: green important!;
 }
 .navigation{	
 	height: 20rem;

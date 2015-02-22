@@ -1,8 +1,17 @@
 html{color:black;
-	font-family: Andale%20Mono;
-	font-size: 1rem;
+    font-size: 1rem;
 }
 
+body {
+    padding: 2rem 1rem 2rem 5rem;
+    margin: 1rem 2rem 3rem;
+    font-family: sans-serif;
+    color: black;
+    background: white;
+    background-position: top left;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
 #Section{	
 	background-color: lightgray;		
 	width: 45rem;
@@ -22,8 +31,8 @@ html{color:black;
 	border-radius: 1rem 1rem 1rem 1rem;
 	
 }
-.inline style
-bak red
+
+
 .navigation{	
 	height: 20rem;
 	background-color: darkgray;
@@ -95,9 +104,4 @@ bak red
 	
 }
 
- [class$="r"]{
-    background-color:magenta;
-}
-
- [class*="a"]:not([class$="r"]) { background-color: blue;
- } 
+ 
