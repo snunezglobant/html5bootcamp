@@ -20,7 +20,7 @@ function getResponse(){
     })
     .always(function(){
       $('section').removeClass('hidden');
-      $('section').append("<span id=" + "completed" + ">(Operation complete)</span>");
+      $('section').append("<span id=\"completed\">(Operation complete)</span>");
     });
 }
 
