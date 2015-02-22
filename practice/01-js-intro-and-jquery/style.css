@@ -5,22 +5,25 @@ body{
 }
 
 section{
+	text-align: center;
+	font-size: 5rem;
 	margin: auto;
-	background-color: lightblue;
 	display: none;
 
 }
 
-
-h1{
-
-	font-size: 3rem;
-	text-align: center;
-
-
-}
 button{
 	position:relative;
 	margin-left: 50%;
 
 }
+
+article{
+	margin-right: 3rem;
+
+	text-align: right;
+	font-size: 5rem;
+
+}
+
+.highlight { background-color: yellow }
