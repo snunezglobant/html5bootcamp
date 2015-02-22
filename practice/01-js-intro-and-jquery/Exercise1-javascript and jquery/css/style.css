@@ -16,3 +16,35 @@ section>article>p{
 #hidden{
 	visibility: hidden;
 }
+
+.highlighttext{
+	background: yellow;
+}
+
+.highlight{
+	background-color: yellow;
+}
+
+#spotifyalbum{
+	display: none;
+	border: solid;
+	height: 40rem;
+	width: 40rem;
+	float: left;
+}
+#spotifyart{
+	display: none;
+	border: solid;
+	height: 20rem;
+	width: 40rem;
+	float: right;
+
+}
+
+dl>dt{
+	color: blue;
+}
+
+dl>dd{
+	color: green;
+}
