@@ -6,7 +6,7 @@
 		<script type="text/javascript" src="js/jquery-2.1.3.js"></script>
 		<script type="text/javascript" src="js/scripts.js"></script>
 	</head>
-	<body onload="hidden">
+	<body onload="hidesection();">
 		<header>
 			<p>
 				AIKIDO
@@ -29,12 +29,68 @@
 		<br>
 		<br>
 		<section id="button">
-			<input type="text" name="alias" class="alias" />
+			<input type="text" name="alias" class="alias" id="alias" />
 		</section>
-		<br>
 		<br>
 		<section id="button">
 				<input type="button" id="acept" name="acept" value="GET A RESPONSE"/>	
+		</section>
+		<br>
+		<section>
+			<section id="button">
+				<label>
+					INSERT AN ARTIST OR A BAND
+				</label>
+				<input type="text" name="artband" id="artband" />
+				<input type="button" id="getres" name="getres" value="GET A SPOTIFY RESPONSE"/>
+			</section>
+			<br>
+			<section id="spotifyalbum">
+				<label>
+					ALBUM IMAGE
+				</label>
+			</section>
+			<article id="spotifyart">
+				<label>
+					ALBUM DESCRIPTION
+				</label>
+				<dl>
+					<dt>
+						NAME:
+					</dt>
+					<dd id="albumname">
+						
+					</dd>
+
+					<dt>
+						ALBUM TYPE:
+					</dt>
+					<dd id="album_type">
+						
+					</dd>
+
+					<dt>
+						TYPE:
+					</dt>
+					<dd  id="albumtype">
+						
+					</dd>
+
+					<dt>
+						SPOTIFY LINK:
+					</dt>
+					<dd >
+						<a  id="albumlink">
+							
+						</a>
+					</dd>
+
+				</dl>
+			</article>
+			<br>
+			<br>
+			<br>
+			<br>
 		</section>
 		<footer>
 			
