@@ -1,43 +1,43 @@
 textarea{
-width: 1050px;
-height: 50px;
+width: 65rem;
+height: 15rem;
 }
 
 html{
 	background-color: #E6E6E6;
 }
 .one{
-width: 500px;
+width: 32rem;
 }
 
 .first{
 	display: inline-block;
-	margin-bottom: 20px;
+	margin-bottom: 1rem;
 
 }
 
 .second{
 	display: inline-block;
-	margin-bottom: 20px;
-	margin top: 20px;
+	margin-bottom: 1rem;
+	margin top: 1rem;
 }
 
 select{
-	width: 200px;
+	width: 14rem;
 }
 
 article{
-border-spacing: 20px;
-margin-right: 30px;
+border-spacing: 1rem;
+margin-right: 2rem;
 }
 
 #birthday{
-	width:260px;
+	width:15rem;
 }
 
 #button{
-	margin-top: 30px;
-	margin-left: 500px;
+	margin-top: 2rem;
+	margin-left: 32rem;
 }
 
 .title{
