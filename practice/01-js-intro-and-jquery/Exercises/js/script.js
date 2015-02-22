@@ -2,25 +2,30 @@ $(document).ready( function() {
   $('section').fadeIn('slow', function() {
     $('.alias').focus();
   });
-  $('#submit').click(getResponse, function(){
-    //highlight name function
-  });
+  $('#submit').click(getResponse);
 });
 
 function getResponse(){
-	var bootcampAPI = "http://bootcamp.aws.af.cm/welcome/" + $('.alias').val();
+  var name = $('.alias').val();
+	var bootcampAPI = "http://bootcamp.aws.af.cm/welcome/" + name;
 	$.getJSON (bootcampAPI, {
 	})
 	.done(function( data ) {	
-      $('section').html("<span id=" + "greeting" + ">" + data.response + "</span>");
-      $('section').removeClass('hidden');
+      var strResponse = data.response;      
+      $('section').html("<span id=\"greeting\">" + strResponse + "</span>");
+      highlightName();
     })  
     .fail(function() {
-      $('section').html("<span id=" + "error" + ">Sorry, server error!</span>");
-      $('section').removeClass('hidden');      
+      $('section').html("<span id=\"error\">Sorry, server error!</span>");
     })
     .always(function(){
+      $('section').removeClass('hidden');
       $('section').append("<span id=" + "completed" + ">(Operation complete)</span>");
     });
-    highlightName();
+}
+
+function highlightName(){
+  var name = $('.alias').val();
+  var highlighted = $('#greeting').html().replace(name, "<span style=\"color: lightblue;\">" + name + "</span>");
+  $('#greeting').html(highlighted);
 }
