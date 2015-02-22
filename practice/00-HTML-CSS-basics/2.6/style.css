@@ -1,5 +1,5 @@
 html{color:black;
-	font-family: Arial;
+	font-family: sans-serif;
 	font-size: 1rem;
 }
 
@@ -58,7 +58,7 @@ a:hover{
 }
 #header{
 	font-size:1.4rem;
-	margin-left: -6rem;
+	margin-left: 3rem;
 }
 #header2{
 	font-size:1rem;
@@ -125,7 +125,7 @@ a:hover{
 }
 
 .fil2{
-	top: 10.8rem;
+	top: 10.8rem;nce
 }
 
 #normal {
@@ -137,6 +137,12 @@ a:hover{
 }
 
 #header3{
-    font-size: 5rem;margin: 3rem;
+    font-size: 3rem;margin: 3rem;
 
+}
+@media (max-width : device-width) {
+#container{
+background-color: transparent;
+width: 29rem;
+height: 61.5rem;
 }
