@@ -6,7 +6,7 @@ body{
 
 section{
 	text-align: center;
-	font-size: 5rem;
+	font-size: 4rem;
 	margin: auto;
 	display: none;
 
@@ -14,16 +14,36 @@ section{
 
 button{
 	position:relative;
-	margin-left: 50%;
+	margin-left: 10%;
 
 }
 
 article{
-	margin-right: 3rem;
-
-	text-align: right;
-	font-size: 5rem;
+	border: .3rem;
+	margin:auto;
+	font-size: 1rem;
 
 }
 
 .highlight { background-color: yellow }
+
+#albumes{
+	margin-top: 4rem;		
+	width: 80%;
+	list-style: none;
+	
+
+}
+
+#albumes li{
+
+	margin-bottom: 2rem;
+}
+
+#albumes li img{
+	margin-left:5%;
+	border:2px solid black;
+	width: 7rem;
+
+
+}
