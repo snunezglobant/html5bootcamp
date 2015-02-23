@@ -4,7 +4,7 @@
    <head>
       <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <title>Fade in</title>
+      <title>Event attached</title>
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <link rel="stylesheet" href="css/normalize.css">
       <link rel="stylesheet" type="text/css" href="css/style.css">
@@ -37,15 +37,20 @@
         <p>
           <input type="text" class="alias"  required="true"/>
         </p>
-        <button type="#"/>Button</button>  
+        <button id="b_event"type="#"/>Button</button>  
           
       </div>
 
       <script type="text/javascript">
   	  $(document).ready(function(){        
-        $("#hidden").fadeIn("slow",function(){
-        $(".alias").focus(); }); 
-		    });
+         $("#b_event").click(function(){
+
+           $.ajax({url: "http://bootcamp.aws.af.cm/welcome/yourname", 
+           success:function(response) { 
+              console.log(response);}
+           });
+		     });
+       });
       </script>	
    </body>
 </html>
