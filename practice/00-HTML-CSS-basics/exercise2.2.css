@@ -98,29 +98,66 @@ body {
 	margin: auto;
 }
 
-header {
-	width: 1000px;
-}
-
-nav {
-	width: 250px;
-}
-
-div {
-	width: 500px;
-}
-
-aside {
-	width: 250px;
-}
-
-footer {
-	width: 1000px;
-}
-
-header, nav, div, aside, footer {
-	border: 2px solid red;
-	float: left;
+.header {
+	width: 100%;
+	background-color: #ff00ff;
 	height: 250px;
+}
+
+.navigation {
+	width: 250px;
+	background-color: blue;
+	height: 250px;
+}
+
+.sectionContainer{
+	width: 500px;
+	height: 250px;
+}
+
+.section {
+	width: 500px;
+	background-color: blue;
+	height: 150px;
+}
+
+.sidebar {
+	width: 250px;
+	background-color: #ff00ff;
+	height: 250px;
+}
+
+.footer {
+	width: 100%;
+	background-color: #ff00ff;
+	height: 250px;
+}
+
+.sectionfooter{
+	height: 80px;
+	background-color: #ff00ff;
+}
+
+.sectionheader{
+	background-color: #ff00ff;
+	height: 80px;
+}
+
+.sectionarticle {
+	height:84px;
+	background-color: blue;
+
+}
+
+.header, .navigation, .section, .sidebar, .footer, .sectionContainer {
+	border: 2px solid red;
+	border-radius: 2px;
+	float: left;
+	box-sizing: border-box;
+}
+
+.sectionfooter, .sectionheader, .sectionarticle {
+	width: 500px;
+	border: 2px solid blue;
 	box-sizing: border-box;
 }
