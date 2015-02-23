@@ -3,6 +3,7 @@ $(document).ready( function() {
     $('.alias').focus();
   });
   $('#submit').click(getResponse);
+  //get spotify api response
 });
 
 function getResponse(){
@@ -26,6 +27,8 @@ function getResponse(){
 
 function highlightName(){
   var name = $('.alias').val();
-  var highlighted = $('#greeting').html().replace(name, "<span style=\"color: lightblue;\">" + name + "</span>");
+  var highlighted = $('#greeting').html().replace(name, "<span class=\"highlighted\">" + name + "</span>");
   $('#greeting').html(highlighted);
 }
+
+//spotify api response

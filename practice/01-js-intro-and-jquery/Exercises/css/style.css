@@ -33,3 +33,7 @@ span:before{
   font-size: 0.7rem;
   color: green;
 }
+
+.highlighted {
+  color: lightblue;
+}
