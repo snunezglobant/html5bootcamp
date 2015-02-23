@@ -1,0 +1,29 @@
+#section {
+    visibility: hidden;
+}
+.text{
+	width: 10rem;	
+}
+#albumimg{
+	margin-top: 1rem;
+	max-width: 20rem;
+	max-height: 20rem;
+	width: auto;
+	height: auto;
+	float: left;	
+}
+#description{
+	margin-top: 1rem;
+	margin-right: 10rem;
+	float: right;
+	
+}
+button{
+	width: 6rem;
+	height: 2rem;
+	border-radius: 1rem;
+}
+#contentalbum{
+	visibility: hidden;
+}
+
