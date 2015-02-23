@@ -1,0 +1,104 @@
+*, *::before, *::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: arial, sans-serif, helvetica;
+    font-size: 12px;
+}
+
+#container{
+    display: block;
+    width: 100%;
+    padding: 5px;
+    float: left;
+}
+
+header{
+    float: left;
+    display: block;
+    width: inherit;
+    height: 4em;
+    padding: 5px 10px;
+    border: 5px;
+    background: brown;
+        /*url(http://4.bp.blogspot.com/-02GX6kHJr98/Tlz0ZpZ3GBI/AAAAAAAAJls/Dhpk2dR3CJw/s320/diary4.jpg);*/
+    background-repeat: repeat-x;
+    font-size: 30px;
+    text-align: left;
+    color: white;
+}
+
+nav{
+    //display: inline-block;
+    clear: both;
+    float: left;
+    background: blue;
+        /*url(http://3.bp.blogspot.com/-UMJ76HPwvQU/TrLDPU1BIjI/AAAAAAAAVnQ/FN3nB0BTgcc/s1600/aintno6.jpg);*/
+    width: 25%;
+    height: auto;
+}
+
+section{
+    //display: inline-block;
+    float: left;
+    width: 48%;
+    height: auto;
+    background: aliceblue;
+    border: solid;
+    overflow: auto;
+}
+
+/*section > header{
+    background: #00ff00;
+    color: black;
+}
+
+section > article{
+
+}
+
+section > footer{
+
+}*/
+
+aside{
+    //display: inline-block;
+    float: right;
+    width: 25%;
+    height: 40px;
+    background: blueviolet
+        /*url(http://3.bp.blogspot.com/-2NAcfvh9ZYE/TlrqOgTycjI/AAAAAAAAJac/gOKzu2OWu3Q/s1600/estoyenamor4.jpg);*/
+}
+
+footer{
+    display: block;
+    clear: both;
+    text-align: center;
+    color: white;
+    width: 100%;
+    height: 3em;
+    background: black;
+}
+
+/*************************/
+/*        CLASSES        */
+.screen{
+    position: absolute;
+    opacity: 0;
+    -webkit-transition:all 0.3s ease-in-out;
+    -moz-transition:all 0.3s ease-in-out;
+    -o-transition:all 0.3s ease-in-out;
+    -ms-transition:all 0.3s ease-in-out;
+    transition:all 0.3s ease-in-out;
+}
+
+.screen:hover{
+    opacity: 1;
+}
+
+.title{
+
+}
