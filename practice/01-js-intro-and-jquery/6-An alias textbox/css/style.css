@@ -10,12 +10,14 @@ section{
 
 #hidden{
 
-	visibility: hidden;
+	display: none;
 }
-button{
-	
-	margin-left:auto;
-	margin-right:auto;
-	display:block;
-	margin-top:22%;
-	margin-bottom:0%"}
+
+.wrapper {
+    text-align: center;
+}
+
+.button {
+    position: absolute:
+    top: 50%;
+}
