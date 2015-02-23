@@ -8,16 +8,16 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 </head>
 <body>
-  <header>Header
-  </header>
-  <section id="hidden-section"><p id="resp-p">Hello world!</p>
-    
-  </section>
-  <aside>
-    <button >Boton</button>
-  </aside>
-  <footer> Footer
-  </footer>
+	<header>Header
+	</header>
+	<section id="hidden-section"><p id="resp-p">Hello world!</p>
+		
+	</section>
+	<aside>
+		<button >Boton</button>
+	</aside>
+	<footer> Footer
+	</footer>
 <script type="text/javascript">
 
 $("#hidden-section").hide().fadeIn(200);
@@ -29,7 +29,13 @@ $("#hidden-section").hide().fadeIn(200);
    var req = new XMLHttpRequest();
    req.open("GET", "http://bootcamp.aws.af.cm/welcome/rbazan", false);
    req.send(null); 
-   document.getElementById("resp-p").innerHTML=req.responseText;
-   });
+   req.status=404;
+   if (req.status===200) {
+    document.getElementById("resp-p").innerHTML=req.responseText;
+    }
+    else{
+      document.getElementById("resp-p").style.backgroundColor="red";
+    }
+  });
  </script>
 </body>
