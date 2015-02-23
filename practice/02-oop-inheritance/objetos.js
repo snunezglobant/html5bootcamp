@@ -1,4 +1,5 @@
 
+
 function Movie( title, year ) {
  
   this.title = title;
@@ -25,7 +26,7 @@ function Movie( title, year ) {
 
   this.get =function(){
 
-    return this.title;
+    return this.title+this.year;
   };
 }
 
@@ -46,7 +47,7 @@ var title= "";
 var year = 0;
 
 return {
-  
+
 
   play: function() {
      return( title + " is playing....");
@@ -117,7 +118,7 @@ Movie.prototype.play= function() {
 };
 
 
-function robocopMovie(type){ ///type = si se puede descargar o no
+function downloadableMovie(type){ ///type = si se puede descargar o no
   
   Movie.call(this,"The Terminator", "Descargable");
   this.type=type;
@@ -125,14 +126,61 @@ function robocopMovie(type){ ///type = si se puede descargar o no
 
 }
 
-robocopMovie.prototype=Object.create(Movie.prototype);
-robocopMovie.prototype.download= function(){
+downloadableMovie.prototype=Object.create(Movie.prototype);
+downloadableMovie.prototype.download= function(){
   console.log("Tipo: "+this.type+"  Downloading..."+this.title);
 }
 
 var movie1= new Movie("movie1", 2010);
 var movie2 = new Movie("movie2", 2011);
-var robocop= new robocopMovie("Descargable");
+var movie3= new downloadableMovie("Descargable");
 movie1.play();// movie1 is playing...
 movie2.play();// movie2 is playing...
-robocop.download(); //  Tipo: Descargable  Downloading...The Terminator
+downloadableMovie.download(); //  Tipo: Descargable  Downloading...The Terminator
+
+//MIXIN OBJECTS
+
+function extend(target){
+  if(arguments[1]){
+    return;
+  }
+
+  for (var i , l=arguments.length; i < l; i++) {
+    var source =arguments[i];
+    for(var prop in source) {
+
+      if(!target[prop] && source.hasOwnProperty(prop)){
+
+        target[prop]=source[prop];
+      }
+    }
+  }
+};
+
+
+
+function movie( title ) {
+ 
+  this.title = title;
+};
+
+
+var social ={
+
+
+  like: function(){
+
+    return this.title+"Liked the movie";
+  },
+
+  share: function(name){
+
+    return name+" compartio "+this.title
+  }
+
+};
+
+
+Movie.extend(Social);
+var movie1 = new Movie("MOVIE1");
+extend(Movie, Social);

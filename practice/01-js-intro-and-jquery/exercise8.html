@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Topic 1: JavaScript Intro and jQuery</title>
+  <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css">
+  <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+</head>
+<body>
+	<header>Header
+	</header>
+	<section id="hidden-section"><p id="resp-p">Hello world!</p>
+		
+	</section>
+	<aside>
+		<button >Boton</button>
+	</aside>
+	<footer> Footer
+	</footer>
+<script type="text/javascript">
+
+$("#hidden-section").hide().fadeIn(200);
+
+</script>
+ <script>
+   var button = document.querySelector("button");
+   button.addEventListener("click", function() {
+   var req = new XMLHttpRequest();
+   req.open("GET", "http://bootcamp.aws.af.cm/welcome/rbazan", false);
+   req.send(null); 
+   req.statusText="Not Found";
+   if (req.statusText==="OK") {
+    document.getElementById("resp-p").innerHTML=req.responseText;
+    }
+    else{
+      document.getElementById("resp-p").style.backgroundColor="red";
+    }
+  });
+ </script>
+</body>
