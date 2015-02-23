@@ -1,0 +1,121 @@
+.background {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.85;
+  background-color: #000;
+  z-index: 9;
+}
+
+.movie-list-container {
+  width: 34rem;
+  margin: 4rem auto;
+}
+
+.movie-list {
+  list-style-type: none;
+  margin: 0rem;
+  padding: 0rem;
+}
+
+.blurred {
+  -webkit-transition: all 400ms linear 400ms;
+  transition: all 400ms linear 400ms;
+  -webkit-filter: blur(2px);
+  filter: blur(2px);
+}
+
+.movie-list li {
+  margin: 0rem;
+  padding: 0.6rem 2rem;
+  border-top-style: solid;
+  border-width: 1px;
+  border-color: #888;
+
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.movie-list li:last-child {
+  border-bottom-style: solid;
+}
+
+.movie-list .name {
+  font-size: 1.1rem;
+}
+
+.movie-list .year {
+  font-size: 0.9rem;
+}
+.movie-list .director {
+  font-size: 0.8rem;
+}
+
+.movie-list li:hover {
+  background-color: #caceff;
+}
+
+.movie-list li:active {
+  background-color: #d6daff;
+}
+
+.movie-details-container {
+  opacity: 0;
+}
+
+.movie-details-container.fadein {
+  opacity: 1;
+  -webkit-transition: opacity 400ms;
+  transition: opacity 400ms;
+}
+
+.movie-details {
+  position: fixed;
+  z-index: 10;
+  left: 50%;
+  top: 40%;
+  width: 38rem;
+  height: 17rem;
+  margin-top: -8rem;
+  margin-left: -20rem; /* width/2 + padding/2 */  
+  padding: 1rem;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  background-color: #fff;
+  -webkit-border-radius: 0.4rem;
+  border-radius: 0.4rem;
+
+  -webkit-box-shadow: 0px 0px 20px 2px #000;
+  box-shadow: 0px 0px 20px 2px #000;
+}
+
+.movie-details .poster {
+  float: left;
+  width: auto;
+  height: 17rem;
+  margin-right: 1rem;
+}
+
+.movie-details .name {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.movie-details .genre:not(:last-child)::after {
+  content: " | ";
+  color: grey;
+}
+
+/*
+.movie-details .star:not(:last-child)::after {
+  content: ", ";
+}
+Demonstrated using {{#unless @last}}, {{/unless}}
+*/

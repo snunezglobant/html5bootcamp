@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="underscore-min.js"></script>
+    <script src="backbone-min.js"></script>
+    <script src="backbone.localStorage-min.js"></script>
+    <script src="handlebars-v3.0.0.js"></script>
+    <script src="functions.js"></script>
+    <title>Topic 4: MVC - Backbone</title>
+  </head>
+  <body>
+    <header>
+      <h1>MVC - Backbone</h1>
+    </header>
+    <!-- 1) Write one Handlebars template to show the details of a movie. -->
+    <script id="movie-details-template" type="text/x-handlebars-template">
+      <div class="background"></div>
+      <article class="movie-details">
+        <img class="poster" src="{{imageUrl}}">
+        <p>
+          <span class="name">{{name}}</span>{{#if year}} <span class="year">({{year}}){{/if}}</span>
+        </p>
+        <p class="genres">
+          {{#each genres}}<span class="genre">{{this}}</span>{{/each}}
+        </p>
+        <p class="director">
+          Director: {{#if director}}<a href="{{director.url}}">{{director.name}}{{else}}Not specified.{{/if}}</a>
+          {{!-- alternative: using the with block helper
+          Director: {{#with director}}<a href="{{url}}">{{name}}</a>{{/with}}
+          --}}
+        </p>
+        {{#if stars}}
+        <p class="stars">
+          Stars: {{#each stars}}<span class="star"><a href="{{url}}">{{name}}</a>{{#unless @last}}, {{/unless}}</span>{{/each}}
+        </p>
+        {{/if}}
+        <p class="plot">
+          {{plot}}
+        </p>
+      </article>
+    </script>
+    <section class="movie-details-container"></section>
+    <!-- 2) Create a second template to render a list of movies. -->
+    <script id="movie-list-template" type="text/x-handlebars-template">
+      <ul class="movie-list">
+        {{#each this}}
+          <li data-index="{{@index}}">
+            <span class="name">{{name}}</span> <span class="year">({{year}})</span><br>
+            <span class="director">Director: {{director.name}}</span>
+          </li>
+        {{/each}}
+      </ul>
+    </script>
+    <section class="movie-list-container"></section>
+  </body>
+</html>
