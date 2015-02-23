@@ -4,8 +4,11 @@
    <head>
       <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <title>A few tags index</title>
+      <title>Hidden sections</title>
       <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="css/normalize.css">
+      <link rel="stylesheet" type="text/css" href="css/style.css">
+      
    </head>
    <body>
       <section id="random">
@@ -24,5 +27,15 @@
             Vestibulum auctor dapibus neque.
          </p>
       </section>
+       <section id="hidden">
+      	<h1> 
+      		Hello World!
+      	</h1>	
+  	  </section>
+  	  <script>
+  	  $(document).ready(function(){
+		$("#hidden").hide("fast");		
+		});
+      </script>	     
    </body>
 </html>
