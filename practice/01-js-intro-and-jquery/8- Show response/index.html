@@ -11,7 +11,9 @@
       
    </head>
    <body>
-      <section>         
+      <section class="show">         
+        <p>
+        </p>
       </section>
       
      <div class="wrapper">
@@ -25,14 +27,13 @@
 
       <script type="text/javascript">
   	  $(document).ready(function(){        
-         $("section").focus(function(){
-                    
+                             
            $.ajax({url: "http://bootcamp.aws.af.cm/welcome/yourname", 
            success:function(response) { 
-            $(section).text(response.response);
-           });
-           
-		     });
+            $(".show").text(response.response);
+            console.log(response);
+          }});
+		     
        });
       </script>	
    </body>

@@ -11,6 +11,11 @@ html{color:black;
 	height: 50rem;
 }
 
+span{
+
+	display: inline;
+}
+
 .im2{
 	position: absolute;
 	width: 15rem;

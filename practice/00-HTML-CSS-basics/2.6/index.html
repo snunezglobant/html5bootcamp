@@ -13,8 +13,25 @@
    </head>
    <body id="body">
       <script type="text/javascript">
-         var htmlCanvas=document.getElementsbyId("body");
-         
+         var htmlscreen=document.getElementsbyId('body');
+         document.window.inn
+         var context=htmlscreen.getContext('2d');
+      
+         initialize();
+
+         function initialize(){
+
+            window.addEventListenet('resize', resizeScreen, false);
+
+            resize();
+
+         }
+
+         function resize(){
+            resizeScreen.width=window.innerWidth;
+            resizeScreen.height=window.innerHeight;
+            document.resize();
+         }
       </script>
       <!--<canvas id="c">-->
          <section id="Container">
