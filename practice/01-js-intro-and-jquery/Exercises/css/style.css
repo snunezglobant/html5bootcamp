@@ -1,4 +1,4 @@
-section {
+section .hidden {
   text-align: center;
   font-size: 2rem;
   margin: 1rem;
@@ -22,7 +22,7 @@ span:before{
  white-space: pre;  
 }
 
-#error {
+.error {
   color: red;
   font-weight: bold;
   font-size: 2rem;
@@ -36,4 +36,28 @@ span:before{
 
 .highlighted {
   color: lightblue;
+}
+
+.albums-continer {
+  float: right;
+ }
+
+.album-data {
+  font-size: 0.8rem;
+  font-family: Verdana;
+  font-style: italic;
+  margin: 0.5rem;
+  text-align: right;
+  border: 0.5rem solid lightgreen;
+  float: right;
+  clear: both;
+  box-sizing: border-box;
+}
+
+.name-input {
+  margin: 1rem;
+}
+
+.artist-input {
+  margin: 1rem;
 }
