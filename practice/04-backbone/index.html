@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" href="style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
@@ -28,7 +29,7 @@
           {{#each genres}}<span class="genre">{{this}}</span>{{/each}}
         </p>
         <p class="director">
-          Director: {{#if director}}<a href="{{director.url}}">{{director.name}}{{else}}Not specified.{{/if}}</a>
+          Director: {{#if director}}<a href="{{director.url}}">{{director.name}}{{else}}Not specified{{/if}}</a>
           {{!-- alternative: using the with block helper
           Director: {{#with director}}<a href="{{url}}">{{name}}</a>{{/with}}
           --}}
@@ -46,15 +47,36 @@
     <section class="movie-details-container"></section>
     <!-- 2) Create a second template to render a list of movies. -->
     <script id="movie-list-template" type="text/x-handlebars-template">
+      <button class="add">Add movie</button> <!-- 5) -->
+      <h2>Movies you should definitely watch:</h2>
       <ul class="movie-list">
         {{#each this}}
-          <li data-index="{{@index}}">
-            <span class="name">{{name}}</span> <span class="year">({{year}})</span><br>
-            <span class="director">Director: {{director.name}}</span>
+          <li class="movie-item" data-id="{{id}}">
+            <div class="toolbox"> <!-- 5) -->
+              <button class="edit">Edit</button>
+              <button class="remove">Remove</button>
+            </div>
+            <span class="name">{{name}}</span> {{#if year}} <span class="year">({{year}}){{/if}}<br>
+            <span class="director">Director: {{#if director}}{{director.name}}{{else}}Not specified{{/if}}</span>
           </li>
         {{/each}}
       </ul>
     </script>
     <section class="movie-list-container"></section>
+    <!-- 5) Allow to add / edit / remove movies from the list. -->
+    <script id="movie-edition-template" type="text/x-handlebars-template">
+      <div class="background"></div>
+      <article class="movie-details">
+        <p class="title">{{title}}</p>
+        <div class="movie-data">
+          <textarea>{{movieData}}</textarea>
+        </div>
+        <div class="button-container">
+          <button class="cancel">Cancel</button>
+          <button class="done">Done</button>
+        </div>
+      </article>      
+    </script>
+    <section class="movie-edition-container"></section>
   </body>
 </html>

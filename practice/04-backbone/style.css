@@ -1,38 +1,33 @@
-.background {
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0.85;
-  background-color: #000;
-  z-index: 9;
+.movie-list-container {
+  width: 50rem;
+  margin: 4rem auto;
 }
 
-.movie-list-container {
-  width: 34rem;
-  margin: 4rem auto;
+.movie-list-container .add {
+  float: right;
+  margin-right: 1rem;
 }
 
 .movie-list {
   list-style-type: none;
-  margin: 0rem;
+  margin: 2rem 0rem;
   padding: 0rem;
 }
 
 .blurred {
-  -webkit-transition: all 400ms linear 400ms;
-  transition: all 400ms linear 400ms;
+  -webkit-transition: all 400ms;
+  transition: all 400ms;
   -webkit-filter: blur(2px);
   filter: blur(2px);
 }
 
-.movie-list li {
+.movie-item {
+  position: relative;
   margin: 0rem;
-  padding: 0.6rem 2rem;
+  padding: 0.6rem 1rem;
   border-top-style: solid;
   border-width: 1px;
-  border-color: #888;
+  border-color: #bbb;
 
   cursor: pointer;
   -webkit-user-select: none;
@@ -41,30 +36,46 @@
   user-select: none;
 }
 
-.movie-list li:last-child {
+.movie-item:last-child {
   border-bottom-style: solid;
 }
 
-.movie-list .name {
+.movie-item .name {
   font-size: 1.1rem;
 }
 
-.movie-list .year {
+.movie-item .year {
   font-size: 0.9rem;
 }
-.movie-list .director {
+.movie-item .director {
   font-size: 0.8rem;
 }
 
-.movie-list li:hover {
-  background-color: #caceff;
+.movie-item:hover {
+  background-color: #caceff; /*#9ec1f5;*/
 }
 
-.movie-list li:active {
-  background-color: #d6daff;
+.movie-item:active {
+  background-color: #d6daff; /*#b3cef7;*/
+}
+
+.movie-item .toolbox {
+  display: none;
+  position: absolute;
+  top: 50%;
+  height: 1.6rem;
+  right: 1rem;
+  margin-top: -0.8rem;
+}
+
+.movie-item .toolbox button {
+  height: 1.6rem;
+  font-size: 0.8rem;
 }
 
 .movie-details-container {
+  position: relative;
+  z-index: 10;
   opacity: 0;
 }
 
@@ -74,16 +85,28 @@
   transition: opacity 400ms;
 }
 
+.background {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.85;
+  background-color: #000;
+}
+
 .movie-details {
   position: fixed;
-  z-index: 10;
   left: 50%;
   top: 40%;
   width: 38rem;
-  height: 17rem;
+  min-height: 17rem;
   margin-top: -8rem;
   margin-left: -20rem; /* width/2 + padding/2 */  
-  padding: 1rem;
+  padding-top: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 0rem;
 
   overflow: hidden;
   text-overflow: ellipsis;
@@ -92,15 +115,16 @@
   -webkit-border-radius: 0.4rem;
   border-radius: 0.4rem;
 
-  -webkit-box-shadow: 0px 0px 20px 2px #000;
-  box-shadow: 0px 0px 20px 2px #000;
+  -webkit-box-shadow: 0px 0px 30px 3px #000;
+  box-shadow: 0px 0px 30px 3px #000;
 }
 
 .movie-details .poster {
   float: left;
-  width: auto;
+  width: 11.5rem;
   height: 17rem;
   margin-right: 1rem;
+  margin-bottom: 1rem;
 }
 
 .movie-details .name {
@@ -119,3 +143,51 @@
 }
 Demonstrated using {{#unless @last}}, {{/unless}}
 */
+
+.movie-edition-container {
+  position: relative;
+  z-index: 10;
+  opacity: 0;
+}
+
+.movie-edition-container.fadein {
+  opacity: 1;
+  -webkit-transition: opacity 400ms;
+  transition: opacity 400ms;
+}
+
+.movie-details .title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0.5rem 0rem;
+}
+
+.movie-details .movie-data {
+  position: absolute;
+  top: 4rem;
+  bottom: 3.5rem;
+  left: 1rem;
+  right: 1rem;
+}
+
+.movie-data textarea {
+  resize: none;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.movie-details .button-container {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+}
+
+.button-container button {
+  margin-left: 0.5rem;
+}
+
+.button-container .done {
+  width: 6rem;
+}
