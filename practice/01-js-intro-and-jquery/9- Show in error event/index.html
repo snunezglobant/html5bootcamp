@@ -12,9 +12,7 @@
    </head>
    <body>
       <section class="show">         
-        <p>
-        </p>
-      </section>
+     </section>
       
      <div class="wrapper">
         <p><label>Alias: </label></p>
@@ -26,15 +24,30 @@
       </div>
 
       <script type="text/javascript">
-  	  $(document).ready(function(){        
-                             
-           $.ajax({url: "http://bootcamp.aws.af.cm/welcome/yourname", 
-           success:function(response) { 
-            $(".show").text(response.response);
-            
-            console.log(response);
-          }});
-		     
+  	  $(document).ready(function()
+      {        
+
+
+         
+        $.ajax({
+        type   :    'put',
+        url    :     "http://bootcamp.aws.af.cm/welcome/yourname/badcode",
+        data   :    data,
+        cache  :   false,
+        success: handler,
+        error  :   function() {
+        $(".show").text("Error con el servidor");  
+        $(".show").css("color","red");
+
+        }
+        });
+        
+        function handler() {
+        alert("Done");
+        }
+  
+  
+          		     
        });
       </script>	
    </body>
