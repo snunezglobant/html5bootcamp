@@ -1,3 +1,37 @@
+/***EXERCISE 3***/
+var MovieObserver=function(){
+	this.movieobserverlist=[];
+}
+
+MovieObserver.prototype.Add=function(obj){
+	return this.movieobserverlist.push(obj);
+};
+
+MovieObserver.prototype.Count=function(){
+	return this.movieobserverlist.length;
+};
+
+MovieObserver.prototype.Get=function(index){
+	if(index > -1 && index < this.movieobserverlist.length){
+		return this.movieobserverlist[index];
+	}
+};
+
+MovieObserver.prototype.indexOf=function(obj,startIndex){
+	var i=startIndex;
+	while(i<this.movieobserverlist.length){
+		if(this.movieobserverlist[i]===obj){
+			return i;
+		}
+		i++;
+	}
+	return -1;
+};
+
+MovieObserver.prototype.removeAt=function(index){
+	this.movieobserverlist.splice(index,1);
+}
+
 /***EXERCISE 1***/
 var Movie= function(){
 	this.attributes={
@@ -5,7 +39,7 @@ var Movie= function(){
 		'director':'',
 		'actor':''
 	};
-	this.movieobserver=new MovieObserver();
+	var movieobserver=new MovieObserver();
 }
 
 Movie.prototype.setTitle=function(attr,value){
@@ -47,7 +81,7 @@ advengers.setTitle('title','The Advengers');
 console.log(advengers.getTitle('title'));
 advengers.playMovie();
 advengers.stopMovie();
-advengers.AddObserver('Marcos');
+
 
 var starWars=new Movie();
 starWars.setTitle('title','Star Wars');
@@ -55,39 +89,6 @@ console.log(starWars.getTitle('title'));
 starWars.playMovie();
 starWars.stopMovie();
 
-/***EXERCISE 3***/
-var MovieObserver=function(){
-	this.movieobserverlist=[];
-}
-
-MovieObserver.prototype.Add=function(obj){
-	return this.movieobserverlist.push(obj);
-};
-
-MovieObserver.prototype.Count=function(){
-	return this.movieobserverlist.length;
-};
-
-MovieObserver.prototype.Get=function(index){
-	if(index > -1 && index < this.movieobserverlist.length){
-		return this.movieobserverlist[index];
-	}
-};
-
-MovieObserver.prototype.indexOf=function(obj,startIndex){
-	var i=startIndex;
-	while(i<this.movieobserverlist.length){
-		if(this.movieobserverlist[i]===obj){
-			return i;
-		}
-		i++;
-	}
-	return -1;
-};
-
-MovieObserver.prototype.removeAt=function(index){
-	this.movieobserverlist.splice(index,1);
-}
 
 
 
