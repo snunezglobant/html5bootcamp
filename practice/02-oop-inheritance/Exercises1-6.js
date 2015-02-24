@@ -10,8 +10,6 @@ variables, while inherited methods cannot.
 */
 /*
 function Movie() {
-  this.attributes = [];
-
   this.play = function() {
     //
   };
@@ -32,39 +30,14 @@ function Movie() {
 
 /* Second alternative: adding the methods using the object's prototype property */
 
-function Movie() {
-  this.attributes = [];
-}
+function Movie() {}
 
 Movie.prototype.set = function(attr, value) {
-  // this[attr] = value; /* using simple object attributes */
-
-  var i;
-
-  for (i = this.attributes.length - 1; i >= 0; i--) {
-    if (this.attributes[i].attrName === attr) {
-      this.attributes[i].attrValue = value;
-      break;
-    }
-  }
-
-  if (i === -1) { /* attr not found */
-    this.attributes.push({attrName: attr, attrValue: value});
-  }
+  this[attr] = value;
 };
 
 Movie.prototype.get = function(attr) {
-  // return this[attr]; /* using simple object attributes */
-
-  var i;
-
-  for (i = this.attributes.length - 1; i >= 0; i--) {
-    if (this.attributes[i].attrName === attr) {
-      return this.attributes[i].attrValue;
-    }
-  }
-
-  return "Attribute not found.";
+  return this[attr];
 };
 
 

@@ -1,32 +1,12 @@
 /* 7) Refactor Movie class as a Module keeping your previous code for reference. */
 var Movie = (function() {
   var newMovie = function() {
-    var attributes = [];
-
     this.set = function(attr, value) {
-      var i;
-
-      for (i = attributes.length - 1; i >= 0; i--) {
-        if (attributes[i].attrName === attr) {
-          attributes[i].attrValue = value;
-          break;
-        }
-      }
-
-      if (i === -1) { 
-        attributes.push({attrName: attr, attrValue: value});
-      }
+      this[attr] = value;
     };
 
     this.get = function(attr) {
-      var i;
-
-      for (i = attributes.length - 1; i >= 0; i--) {
-        if (attributes[i].attrName === attr) {
-          return attributes[i].attrValue;
-        }
-      }
-      return "Attribute not found.";
+      return this[attr];
     };
 
     this.play = function() {
