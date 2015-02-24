@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset = "utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="Stylesheet" type="text/css" href="css/style.css">
+      <title>index</title>
+      <script defer src="js/jquery-1.11.2.min.js"></script>
+      <script defer type="text/javascript" src="./js/javascript.js"></script>
+   </head>
+   <body onload="visibility();">
+      <section>
+         <section id="section">
+            <p id="mydiv" class="text">Hello world</p>
+         </section>
+         <div>
+            <input type="text" class="alias">
+         </div>
+         <div>
+            <button type="button" id ="button">Welcome</button>   
+         </div>
+         <div>
+            <input type="text" id="txtsearch">
+         </div>
+         <div>
+            <button type="button" id ="search">Search</button>   
+         </div>
+      </section>
+      <section id="contentalbum">
+         <section id="albumimg">
+            <label>Album Image</label>
+         </section>
+         <section id="artist">
+            <h3>Spotify Album</h3>
+         </section>
+         <section id="description">
+            <ul>
+               <li>Name: <span id="name"></span></li>
+               <li>Album Type: <span id="albumtype"></span></li>
+               <li>Type: <span id="type"></span></li>
+               <li>Album Link: <a id="link" target="_blank"></a></li>
+            </ul>
+         </section>
+      </section>
+   </body>
+</html>
