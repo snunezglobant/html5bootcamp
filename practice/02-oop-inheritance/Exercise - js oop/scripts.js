@@ -1,23 +1,23 @@
-/***EXERCISE 3***/
-var MovieObserver=function(){
+/***OBSERVER LIST***/
+var MovieObserverList=function(){
 	this.movieobserverlist=[];
 }
 
-MovieObserver.prototype.Add=function(obj){
+MovieObserverList.prototype.Add=function(obj){
 	return this.movieobserverlist.push(obj);
 };
 
-MovieObserver.prototype.Count=function(){
+MovieObserverList.prototype.Count=function(){
 	return this.movieobserverlist.length;
 };
 
-MovieObserver.prototype.Get=function(index){
+MovieObserverList.prototype.Get=function(index){
 	if(index > -1 && index < this.movieobserverlist.length){
 		return this.movieobserverlist[index];
 	}
 };
 
-MovieObserver.prototype.indexOf=function(obj,startIndex){
+MovieObserverList.prototype.indexOf=function(obj,startIndex){
 	var i=startIndex;
 	while(i<this.movieobserverlist.length){
 		if(this.movieobserverlist[i]===obj){
@@ -28,18 +28,26 @@ MovieObserver.prototype.indexOf=function(obj,startIndex){
 	return -1;
 };
 
-MovieObserver.prototype.removeAt=function(index){
+MovieObserverList.prototype.removeAt=function(index){
 	this.movieobserverlist.splice(index,1);
 }
 
-/***EXERCISE 1***/
+/***OBSERVER***/
+var MovieObserver=function(){
+	this.update=function(title,action){
+         console.log(title+" "+action);
+	}
+}
+
+/***MOVIE***/
 var Movie= function(){
 	this.attributes={
 		'title':'',
 		'director':'',
 		'actor':''
 	};
-	var movieobserver=new MovieObserver();
+	this.molist=new MovieObserverList();
+	this.observer=new MovieObserver();
 }
 
 Movie.prototype.setTitle=function(attr,value){
@@ -51,43 +59,47 @@ Movie.prototype.getTitle=function(attr){
 }
 
 Movie.prototype.playMovie=function(){
-
-	console.log(this.attributes['title']+" is Playing");
+	this.observer.update(this.attributes['title'],'is playing . . .');
 }
 
 Movie.prototype.stopMovie=function(){
-	console.log(this.attributes['title']+" Stopped");
+	this.observer.update(this.attributes['title'],'Stopped. . . ');
 }
 
 Movie.prototype.AddObserver=function(observer){
-	this.movieobserver.Add(observer);
+	this.molist.Add(observer);
 };
 
 Movie.prototype.removeObserver=function(observer){
-	this.movieobserver.removeAt(this.movieobserver.indexOf(observer,0));
+	this.molist.removeAt(this.molist.indexOf(observer,0));
 };
 
 Movie.prototype.notify=function(context){
-	var movieobservercount=this.movieobserver.Count();
+	var movieobservercount=this.molist.Count();
 	for(var i=0;i<movieobservercount;i++){
-		this.movieobserver.Get(i).update(context);
+		this.molist.Get(i).update(context);
 	}
 }
 
 
-/***EXERCISE 2***/
+var observer = new MovieObserver();
+var terminator = new Movie();
+terminator.AddObserver(observer);
+terminator.setTitle('title','Terminator');
+terminator.play();
+
+/***EXERCISE 2
 var advengers=new Movie();
 advengers.setTitle('title','The Advengers');
 console.log(advengers.getTitle('title'));
 advengers.playMovie();
 advengers.stopMovie();
 
-
 var starWars=new Movie();
 starWars.setTitle('title','Star Wars');
 console.log(starWars.getTitle('title'));
 starWars.playMovie();
-starWars.stopMovie();
+starWars.stopMovie();***/
 
 
 
