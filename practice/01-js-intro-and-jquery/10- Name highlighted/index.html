@@ -22,19 +22,14 @@
     <script type="text/javascript">
     $(document).ready(function(){        
                              
-            
-                
-            
-
-
-            $.ajax({url: "http://bootcamp.aws.af.cm/welcome/yourname", 
+            var myname="Gonzalo";          
+            $.ajax({url: "http://bootcamp.aws.af.cm/welcome/"+myname, 
             success:function(data) { 
             
              var str=data.response;
-             var myname="Gonzalo";          
-            
+             
              console.log(str);
-              var res= str.replace(/yourname/gi, '<span class=\"remark\">' +myname+'</span>');  
+              var res= str.replace(myname, '<span class=\"remark\">' +myname+'</span>');  
               $(".show").html(res);
              console.log(res);
            }});     
