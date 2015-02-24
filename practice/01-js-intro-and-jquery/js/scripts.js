@@ -6,8 +6,8 @@ $("#hidden").fadeIn(2000, function(){
 });
 
 
-/********************/
-/*  Excercise 1.7   */
+/**************************/
+/*  Excercise 1.7 - 1.10  */
 var name = "Alvaro";
 
 $("#button").click (function(){
@@ -25,4 +25,26 @@ $("#button").click (function(){
         .always(function(){
             console.log("Finish");
         });
+});
+
+/**************************/
+/*  Excercise 1.11  */
+var search = 'Rolling Stones';
+var type = 'album';
+var url = 'https://api.spotify.com/v1/search';
+
+$.ajax({
+    dataType: "json",
+    url: url,
+    data: {
+        q: search,
+        type: type
+    },
+    success: function(response){
+        console.log(response);
+        var albums = [];
+        $.each(response, function(album){
+            albums.push(album.items[0].name); // Don't know how to catch the items in the response
+        });
+    }
 });
