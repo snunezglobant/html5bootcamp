@@ -40,15 +40,18 @@ $("#search").click(function(){
    .done(function(result){
 
 
+for(i=0;i<=50;i++)
+{
+
  $("#spotifyalbum").css('display','block');
- $("#spotifyalbum").html("<img src=\""+result.albums.items[0].images[0].url+"\"/>");
- $("#albumname").html(result.albums.items[0].name);
- $("#albumtype").html(result.albums.items[0].album_type);
- $("#album_type").html(result.albums.items[0].type);
- $("#albumlink").html(result.albums.items[0].external_urls.spotify);
- $("#albumlink").attr("href" ,result.albums.items[0].external_urls.spotify);
+ $("#spotifyalbum").append("<img src=\""+result.albums.items[i].images[0].url+"\"/>");
+ $("#spotifyalbum").append("<p>\n" + result.albums.items[i].name + "</p>");
+ $("#spotifyalbum").append("<p>\n" + result.albums.items[i].album_type+ "</p>");
+ $("#spotifyalbum").append("<p>\n" + result.albums.items[i].type+ "\n</p>");
+ $("#spotifyalbum").append("<p>\n <a href=\"" +  result.albums.items[i].external_urls.spotify + "\"> Link to Album \n\n</a>");
+ // $("#spotifyalbum").attr("href" ,result.albums.items[i].external_urls.spotify);
 
-
+}
 
 
 
