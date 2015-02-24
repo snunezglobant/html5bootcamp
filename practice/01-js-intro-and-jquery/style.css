@@ -81,6 +81,17 @@ summary {
   display: block;
 }
 
+.header {
+  margin:  0 auto 0 auto;
+    background-color: #444;
+    text-align: center;
+}
+.header h1,p{
+  font-size: 12px;
+  background-color: #444;
+  text-align: center;
+  color: red;
+}
 
 .content {
   margin:  0 250px 0 250px;
@@ -95,6 +106,24 @@ summary {
 }
 
 .content h1{
-  visibility: hidden;
   color: red;
+}
+
+nav {
+  position:absolute;
+  width:250px;
+  height: 270px;
+  right:50px;
+  top:150px;
+    margin:  0 auto 0 auto;
+    font-size:10px;
+}
+
+.footer {
+  font-size: 10px;
+  text-align: center;
+}
+.footer p{
+  color: red;
+  text-align: center;
 }
