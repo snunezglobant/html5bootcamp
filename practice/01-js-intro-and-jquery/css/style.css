@@ -1,0 +1,13 @@
+body{
+    width: 100%;
+}
+
+section{
+    text-align: center;
+}
+
+#hidden{
+    display: none;
+}
+
+.button{}
