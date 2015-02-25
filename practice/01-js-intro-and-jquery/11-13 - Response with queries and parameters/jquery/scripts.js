@@ -7,10 +7,33 @@ function visible() {
 
 $('document').ready(function() {
 
+
    $('.alias').focus();
    $('.alias').css('border-color', 'red');
 
-    
+                                   
+    var query;
+    query= $.ajax({url: "https://api.spotify.com/v1/search",
+    type:"get", 
+    data:{
+        q: "Rolling Stones",
+        type: "album"
+    }});
+     
+    query.done(function(response){
+        console.log(response);
+    });
+      
+    query.fail(function(){
+        console.log("Error");
+    });
+      
+    query.always(function(){
+         console.log("Everything ok");
+    });  
+         
+      
+
     $("#find").click(function(){
         var artist=document.getElementById("txtsearch").value; 
         $.ajax("https://api.spotify.com/v1/search",{data:{'q': artist, 'type': album}})
