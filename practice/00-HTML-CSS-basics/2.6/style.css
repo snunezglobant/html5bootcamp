@@ -7,13 +7,9 @@ h1{
 	display: inline-block;
 	z-index: 1000;	
 	transition: all 0.25s ease-in-out;
-	height: 30%;
-	width: 30%;
 	
 }
-table{
-	display: block;
-}
+
 #wrapper @media{
 	width: auto;
 	height: auto;
@@ -38,7 +34,7 @@ header{
 
 .desc p{
 	font-size: 2em;
-	padding: 5%;
+	padding: 95%;
 }
 
 .desc{
@@ -50,6 +46,6 @@ header{
 .desc:hover{
 	opacity:1;
 	transition: all 0.3s ease-in-out;
-	/*margin-left: 1rem;*/
+	margin-left: 1rem;
 }
 
