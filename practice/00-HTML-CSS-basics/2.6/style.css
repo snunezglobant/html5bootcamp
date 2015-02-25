@@ -7,15 +7,28 @@ h1{
 	display: inline-block;
 	z-index: 1000;	
 	transition: all 0.25s ease-in-out;
+	height: 30%;
+	width: 30%;
 	
 }
+table{
+	display: block;
+}
+#wrapper @media{
+	width: auto;
+	height: auto;
+	margin: auto;
+	position: relative;	
+}
+
+
 header{
 	font-weight: bold;
 	font-size: 2rem;	
 }
 
 .image:hover{
-	opacity:0.8;
+	opacity:0.8;	
 }
 	
 
@@ -31,12 +44,12 @@ header{
 .desc{
 	color: #fff;		
 	transition: all 0.3s ease-in-out;
-	margin-left: -3rem;
+	margin-bottom: -3rem;
 	opacity:0;		
 }
 .desc:hover{
 	opacity:1;
 	transition: all 0.3s ease-in-out;
-	margin-left: 1rem;
+	/*margin-left: 1rem;*/
 }
 

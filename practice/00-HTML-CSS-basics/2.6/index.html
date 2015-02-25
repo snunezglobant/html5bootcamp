@@ -9,9 +9,9 @@
 </head>
 <body onresize="mediaresize()">
 	<header>
-		<h1>Adapt your content</h1>		
+		<h1>Three windows, one window</h1>		
 	</header>
-	<div>
+	<div id="wrapper">
 	<span>
 		<div class="image">
 			<img src="im1.jpg">
@@ -29,16 +29,48 @@
 	</span>
 	</div>
 	<script type="text/javascript">
-		var IEL=document.getElementsByClassName("image");
+		var IEL=document.getElementsClassName("image");
 		
 
-			mediaresize(){
+			adjust(){
 				var i=0;
 				for (i=0;i<IEL.length;i++){
-					IEL.style.width=window.innerWidth%;
-					IEL.style.height=window.innerHeight%;
+					IEL.style.width=window.innerWidth;
+					IEL.style.height=window.height;
+									
 				}
 			}
+
+			function mediaresize(){
+             
+        	
+         
+        	var ratio =  IEL.width / IEL.height;   
+         	
+        	if ((window.innerWidth / window.innerHeight) < ratio){
+         
+            	IEL.style.width = 'auto';
+            	IEL.style.height = '100%';
+             
+            	
+            if (IEL.width > window.innerWidth){
+             
+                var ajuste = (window.innerWidth - IEL.width)/2;
+                 
+                element.style.left = ajuste+'px';
+             
+            }
+	         
+    	    }
+        	else{  
+         
+            IEL.style.width = '100%';
+            IEL.style.height = 'auto';
+            IEL.style.left = '0';
+ 
+        }
+         
+    }
 		
 	</script>
 </body>
