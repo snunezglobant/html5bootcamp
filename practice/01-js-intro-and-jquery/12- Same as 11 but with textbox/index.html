@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Response with queries</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+  </head>
+  <body>
+    <section class="show">
+    </section>
+    <script type="text/javascript">
+      $(document).ready(function(){        
+                               
+           var query;
+           query= $.ajax({url: "https://api.spotify.com/v1/search",
+             type:"get", 
+             data:{
+              q: "Rolling Stones",
+              type: "album"
+            }});
+      
+           query.done(function(response){
+              console.log(response);
+            });
+      
+          query.fail(function(){
+              console.log("Error");
+          });
+      
+          query.always(function(){
+              console.log("Everything ok");
+          });  
+         
+      });    
+    </script> 
+  </body>
+</html>

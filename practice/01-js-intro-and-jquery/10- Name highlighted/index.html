@@ -20,21 +20,21 @@
       <button id="b_event"type="button"/>Button</button>  
     </div>
     <script type="text/javascript">
-    $(document).ready(function(){        
-                             
-            var myname="Gonzalo";          
-            $.ajax({url: "http://bootcamp.aws.af.cm/welcome/"+myname, 
-            success:function(data) { 
-            
-             var str=data.response;
-             
-             console.log(str);
-              var res= str.replace(myname, '<span class=\"remark\">' +myname+'</span>');  
-              $(".show").html(res);
-             console.log(res);
-           }});     
-
-      });
+      $(document).ready(function(){        
+                               
+              var myname="Gonzalo";          
+              $.ajax({url: "http://bootcamp.aws.af.cm/welcome/"+myname, 
+              success:function(data) { 
+              
+               var str=data.response;
+               
+               console.log(str);
+                var res= str.replace(myname, '<span class=\"remark\">' +myname+'</span>');  
+                $(".show").html(res);
+               console.log(res);
+             }});     
+      
+        });
     </script> 
   </body>
 </html>
