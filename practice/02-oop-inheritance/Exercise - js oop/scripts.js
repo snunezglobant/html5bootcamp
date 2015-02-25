@@ -81,7 +81,7 @@ Movie.prototype.notify=function(context){
 	}
 }
 
-
+/*************/
 var observer = new MovieObserver();
 var terminator = new Movie();
 terminator.AddObserver(observer);
@@ -106,7 +106,6 @@ starWars.stopMovie();
 
 
 /***MOVIE CLASS AS MODULE***/
-
 var Movie={};
 
 Movie= (function(){
@@ -135,6 +134,37 @@ Movie= (function(){
 }());
 
 
+/***DOWNLOAD MOVIE***/
+var DownloadableMovie=function(){}
+ 
+DownloadableMovie.prototype = new Movie();
+DownloadableMovie.prototype.constructor = DownloadableMovie;
+ 
+DownloadableMovie.prototype.download = function () {
+  console.log('Downloading'+' '+this.attributes['title']+'. . . ');
+};
+ 
+
+ var greenHornet=new DownloadableMovie();
+ greenHornet.setTitle('title','Green Hornet');
+ greenHornet.download();
 
 
 
+ /***MIXIN OBJECT***/
+
+ var Social={
+ 	share:function(person){
+ 		console.log("Sharing"+" "+this.attributes['title']+" with"+" "+person);
+ 	},
+ 	like:function(){
+        console.log("I like this movie. . . ");
+    }
+ }
+
+
+ $.extend(true,Movie.prototype,Social);
+
+var peli=new Movie();
+peli.setTitle('title','Iron Man');
+peli.share('Samira');
