@@ -12,17 +12,22 @@
   <body>
     <header>Welcome</header>
     <nav>Navigate over me</nav>
+    
     <section>
-      
+      <input type="button" value="Hello" id="button"/>
+      <input type="text" class="alias" placeholder="Don't write here" />
     </section>
+    
     <section id="hidden">
       Hello World!
     </section>
+
     <article>
-      <input type="button" value="Hello" id="button"/>
-      <input type="text" class="alias" placeholder="Don't write here" />
-      
-      <div id="results"></div>
+      <form id="search-form">
+        <input type="text" id="query" value="" placeholder="Type an Artist Name">
+        <button id="search" type="submit">Search</button>
+      </form>
+      <table id="results"></table> <!--For being filled by the script-->
     </article>
   </body>
 </html>
