@@ -1,0 +1,15 @@
+html{color:black;
+	font-family: sans-serif;
+	font-size: 1rem;
+}
+
+section{
+	text-align: center;
+	padding: 1rem;
+}
+
+#inside{
+
+	float:right;
+	display: inline;
+}
