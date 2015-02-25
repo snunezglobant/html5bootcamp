@@ -86,20 +86,53 @@ var observer = new MovieObserver();
 var terminator = new Movie();
 terminator.AddObserver(observer);
 terminator.setTitle('title','Terminator');
-terminator.play();
+terminator.playMovie();
+terminator.stopMovie();
 
-/***EXERCISE 2
-var advengers=new Movie();
-advengers.setTitle('title','The Advengers');
-console.log(advengers.getTitle('title'));
+var observer2 = new MovieObserver();
+var advengers = new Movie();
+advengers.AddObserver(observer2);
+advengers.setTitle('title','Advengers');
 advengers.playMovie();
 advengers.stopMovie();
 
+var observer3 = new MovieObserver();
 var starWars=new Movie();
-starWars.setTitle('title','Star Wars');
-console.log(starWars.getTitle('title'));
+starWars.AddObserver(observer3);
+starWars.setTitle('title','Terminator');
 starWars.playMovie();
-starWars.stopMovie();***/
+starWars.stopMovie();
+
+
+
+/***MOVIE CLASS AS MODULE***/
+
+var Movie={};
+
+Movie= (function(){
+
+	var attributes={
+		'title':'',
+		'director':'',
+		'actor':''
+	};
+
+	return{
+		setTitle:function(attr,value){
+			attributes[attr]=value;
+		},
+		getTitle:function(attr){
+			return attributes[attr];
+		},
+		playMovie:function(){
+			console.log(attributes['title']+" "+"is playing. . . ");
+		},
+
+		stopMovie:function(){
+			console.log(attributes['title']+" "+"Stopped. . . ");	
+		}
+	};
+}());
 
 
 
