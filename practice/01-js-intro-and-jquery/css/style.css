@@ -1,0 +1,44 @@
+body{
+    width: 100%;
+}
+
+header{
+    display: block;
+    width: inherit;
+    height: 40px;
+    text-align: center;
+    color: white;
+    background: black;
+}
+
+nav{
+    display: inline-block;
+    float: left;
+    width: 60px;
+    height: auto;
+    background: greenyellow;
+}
+
+section{
+    text-align: center;
+    float: right;
+    background: yellowgreen;
+    padding: 10px;
+    margin: 10px;
+}
+
+article{
+    background: orange;
+    width: auto;
+    height: auto;
+    float: left;
+    display: block;
+}
+
+#hidden{
+    display: none;
+    float: right;
+    display: block;
+}
+
+.button{}

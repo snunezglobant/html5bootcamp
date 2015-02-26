@@ -74,11 +74,15 @@ footer{
 	font-size: 10px;
 }
 
+/*Attribute selectors*/
+
 [class$="r"]{
 	background: magenta;
 }
 
-/*If the class attribute contains an a (example nav) but do NOT finish with r, the background must be blue.*/
 [class*="a"]:not([class$="r"]){
 	background: blue;
 }
+
+/*6. To add weight to the global font definition of classes, you can put [class="value"] being "value" the class you want to override*/
+/*7. You can declare a style attribute wherever you need background: green */
