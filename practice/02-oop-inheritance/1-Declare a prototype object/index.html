@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>A prototype object</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="css/normalize.css">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>	
+	</head>
+
+	<body>
+		<script type="text/javascript">
+			function Movie(attributes){
+				 this.attributes={};
+			};
+
+			Movie.prototype.setTitle=function(title){
+				this.attributes['title']=title;
+				
+			};
+			Movie.prototype.getTitle=function(){
+				return this.attributes['title'];
+			};
+			Movie.prototype.setDesc=function(desc){
+				this.attributes['desc']=desc;
+				
+			};
+			Movie.prototype.getDesc=function(desc){
+				return this.attributes['desc'];
+				
+			};
+			Movie.prototype.setGenre=function(genre){
+				this.attributes['genre']=genre;
+				
+			};
+			Movie.prototype.getGenre=function(genre){
+				return this.attributes['genre'];
+			};
+
+			Movie.prototype.setYear=function(year){
+				this.attributes['year']=year;
+				return this.attributes['year'];
+			};
+			Movie.prototype.getYear=function(year){
+				return this.attributes['year'];
+			};
+
+			$('document').ready(
+			function visible(){	
+
+				var terminator= new Movie();
+				terminator.setTitle('Terminator');
+				terminator.setDesc('A future movie');
+				terminator.setGenre('Science Fiction');
+				terminator.setYear('1986');
+				console.log(terminator.getTitle());
+				
+				/*var saw= new Movie('Saw','A horror movie', 'Terror','2001');
+				console.log(saw.getDesc); 
+				this is just a code testing: the dynamic constructor fails in the asumption of creating dynamic instances*/
+			});
+		</script>
+	</body>
+</html>
