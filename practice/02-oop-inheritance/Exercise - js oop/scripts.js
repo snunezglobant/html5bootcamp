@@ -43,8 +43,7 @@ var MovieObserver=function(){
 var Movie= function(){
 	this.attributes={
 		'title':'',
-		'director':'',
-		'actor':''
+		'director':''
 	};
 	this.molist=new MovieObserverList();
 	this.observer=new MovieObserver();
@@ -106,14 +105,14 @@ starWars.stopMovie();
 
 
 /***MOVIE CLASS AS MODULE***/
-var Movie={};
+var MovieClassModule={};
 
-Movie= (function(){
+MovieClassModule= (function(){
 
 	var attributes={
 		'title':'',
 		'director':'',
-		'actor':''
+		'actors':''
 	};
 
 	return{
@@ -168,3 +167,19 @@ DownloadableMovie.prototype.download = function () {
 var peli=new Movie();
 peli.setTitle('title','Iron Man');
 peli.share('Samira');
+
+
+
+/***ACTORS***/
+var Actors=function(name){
+	this.name=name;
+}
+
+var leto=new Actors('Jared Leto');
+var bale=new Actors('Christian Bale');
+
+/***SET IN CLASS MOVIE THE ARRAY OF ACTORS***/
+
+var starWars=new Movie();
+starWars.setTitle('actors',[leto,bale]);
+
