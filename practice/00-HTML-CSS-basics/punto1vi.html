@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link href="normalize.css" rel="stylesheet">
+	<meta charset="utf-8">
+    <meta name="keywords" content="forms">
+    <meta name="description" content="sixth excercise: sign-up form">
+    <meta name="author" content="Gabriel Bazán">
+    <meta http-equiv="refresh" content="30">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<title> Sing up FORM </title>
+</head>
+<body>
+	<form id="sign-up" action="script.php" method="post">
+		<input type="hidden" name="redirect" value="" />
+		<fieldset> 
+			<legend> Personal details</legend>
+		<ul>
+			<li><label for="first-name"> First-Name: </label> <input type="text" name="first-name" id="first-name" value="" required/> </li>
+			<li><label for="last-name"> Last-Name: </label> <input type="text" name="last-name" id="last-name" value="" required/></li>
+			<li><label for="email"> Email:</label> <input type="text" name="email" id="email" value="" required/></li>
+			<li><label for="birthday"> Birthday: </label> <input type="text" name="birthday" id="birthday" value="" required/></li>
+			<li><label for="biography"> Biography: </label> <textarea name="biography" id="biography" cols="25" rows="3"></textarea></li>
+			<li><label for="sport"> Favorite sport:</label>
+						<select name="sport" id="sport" required>
+							<option value="">Select sport</option>
+							<option value="football">Football</option>
+							<option value="tennis">Tennis</option>
+							<option value="baseball">baseball</option>
+			</select></li>
+			<li><input type="reset" value="reset"/></li>
+			<li><input type="submit" value="submit"/></li>
+		</ul>
+</fieldset>
+
+	</form>
+</body>
+</html>
+
