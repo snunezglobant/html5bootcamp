@@ -1,17 +1,5 @@
-var name = "Gonzalo";
-var album = "album";
-
-function visible() {
-   document.getElementById("section").style.visibility = "visible";
-}
-
 $('document').ready(function() {
 
-
-   $('.alias').focus();
-   $('.alias').css('border-color', 'red');
-
-                                   
     var query;
     query= $.ajax({url: "https://api.spotify.com/v1/search",
     type:"get", 
@@ -35,27 +23,28 @@ $('document').ready(function() {
       
 
     $("#find").click(function(){
-        var artist=document.getElementById("txtsearch").value; 
-        $.ajax("https://api.spotify.com/v1/search",{data:{'q': artist, 'type': album}})
-        .done(function(result){
-            $("#metadata").css('display','block');
-            $("#metadata").html("<img src=\""+result.albums.items[0].images[0].url+"\"/>");
-            $("#artists").css('display','block');
-            $("#name").html(result.albums.items[0].name);
-            $("#atype").html(result.albums.items[0].album_type);
-            $("#type").html(result.albums.items[0].type);
-            $("#link").html(result.albums.items[0].external_urls.spotify);
-            $("#link").attr("href",result.albums.items[0].external_urls.spotify);
-            $("#content").css("visibility","visible");
-            console.log(result);
+
+        var artist=$("#search").val(); 
+
+        $.ajax("https://api.spotify.com/v1/search",{data:{'q': artist, 'type': 'album'}})
+            .done(function(response){
+                $("#name").html(response.albums.items[0].name);
+                $("#atype").html(response.albums.items[0].album_type);
+                $("#image").attr("src",response.albums.items[0].images[0].url);
+                $("#link").html(response.albums.items[0].external_urls.spotify);
+                $("#link").attr("href",response.albums.items[0].external_urls.spotify);
+                
+                $("#contentalbum").css("display","block");
+
+                console.log(response);
         })
+
         .fail(function(){
             console.log("Error");
         })
+
         .always(function(){
             console.log("Eitherway you'll get this");
         });
-
     });
-
 });
