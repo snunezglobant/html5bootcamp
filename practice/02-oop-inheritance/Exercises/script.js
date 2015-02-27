@@ -105,3 +105,35 @@ avatar.play();
 inception.stop();
 avatar.stop();
 
+/* Exercise 8 - Create a DownloadableMovie that extends from Movie adding a download method. 
+Here you will have to set the correct prototype to DownloadableMovie. */
+
+var DownloadableMovie = function() {}
+ 
+DownloadableMovie.prototype = new Movie();
+DownloadableMovie.prototype.constructor = DownloadableMovie;
+ 
+DownloadableMovie.prototype.download = function () {
+  console.log("Downloading " + this.get("title") + "...");
+};
+
+var mask = new DownloadableMovie();
+mask.set("title", "The Mask");
+mask.set("director", "Chuck Russell");
+mask.set("year", "1994");
+mask.download();
+
+/* Exercise 9 - Create a mixin object called Social with the methods: share(friendName) and like(). */
+
+var Social = {
+
+	share: function( friendName ) {
+		console.log( this.get("title") + " Shared with " + friendName );
+	},
+	like: function() {
+		console.log( this.get("title") + " got a like!");
+	}
+}
+
+/* Exercise 10 - Apply the mixin to Movie object and play with the console output. */
+
