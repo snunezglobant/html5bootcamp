@@ -1,0 +1,5 @@
+/***3-MOVIE CLASS***/
+var Movie=function(){
+    console.log("vas bien");
+}
+module.exports=Movie;
