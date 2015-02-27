@@ -1,51 +1,48 @@
+@media (max-width: 35rem) {
+	.desc{
+		margin-top: 2.5rem;
+	}
+}
+
 h1{
 	font-family: sans-serif;
 }
-.image{
-	
-	opacity: 0.2;
-	display: inline-block;
-	z-index: 1000;	
-	transition: all 0.25s ease-in-out;
-	
-}
-
-#wrapper @media{
-	width: auto;
-	height: auto;
-	margin: auto;
-	position: relative;	
-}
-
 
 header{
 	font-weight: bold;
 	font-size: 2rem;	
 }
 
+p{
+	position:absolute;
+}
+
+.image{
+	opacity: 0.2;
+	display: inline-block;
+	z-index: -1;	
+	transition: all 0.25s ease-in-out;
+}
+
 .image:hover{
 	opacity:0.8;	
 }
 	
-
-.display:hover .desc {
-	margin-left: 0;
-}
-
-.desc p{
-	font-size: 2em;
-	padding: 95%;
-}
-
-.desc{
-	color: #fff;		
-	transition: all 0.3s ease-in-out;
-	margin-bottom: -3rem;
-	opacity:0;		
-}
-.desc:hover{
-	opacity:1;
-	transition: all 0.3s ease-in-out;
+.image:hover .desc {
 	margin-left: 1rem;
+	opacity:0.8;
+}
+
+.desc {
+	padding-top:5%;
+	padding-left: 1%; 
+	margin-bottom:1rem;
+	font-size: 2em;
+	color: white;		
+	opacity:0.4;
+	font-family: Garamond;
+	text-shadow: 0.7rem 0.7rem 0.7rem black;
+	transition: 0.3s ease-in-out;
+	transform:rotate(-6deg);
 }
 
