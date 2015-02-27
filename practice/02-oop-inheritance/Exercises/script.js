@@ -128,7 +128,7 @@ mask.download();
 var Social = {
 
 	share: function( friendName ) {
-		console.log( this.get("title") + " Shared with " + friendName );
+		console.log( "Sharing " + this.get("title") + "with " + friendName );
 	},
 	like: function() {
 		console.log( this.get("title") + " got a like!");
@@ -137,3 +137,44 @@ var Social = {
 
 /* Exercise 10 - Apply the mixin to Movie object and play with the console output. */
 
+$.extend(true, Movie.prototype, Social);
+
+var madagascar = new Movie();
+madagascar.set("title", "Madagascar");
+madagascar.share("JP Navarro");
+madagascar.like();
+
+/* Exercise 11 - Create an Actor class and create some actors from one of your favorite movies. */
+
+var Actor = {};
+
+var Actor = ( function () {
+	var attributes = {
+		'name': '',
+		'age': ''
+	};
+
+	return {
+		set: function( attr, value) {
+			attributes[ attr ] = value;
+		},
+		get: function( attr ) {
+			return attributes[ attr ];
+		}
+	};
+});
+
+var dicaprio = new Actor();
+dicaprio.set("name", "Leonardo DiCaprio");
+dicaprio.set("birthday", "11/11/74");
+
+var jnicholson = new Actor();
+jnicholson.set("name", "Jack Nicholson");
+jnicholson.set("birthday", "04/22/37");
+
+/* Show how you would add an array of actors to a Movie object. */ 
+
+var cast = [dicaprio, jnicholson];
+
+madagascar.set("cast", cast);
+console.log(madagascar.get("cast"));
