@@ -125,7 +125,6 @@
 				saw.setDesc('A good movie');
 				saw.setGenre('Terror');
 				saw.setYear('2005');
-				console.log(saw.getTitle);
 				saw.play();
 				saw.stop();
 				var observer = new MovieObserver();
@@ -138,3 +137,4 @@
 			});
 
 			
+
