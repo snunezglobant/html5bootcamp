@@ -1,142 +1,51 @@
-html{color:black;
-	font-family: Arial;
-	font-size: 1rem;
+h1{
+	font-family: sans-serif;
 }
 
-#Container{
-	width: 83rem;
-	height: 50rem;
+
+header{
+	font-weight: bold;
+	font-size: 2rem;	
 }
 
-.im2{
-	position: absolute;
-	width: 15rem;
-	height: 50rem;	
-	left: 17rem;
-}
-.im3{
-	position: absolute;
-	width: 15rem;
-	height: 50rem;	
-	left: 30.8rem;
-}
-
-#bo{
-	display: table;
-	border-spacing: 0.357rem;	
-	position: relative;
-	top: 5rem;
-}
-#box>.bo2{
-	top:10rem;
-}
-#box{
-	display: table-row;
-}
-#bo.im1, #bo.im2 {
-	font-size:1rem;
-  	display: table-cell;
-  	width: 20%;
-}
-
-#bo.im1>header{
-	margin-left: 5rem;
-}
-
-#bo.im2>article{
-	margin-left: -11rem;
-	text-align: justify;
-	
-}
-
-a{
-	text-decoration: none;
-	color: black;
-}
-a:hover{
-	text-decoration: underline;
-}
-#header{
-	font-size:1.4rem;
-	margin-left: 3rem;
-}
-#header2{
-	font-size:1rem;
-	margin-left: 10rem;
-	display: inline;
-}
-.photo1{	
-	position: relative;
-	top: 15rem;
-}
-.photo1 article{
-	float: left;
-}
-
-#article1{
-	margin-left: 6.95rem;
-}
-
-#article2{
-	margin-left: 7.7rem;
-}
-
-#article3{
-	margin-left: 7.55rem;
-}
-
-.display:hover {
-	opacity: 0.83;
-}
-
-.display {
-	background-color: black;
-	top: 0;
-	border-radius: 0;
-	height: 12.1rem;
-	width: 16.3rem;
-	position: absolute;
-	opacity: 0;
-	z-index: 1000;	
+.image{
+	opacity: 0.2;
+	display: inline-block;
+	z-index: -1;	
 	transition: all 0.25s ease-in-out;
 }
 
-.display:hover .tit {
-	margin-left: 0;
+p{
+	position:absolute;
 }
-.tit {
-	color: #fff;		
-	transition: all 0.3s ease-in-out;
-	margin-left: -3rem;
+/*#wrapper @media{
+	width: auto;
+	height: auto;
+	margin: auto;
+	position: relative;	
+}*/
+
+
+.image:hover{
+	opacity:0.8;	
 }
-.tit p {
+	
+
+.image:hover .desc {
+	margin-left: 1rem;
+	opacity:0.8;
+}
+
+.desc {
+	padding-top:5%;
+	padding-left: 1%; 
+	margin-bottom:1rem;
 	font-size: 2em;
-	padding: 5%;
+	color: white;		
+	transition: 0.3s ease-in-out;
+	opacity:0.4;
+	font-family: Garamond;
+	text-shadow: 0.7rem 0.7rem 0.7rem black;
+	transform:rotate(-6deg);
 }
 
-.one{
-	left: 7rem;
-}
-.two{
-	left: 30.8rem;
-}
-.three{
-	left: 54.5rem;
-}
-
-.fil2{
-	top: 10.8rem;
-}
-
-#normal {
-    font-weight: normal;
-}
-
-#bold, #header2{
-    font-weight: bold;
-}
-
-#header3{
-    font-size: 5rem;margin: 3rem;
-
-}
