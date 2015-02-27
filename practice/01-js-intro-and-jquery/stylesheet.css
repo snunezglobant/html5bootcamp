@@ -1,0 +1,36 @@
+.sectionContainer{
+	 height:500px;
+    width:100%;
+    background-color: #FFBF00;
+    border: 2px solid black;
+    border-radius: 2px;
+
+}
+
+.sectionheader{
+	height: 100px;
+	text-align: center;
+	border: 2px solid black;
+	background-color: #82FA58;
+
+
+}
+
+.sectionarticle{
+	height: 300px;
+	text-align: center;
+	border: 2px solid black;
+	
+}
+.sectionfooter{
+	height: 100px;
+	text-align: center;
+	border: 2px solid black;
+	
+}
+
+.sectionheader .sectionarticle .sectionfooter{
+	box-sizing: border-box;
+	
+	width: 100%;
+}
