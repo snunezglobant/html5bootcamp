@@ -6,75 +6,9 @@
 		<link rel="stylesheet" type="text/css" href="css/normalize.css">
 		<link rel="stylesheet" type="text/css" href="css/style.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>	
+		<script src="jquery/myscript.js"></script>			
 	</head>
-
-	<body>
-		<script type="text/javascript">
-			function Movie(attributes){
-				 this.attributes={};
-			};
-
-			Movie.prototype.setTitle=function(title){
-				this.attributes['title']=title;
-				
-			};
-			Movie.prototype.getTitle=function(){
-				return this.attributes['title'];
-			};
-			Movie.prototype.setDesc=function(desc){
-				this.attributes['desc']=desc;
-				
-			};
-			Movie.prototype.getDesc=function(desc){
-				return this.attributes['desc'];
-				
-			};
-			Movie.prototype.setGenre=function(genre){
-				this.attributes['genre']=genre;
-				
-			};
-			Movie.prototype.getGenre=function(genre){
-				return this.attributes['genre'];
-			};
-
-			Movie.prototype.setYear=function(year){
-				this.attributes['year']=year;
-				
-			};
-			Movie.prototype.getYear=function(year){
-				return this.attributes['year'];
-			};
-
-			function MovieObserver(){
-
-				this.observersList=[];
-			}	
-
-			Movie.prototype.play=function(){
-				console.log("The movie is playing"+" "+this.attributes['title']);
-			}
-
-			Movie.prototype.stop=function(){
-				console.log("The "+this.attributes['title']+ " movie is stopped");
-			}
-
-			$('document').ready(
-			function visible(){	
-
-				var terminator= new Movie();
-				terminator.setTitle('Terminator');
-				terminator.setDesc('A future movie');
-				terminator.setGenre('Science Fiction');
-				terminator.setYear('1986');
-				console.log(terminator.getYear());	
-				terminator.play();		
-				var saw=new Movie();
-				saw.setTitle('Saw');
-				saw.stop();	
-			});
-
-			
-
-		</script>
+	
+	<body>		
 	</body>
 </html>
