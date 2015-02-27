@@ -1,94 +1,66 @@
-// Exercise 1 - Creating Movie() class
+/* Exercise 1 - Creating Movie() class */
+/* Modeling the Subject class - (in this case, 'Movie()' is the 'Subject' being observed) */
+
 function Movie() {
-	this.title = "";
+	this.attributes = {
+		'title':'',
+		'director':'',
+		'year':''
+	};	
+	
+	this.observer = new MovieObserver();
+}
 
-	this.observers = new MovieObserver();
-
-	this.set = function( title ) {
-		this.title = title;
-	};
-
-	this.get = function() {
-		return this.title;
-	};
-	this.play = function( title ) {
-		console.log("Playing " + this.title);
-	};
-	this.stop = function() {
-		console.log( "Stopped" );
-	};
+Movie.prototype.set = function( attr, value ) {
+	this.attributes[ attr ] = value;
 };
 
-/* Modeling the Subject class - 
-(in this case, 'Movie()' is the Subject being observed) */
-
-Movie.prototype.addObserver = function ( observer ) {
-	this.observers.add( observer );
+Movie.prototype.get = function(attr) {
+	return this.attributes[ attr ];
 };
 
-Movie.prototype.removeObserver = function( observer ) {
-	this.observers.removeAt( this.observers.indexOf( observer, 0 ) );
+Movie.prototype.play = function( title ) {
+	var event = "Playing";
+	this.notify( event );
 };
 
-Movie.prototype.notify = function ( context ) {
-	var observerCount = this.observers.count();
-	for( var i = 0; i < observerCount; i++ ) {
-		this.observers.get(i).update( context );
-	}
+Movie.prototype.stop = function() {
+	var event =  "Stopped";
+	this.notify( event );
 };
 
-// Exercise 2 - Adding some instances of Movie()
-var inception = new Movie();
-inception.set( "Inception" );
-inception.play();
+Movie.prototype.addObserver = function (observer) {
+	this.oList.add(observer);
+};
 
-var avatar = new Movie();
-avatar.set( "Avatar" );
-avatar.play();
+ 
+ Movie.prototype.notify = function ( event ) {
+ 	var event = event;
+	this.observer.update( this.attributes['title'], event);
+}; 
 
-// Exercise 3 - Adding a MovieObserver class()
+/* Exercise 3 - Adding a MovieObserver class() */
 
 function MovieObserver() {
-	this.update = function() {
-
+	this.update = function( movie, event ) {
+		console.log( movie + " " + event );
 	};
 }
 
-/* Modeling the List of Observers class */
+/* Exercise 2 - Adding some instances of Movie() */
 
-function ObserverList() {
-	this.observerList = [];
-}
+var inception = new Movie();
+inception.set("title", "Inception" );
+inception.set("director", "Christopher Nolan" );
 
-ObserverList.prototype.add = function( obj ) {
-	return this.observerList.push( obj );
-};
+var avatar = new Movie();
+avatar.set("title", "Avatar" );
+avatar.set("director", "James Cameron");
 
-ObserverList.prototype.count = function() {
-	return this.observerList.length;
-};
+/* Playing and Stopping */
 
-ObserverList.prototype.get = function( index ) {
-	if( index > -1 && index < this.observerList.length ) {
-		return this.observerList[ index ];
-	}
-};
+inception.play();
+avatar.play();
 
-ObserverList.prototype.indexOf = function ( obj, startIndex ) {
-	var i = startIndex;
-
-	while ( i < this.observerList.length ) {
-		if( this.observerList[i] === obj ) {
-			return i;
-		}
-		i++;
-	}
-	return -1;
-};
-
-ObserverList.prototype.removeAt = function( index ) {
-	this.observerList.splice( index, 1 );
-};
-
-
-
+inception.stop();
+avatar.stop();
