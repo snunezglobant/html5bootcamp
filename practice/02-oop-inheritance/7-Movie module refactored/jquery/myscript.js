@@ -88,23 +88,7 @@
 				}
 			};
 
-			$('document').ready(
-			function visible(){	
-				var saw=new Movie();
-				saw.setTitle('SAW I');
-				saw.setDesc('A good movie');
-				saw.setGenre('Terror');
-				saw.setYear('2005');
-				//saw.play();
-				//saw.stop();
-				var observer = new MovieObserver();
-				saw.AddObserver(observer);
-				var starw=new Movie();
-				starw.setTitle('Star Wars');
-				//starw.play();
-				//starw.stop();
-				
-			});
+			
 
 			//MOVIE MODULE
 
@@ -131,13 +115,22 @@
 				    },
 
 				    play : function (){
-				        console.log ("You're playing"+" "+this.attributes['title']);
+				        console.log ("You're playing"+" "+properties.attributes['title']);
 				    },
 
 				    stop : function(){
-				        console.log ("The "+this.attributes['title']+ " movie is stopped");
+				        console.log ("The "+properties.attributes['title']+ " movie is stopped");
 				    }
 
 			    };
-			});
+			}());
 
+			$('document').ready(
+			function visible(){	
+				
+				MovieModule.set('title','SAW I');
+				MovieModule.play();
+				MovieModule.stop();
+				
+			});
+			
