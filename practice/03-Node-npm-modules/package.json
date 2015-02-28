@@ -1,11 +1,11 @@
 {
-  "name": "bootcamp",
+  "name": "nodemodules",
   "version": "1.0.0",
-  "description": "this is a bootcamp exercise",
+  "description": "nodejs and browserify",
   "main": "scripts.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Marcos Diaz",
+  "author": "marcos diaz",
   "license": "ISC"
 }
