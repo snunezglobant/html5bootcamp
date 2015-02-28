@@ -147,7 +147,7 @@
 
 			$.extend(true,Movie.prototype,Social);
 
-			//ACTORS
+			//ACTORS WITHOUT ARRAY
 
 			var Actors=function(name){
 				this.name=name;
