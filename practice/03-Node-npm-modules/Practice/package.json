@@ -1,0 +1,11 @@
+{
+  "name": "Practice",
+  "version": "1.0.0",
+  "description": "Web UI Bootcamp - 2015 - Globant",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Juan Pablo Navarro",
+  "license": "ISC"
+}
