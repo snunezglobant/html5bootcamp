@@ -1,12 +1,7 @@
 function Director(name,quotes){
 	this.name=name;
 	this.quotes=[];	
-	this.set=function(attr,value){
-		this.attributes[attr];
-	}
-	this.get = function(){
-		return this.attributes[attr];
-	}	
+		
 	Director.prototype.speak=function(){
 		var string;
 		for(var i=0; i<quotes.length; i++){

@@ -1,12 +1,12 @@
+var $=require('Jquery');
 var Director = require("./Director");
-console.log("Pasa");
 function Movie(){  
-  this.attributes={};         
-  function set(key,value){
-        this.attributes[key]=value;        
-  };
-  function get(key){
-      return  this.attributes[key];        
-  };
+	this.attributes={};         
+	Movie.prototype.set=function(attr,value){
+		this.attribute[attr]=value;
+	}
+	Movie.prototype.get=function(){
+		console.log(this.attribute["title"]);
+	}
 };
 module.exports=Movie; 
