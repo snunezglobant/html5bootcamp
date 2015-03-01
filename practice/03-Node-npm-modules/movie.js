@@ -1,17 +1,17 @@
-var Movie=function (){
- this.attr={
- 	'title':'',
- 	'nombredirector':''
- };
+var Movie = function(){
+
+	this.attributes = {};
+
+}
+Movie.prototype.setAttr = function(attr,value){
+this.attributes[attr] = value;
 };
 
- Movie.prototype.setAttr = function(attr,value){
- 	this.attr[attr]=value;
-}; 
- Movie.prototype.getAttr = function(attr){
- 	console.log(this.attr[attr]);
-}; 
+Movie.prototype.getAttr = function(attr){
+	return this.attributes[attr];
+};
 
-
-
-module.exports = Movie; 
+Movie.prototype.getTitle = function(){
+	console.log(this.attributes['title']);
+};
+module.exports = Movie;
