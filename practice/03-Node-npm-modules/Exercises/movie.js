@@ -1,13 +1,12 @@
-/* Topic 3: NodeJS, npm, and JavaScript Modules */
 /* Exercise 3 - Create the same Movie class as in the previous practice, but inside a CommonJS module. */
 
-var Movie = require('./director.js');
+var Director = require('./director.js');
 
-exports.Movie =  function () {
+module.exports = function() {
 	var attributes = {
 		'title': '',
-		'director': '',
-		'year': ''
+		'year': '',
+		'director': ''
 	};
 
 	return {
@@ -17,7 +16,7 @@ exports.Movie =  function () {
 		get: function( attr ) {
 			return attributes[ attr ];
 		},
-		play: function() {
+		play: function( ) {
 			var event = "Playing";
 			this.notify(event);	
 		},
@@ -25,5 +24,5 @@ exports.Movie =  function () {
 			var event = "Stopped";
 			this.notify(event);	
 		}		
-	}
-};
+	};
+}
