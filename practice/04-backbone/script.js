@@ -1,5 +1,6 @@
 //count elements of list
-<script> Handlebars.registerHelper('length', function(list) {
+<script>
+Handlebars.registerHelper('length', function(list) {
   return list.length;
 });
 
