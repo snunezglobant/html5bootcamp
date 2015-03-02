@@ -1,4 +1,4 @@
-//Observer Patterns
+//Observer Patternss
 function ObserverMovie(){
 
 	this.observermovie = [];
@@ -26,7 +26,7 @@ ObserverMovie.prototype.get = function (index){
 
 ObserverMovie.prototype.indexOf = function (obj , start){
 	
-	this.observermovie.indexOf(obj, start);
+	return this.observermovie.indexOf(obj, start);
 };
 
 ObserverMovie.prototype.removeAt = function(index){
@@ -68,7 +68,7 @@ Movie.prototype.addObserver = function (observer){
 	this.listObservers.add(observer)
 };
 Movie.prototype.removeObserver = function(observer){
-	this.listObservers.removeAt(this.listOservers.indexOf(observer, 0))
+	this.listObservers.removeAt(this.listObservers.indexOf(observer, 0))
 };
 Movie.prototype.notify = function (title, action){
 	var observerCount = this.listObservers.count();
