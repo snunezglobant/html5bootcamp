@@ -7,7 +7,7 @@ function ObserverMovie(){
 
 ObserverMovie.prototype.add = function(obj){
 
-	return this.observermovie.push(obj);
+	this.observermovie.push(obj);
 };
 
 ObserverMovie.prototype.count = function(){
@@ -24,41 +24,27 @@ ObserverMovie.prototype.get = function (index){
 	}
 };
 
-ObserverMovie.prototype.indexOf = function (obj , startIndex){
+ObserverMovie.prototype.indexOf = function (obj , start){
 	
-	var i = startIndex;
-
-	while( i< this.observermovie.length){
-
-		if(this.observermovie[i] === obj)
-		{
-
-			return i;			
-		}
-
-		i++;
-	}
-
-	return -1;
+	this.observermovie.indexOf(obj, start);
 };
 
 ObserverMovie.prototype.removeAt = function(index){
 	this.observermovie.splice( index, 1);	
 }; 
 
-var MoObserver = function(){
+var Observer = function(){
 
 	this.update = function(title,action){
 
-		console.log(title+" "+action);
+		console.log(title + " " + action);
 }
 
 };
 //These are the first 6 exercises with the constructor and observer pattern
 var Movie = function(){
 	this.attributes= {'title': '','director': '', 'duration': '', 'actors':''} ;
-	this.mobservers = new ObserverMovie();
-	this.observer = new MoObserver();
+	this.listObservers = new ObserverMovie();
 	
 };
 Movie.prototype.set = function(atribute,val){
@@ -71,28 +57,29 @@ Movie.prototype.get = function(atribute){
 };
 Movie.prototype.play =  function(){
 
-	this.observer.update(this.attributes['title'], 'is playing');
+	this.notify(this.attributes['title'] , 'is playing');
 };
 Movie.prototype.stop = function(){
 
-	this.observer.update(this.attributes['title'], 'stoped');
+	this.notify(this.attributes['title'] , 'stoped');
+
 };
 Movie.prototype.addObserver = function (observer){
-	this.mobservers.add(observer)
+	this.listObservers.add(observer)
 };
 Movie.prototype.removeObserver = function(observer){
-	this.mobservers.removeAt(this.mobservers.indexOf(observer, 0))
+	this.listObservers.removeAt(this.listOservers.indexOf(observer, 0))
 };
-Movie.prototype.notify = function (context){
-	var observerCount = this.mobservers.count();
+Movie.prototype.notify = function (title, action){
+	var observerCount = this.listObservers.count();
 	for(var i=0; i< observerCount ; i++){
-		this.mobservers.get(i).update(context);
+		this.listObservers.get(i).update(title, action);
 	}
 };
 /*
 Tested:
 var harry = new Movie();
-var observer = new MoObserver();
+var observer = new Observer();
 harry.set('title','Harry Potter 1')
 harry.set('director','Chris Columbus')
 harry.set('duration','160min')
