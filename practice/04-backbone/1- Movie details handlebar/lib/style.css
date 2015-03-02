@@ -1,0 +1,42 @@
+html{
+	font-family: sans-serif;
+	font-size: 1.1rem;
+	text-align: justify;
+	right-margin: 4rem;
+	text-align: justify;
+	font-weight: bolder;
+	text-indent: 57rem;
+}
+body{
+	background: URL("movie.jpg");
+	background-repeat: no-repeat;
+}
+h1{
+	color:white;
+	font-family: Impact;
+	font-weight: bold;
+	font-size: 5rem;
+	text-align: right;
+	text-indent: 35rem;
+}
+h2{
+	color:lightgray;
+	text-align: center;
+	text-indent: 58rem;
+	font-weight: bold;
+}
+#desc{
+	font-weight: bold;
+	font-size: 2rem;
+	font-family: Impact;
+}
+.movies{
+	font-family: sans-serif;
+	font-size: 1rem;
+	font-weight: bold;
+	color:#FFF;
+
+}
+ul{
+list-style-type: none;
+}
