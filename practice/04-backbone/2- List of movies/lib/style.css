@@ -2,8 +2,6 @@ html{
 	font-family: sans-serif;
 	font-size: 1rem;
 	text-align: justify;
-	
-	text-align: justify;
 	font-weight: bolder;
 	color: black;
 	
@@ -46,5 +44,5 @@ ul{
 	color: white;
 	float: left;
 	border-radius: 1rem;
-	z-index: 0;
+	
 }
