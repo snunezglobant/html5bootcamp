@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8">
+ <!-- <link type="text/css" rel="stylesheet" href="normalize.css">
+ 	  <link type="text/css" rel="stylesheet" href="style.css"> 
+  
+  	<script type="text/javascript" src="jquery-topic2.js"></script>-->
+
+	<script src="http://code.jquery.com/jquery.js"> </script>
+ 	<script src="jquery-topic4.js"></script>
+ 	<script src="handlebars-v3.0.0.js"></script>
+ 	<script src="Underscore 1.8.2.js"></script>
+ 	<script src="Backbone 1.0.0.js"></script>
+
+
+ </head>
+
+<body>
+
+<header class="header"> <p id="welcome">  </p> </header>
+<section class="content"><h1>Movie Details:</h1></section>
+<p  id= "movie"></p>
+<p  id= "movielist"></p>
+<nav id="album"></nav>
+<footer class="footer"></footer>
+</body>
+
+
+
+<script id="movie-template" type="text/x-handlebars-template">
+ <div>
+ {{name}}
+ </div>
+  <div>
+ {{year}}
+ </div>
+  <div>
+ {{description}}
+ </div>
+  <div>
+ {{genre}}
+ </div>
+</script>
+
+
+<script id="movie-list-template" type="text/x-handlebars-template">
+<div>
+{{#list movies}}{{title}} {{year}}{{/list}}
+
+</div>
+</script>
+
+
+
+
+<script>
+
+
+</script>
+
+
+</html>
+
+
+
