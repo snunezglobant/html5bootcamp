@@ -1,0 +1,76 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>
+		Movie details handlebar
+	</title>
+	<script type="text/javascript" src="lib/jquery-1.11.2.min"></script>
+	<script type="text/javascript" src="lib/handlebars.js"></script>
+	<!--<script type="text/javascript" src="lib/scripts.js">-->
+	
+	
+
+<body>
+	<script id="movies-tmp" type="text/x-handlebars-template">
+    
+	    <div class="movies">
+	        
+	        <h1>{{title}} of {{info.date}} in {{info.languages.1.lang}}</h1>
+	        
+	        <h2>You know, Inception...</h2>
+	        
+	        <p>{{description}}</p>
+	        
+	        <ul>	            
+	            <li>
+	                <p>Title: {{name}}</p>
+	                <p>Score: {{rating}}</p>
+	                {{#if director}}
+	                <p>Director: {{director}}</p>
+	                {{/if}}
+	                {{#unless director}}
+	                <p>There is no info about the director.</p>
+	                {{/unless}}
+	            </li>
+	        
+	        </ul>	        
+	    </div>  	  
+	</script>	
+	<script>
+		Handlebars.registerHelper('length', function(list) {
+		  return list.length;
+		});
+
+		var data = {
+		    title : "Best movie",
+		    description : "According to IMDB data...",
+		    info: {
+		        date: "the year",
+		        languages : [
+		            {"lang":"Spanish"},
+		            {"lang":"English"}
+		        ]
+		    },
+		    movies: [
+		        
+		        {
+		            name: "Inception",
+		            rating: "8,8",
+		            director: "Christopher Nolan"
+		        }
+		    ]
+		};
+
+		var template = $("movies-tmp").html();
+
+
+		var templateCompile = Handlebars.compile(template);
+
+
+		var result = templateCompile(data);
+
+		$("body").append(result);
+	</script>
+</body>
+</html>
