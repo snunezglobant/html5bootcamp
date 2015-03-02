@@ -1,0 +1,43 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files\\nodejs\\\\node.exe',
+1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install',
+1 verbose cli   'script.js' ]
+2 info using npm@2.5.1
+3 info using node@v0.12.0
+4 verbose node symlink C:\Program Files\nodejs\\node.exe
+5 warn package.json Practice@1.0.0 No repository field.
+6 warn package.json Practice@1.0.0 No README data
+7 warn package.json movie@1.0.1 No repository field.
+8 warn package.json movie@1.0.1 No README data
+9 silly cache add args [ 'script.js', null ]
+10 verbose cache add spec script.js
+11 silly cache add parsed spec { raw: 'script.js',
+11 silly cache add   scope: null,
+11 silly cache add   name: null,
+11 silly cache add   rawSpec: 'script.js',
+11 silly cache add   spec: 'C:\\Users\\Jorge\\Documents\\Globant\\Repos\\bootcamp\\html5bootcamp\\practice\\03-Node-npm-modules\\Practice\\script.js',
+11 silly cache add   type: 'local' }
+12 silly addLocalTarball shasum (computed) e50203d302e4881df1bea1809c05f03495377844
+13 verbose addTmpTarball C:\Users\Jorge\Documents\Globant\Repos\bootcamp\html5bootcamp\practice\03-Node-npm-modules\Practice\script.js not in flight; adding
+14 verbose addTmpTarball validating metadata from C:\Users\Jorge\Documents\Globant\Repos\bootcamp\html5bootcamp\practice\03-Node-npm-modules\Practice\script.js
+15 verbose tar unpack C:\Users\Jorge\Documents\Globant\Repos\bootcamp\html5bootcamp\practice\03-Node-npm-modules\Practice\script.js
+16 verbose tar unpacking to C:\Users\Jorge\AppData\Local\Temp\npm-2704-ac2b2faa\unpack-fec691a92f92
+17 verbose gentlyRm vacuuming C:\Users\Jorge\AppData\Local\Temp\npm-2704-ac2b2faa\unpack-fec691a92f92
+18 silly gunzTarPerm modes [ '777', '666' ]
+19 error not a package C:\Users\Jorge\Documents\Globant\Repos\bootcamp\html5bootcamp\practice\03-Node-npm-modules\Practice\script.js
+20 error addLocal Could not install C:\Users\Jorge\Documents\Globant\Repos\bootcamp\html5bootcamp\practice\03-Node-npm-modules\Practice\script.js
+21 verbose stack Error: ENOENT, open 'C:\Users\Jorge\AppData\Local\Temp\npm-2704-ac2b2faa\unpack-fec691a92f92\package.json'
+21 verbose stack     at Error (native)
+22 verbose cwd C:\Users\Jorge\Documents\Globant\Repos\bootcamp\html5bootcamp\practice\03-Node-npm-modules\Practice
+23 error Windows_NT 6.1.7600
+24 error argv "C:\\Program Files\\nodejs\\\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install" "script.js"
+25 error node v0.12.0
+26 error npm  v2.5.1
+27 error path C:\Users\Jorge\AppData\Local\Temp\npm-2704-ac2b2faa\unpack-fec691a92f92\package.json
+28 error code ENOENT
+29 error errno -4058
+30 error enoent ENOENT, open 'C:\Users\Jorge\AppData\Local\Temp\npm-2704-ac2b2faa\unpack-fec691a92f92\package.json'
+30 error enoent This is most likely not a problem with npm itself
+30 error enoent and is related to npm not being able to find a file.
+31 verbose exit [ -4058, true ]

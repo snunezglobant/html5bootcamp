@@ -1,19 +1,21 @@
-/* Topic 3: NodeJS, npm, and JavaScript Modules */
-/* Exercise 4 - Create a Director class inside a module and set it as dependency on the Movie module. */
+/* Exercise 4 - Create a Director class inside a module and set it as a dependency on the Movie module. */
+/* Exercise 6 - Add name:string, a quotes:array properties, and a speak() method to Director; calling speak() will return director’s quotes. */
 
-var director = require('./movie');
-
-module.exports = function() {
+exports.Director = function( name ) {
 	var attributes = {
-		'name': '',
-		'birthday': ''
+		'name': name,
+		'quotes': []
 	};
 
 	return {
-		set: function( attr, value ) {
+		speak: function() {
+			console.log(this.get("name") + " says:" + this.get("quotes"));
+		},
+		set: function( attr, value) {
 			attributes[ attr ] = value;
 		},
 		get: function( attr ) {
 			return attributes[ attr ];
-		}		
+		}
+	}
 };
