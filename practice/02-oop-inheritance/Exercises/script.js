@@ -1,94 +1,180 @@
-// Exercise 1 - Creating Movie() class
-function Movie() {
-	this.title = "";
+/* Exercise 1 - Creating Movie() class */
+/* Modeling the Subject class - (in this case, 'Movie()' is the 'Subject' being observed) */
 
-	this.observers = new MovieObserver();
+/* Movie class is commented because down below was refactored as a Module - (Exercise 7) */
 
-	this.set = function( title ) {
-		this.title = title;
-	};
+/* function Movie() {
+	this.attributes = {
+		'title':'',
+		'director':'',
+		'year':''
+	};	
+	
+	this.observer = new MovieObserver();
+}
 
-	this.get = function() {
-		return this.title;
-	};
-	this.play = function( title ) {
-		console.log("Playing " + this.title);
-	};
-	this.stop = function() {
-		console.log( "Stopped" );
-	};
+Movie.prototype.set = function( attr, value ) {
+	this.attributes[ attr ] = value;
 };
 
-/* Modeling the Subject class - 
-(in this case, 'Movie()' is the Subject being observed) */
-
-Movie.prototype.addObserver = function ( observer ) {
-	this.observers.add( observer );
+Movie.prototype.get = function(attr) {
+	return this.attributes[ attr ];
 };
 
-Movie.prototype.removeObserver = function( observer ) {
-	this.observers.removeAt( this.observers.indexOf( observer, 0 ) );
+Movie.prototype.play = function( title ) {
+	var event = "Playing";
+	this.notify( event );
 };
 
-Movie.prototype.notify = function ( context ) {
-	var observerCount = this.observers.count();
-	for( var i = 0; i < observerCount; i++ ) {
-		this.observers.get(i).update( context );
-	}
+Movie.prototype.stop = function() {
+	var event =  "Stopped";
+	this.notify( event );
 };
 
-// Exercise 2 - Adding some instances of Movie()
-var inception = new Movie();
-inception.set( "Inception" );
-inception.play();
+Movie.prototype.addObserver = function (observer) {
+	this.oList.add(observer);
+};
 
-var avatar = new Movie();
-avatar.set( "Avatar" );
-avatar.play();
+ 
+ Movie.prototype.notify = function ( event ) {
+ 	var event = event;
+	this.observer.update( this.attributes['title'], event);
+}; */
 
-// Exercise 3 - Adding a MovieObserver class()
+/* Exercise 7 - Refactor Movie class as Module keeping your previous code for reference */
+/* Refactoring Movie() as a Module */
+var Movie = {};
+
+var Movie = ( function () {
+	var attributes = {
+		'title': '',
+		'director': '',
+		'year': ''
+	};
+
+	var observer = new MovieObserver();
+
+	return {
+		set: function( attr, value) {
+			attributes[ attr ] = value;
+		},
+		get: function( attr ) {
+			return attributes[ attr ];
+		},
+		play: function( ) {
+			var event = "Playing";
+			this.notify(event);	
+		},
+		stop: function() {
+			var event = "Stopped";
+			this.notify(event);	
+		},
+		notify: function( event ) {
+			var event = event;
+			observer.update( attributes['title'], event);
+		}
+	};
+});
+
+/* Exercise 3 - Adding a MovieObserver class() */
 
 function MovieObserver() {
-	this.update = function() {
-
+	this.update = function( movie, event ) {
+		console.log( movie + " " + event );
 	};
 }
 
-/* Modeling the List of Observers class */
+/* Exercise 2 - Adding some instances of Movie() */
 
-function ObserverList() {
-	this.observerList = [];
+var inception = new Movie();
+inception.set("title", "Inception" );
+inception.set("director", "Christopher Nolan" );
+inception.set("year", "2010");
+
+var avatar = new Movie();
+avatar.set("title", "Avatar" );
+avatar.set("director", "James Cameron");
+avatar.set("year", "2009");
+
+
+/* Playing and Stopping */
+
+inception.play();
+avatar.play();
+
+inception.stop();
+avatar.stop();
+
+/* Exercise 8 - Create a DownloadableMovie that extends from Movie adding a download method. 
+Here you will have to set the correct prototype to DownloadableMovie. */
+
+var DownloadableMovie = function() {}
+ 
+DownloadableMovie.prototype = new Movie();
+DownloadableMovie.prototype.constructor = DownloadableMovie;
+ 
+DownloadableMovie.prototype.download = function () {
+  console.log("Downloading " + this.get("title") + "...");
+};
+
+var mask = new DownloadableMovie();
+mask.set("title", "The Mask");
+mask.set("director", "Chuck Russell");
+mask.set("year", "1994");
+mask.download();
+
+/* Exercise 9 - Create a mixin object called Social with the methods: share(friendName) and like(). */
+
+var Social = {
+
+	share: function( friendName ) {
+		console.log( "Sharing " + this.get("title") + "with " + friendName );
+	},
+	like: function() {
+		console.log( this.get("title") + " got a like!");
+	}
 }
 
-ObserverList.prototype.add = function( obj ) {
-	return this.observerList.push( obj );
-};
+/* Exercise 10 - Apply the mixin to Movie object and play with the console output. */
 
-ObserverList.prototype.count = function() {
-	return this.observerList.length;
-};
+$.extend(true, Movie.prototype, Social);
 
-ObserverList.prototype.get = function( index ) {
-	if( index > -1 && index < this.observerList.length ) {
-		return this.observerList[ index ];
-	}
-};
+var madagascar = new Movie();
+madagascar.set("title", "Madagascar");
+madagascar.share("JP Navarro");
+madagascar.like();
 
-ObserverList.prototype.indexOf = function ( obj, startIndex ) {
-	var i = startIndex;
+/* Exercise 11 - Create an Actor class and create some actors from one of your favorite movies. */
 
-	while ( i < this.observerList.length ) {
-		if( this.observerList[i] === obj ) {
-			return i;
+var Actor = {};
+
+var Actor = ( function () {
+	var attributes = {
+		'name': '',
+		'age': ''
+	};
+
+	return {
+		set: function( attr, value) {
+			attributes[ attr ] = value;
+		},
+		get: function( attr ) {
+			return attributes[ attr ];
 		}
-		i++;
-	}
-	return -1;
-};
+	};
+});
 
-ObserverList.prototype.removeAt = function( index ) {
-	this.observerList.splice( index, 1 );
-};
+var dicaprio = new Actor();
+dicaprio.set("name", "Leonardo DiCaprio");
+dicaprio.set("birthday", "11/11/74");
 
+var jnicholson = new Actor();
+jnicholson.set("name", "Jack Nicholson");
+jnicholson.set("birthday", "04/22/37");
 
+/* Show how you would add an array of actors to a Movie object. */ 
 
+var cast = [dicaprio, jnicholson];
+
+madagascar.set("cast", cast);
+console.log(madagascar.get("cast"));
