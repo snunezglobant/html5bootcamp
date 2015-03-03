@@ -129,9 +129,60 @@
       download: function(){
         console.log(this.attributes.name + " is downloading right now");
       }
-    }
+    };
 
     var dm = new DownloadableMovie("Pirates of the Caribean", "Adventure", 2005);
     console.log(dm);
+    dm.download();
+    
+    
+    /*****************/
+    /*  Excercise 9  */
+    var Social = {
+      share: function(friendName){
+        console.log("Sharing " + this.getName() + " with " + friendName);
+      },
+      like: function(){
+        console.log("I like " + this.getName());
+      }
+    };
+    
+    
+    /******************/
+    /*  Excercise 10  */
+    function merge(target, source) {
+      /* Merges two (or more) objects,
+      giving the last one precedence */
+      if ( typeof target !== 'object' ) target = {};
+      for (var property in source) {
+        if ( source.hasOwnProperty(property) ) {
+          var sourceProperty = source[ property ];
+          if ( typeof sourceProperty === 'object' ) {
+            target[ property ] = util.merge( target[ property ], sourceProperty );
+            continue;
+          }
+          target[ property ] = sourceProperty;
+        }
+      }
+      for (var a = 2, l = arguments.length; a < l; a++) merge(target, arguments[a]);
+      return target;
+    };
+    merge(Movie.prototype, Social);
+    socialMovie = new Movie("The Godfather", "Suspense", 1985);
+    //Testing
+    socialMovie.like();
+    movie1.share("Alvaro");
+    
+    
+    /******************/
+    /*  Excercise 11  */
+    function Actor(name){
+      this.name = name;
+    }
+    var pacino = new Actor("Al Pacino");
+    var brando = new Actor("Marlon Brando");
+    var darin = new Actor("Ricardo Darin");
+    var pauls = new Actor("Gaston Pauls");
+    var depp = new Actor("Johnny Depp");
   </script>
 </html>
