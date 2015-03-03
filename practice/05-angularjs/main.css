@@ -1,0 +1,140 @@
+.movie-list-container {
+  width: 50rem;
+  margin: 4rem auto;
+}
+
+.movie-list {
+  margin: 2rem 0rem;
+  padding: 0rem;
+
+  list-style-type: none;
+}
+
+.movie-item {
+  position: relative;
+  margin: 0rem;
+  padding: 0.6rem 2rem;
+
+  background-color: #fff;
+
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.movie-item::before,
+.movie-item:last-child::after,
+.movie-item:hover::after {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  margin: auto -2rem;
+
+  background: -webkit-gradient(linear, left top, right top, color-stop(0, #fff), color-stop(2rem, #bbb), color-stop(48rem, #bbb), color-stop(50rem, #fff));
+  background: -webkit-linear-gradient(left, #fff 0, #bbb 2rem, #bbb 48rem, #fff 50rem);
+  background: linear-gradient(to right, #fff 0, #bbb 2rem, #bbb 48rem, #fff 50rem);
+
+  content: '';
+}
+
+.movie-item::before {
+  top: 0;
+}
+
+.movie-item:last-child::after,
+.movie-item:hover::after {
+  bottom: 0;
+}
+
+.movie-item:hover {
+  z-index: 1;
+
+  -webkit-transition: -webkit-transform 100ms;
+  transition: transform 100ms;
+  -webkit-transform: scale(1.04, 1.04);
+  -ms-transform: scale(1.04, 1.04);
+  transform: scale(1.04, 1.04);
+}
+
+.movie-item:active {
+  -webkit-transform: scale(1.03, 1.03);
+  -ms-transform: scale(1.03, 1.03);
+  transform: scale(1.03, 1.03);
+}
+
+.toolbox {
+  display: none;
+  position: absolute;
+  top: 50%;
+  right: 1rem;
+  height: 1.6rem;
+  margin-top: -0.8rem;
+}
+
+.toolbox.visible {
+  display: block;
+}
+
+.toolbox button {
+  height: 1.6rem;
+
+  border-width: 1px;
+  border-style: solid;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+
+  font-size: 0.8rem;
+}
+
+.toolbox .edit {
+  border-color: #ccc;
+
+  background-color: #fff;
+
+  color: #333;
+}
+
+.toolbox .remove {
+  border-color: #d43f3a;
+
+  background-color: #d9534f;
+
+  color: #fff;
+}
+
+.movie-item .name {
+  font-size: 1.1rem;
+}
+
+.movie-item .year {
+  font-size: 0.9rem;
+}
+.movie-item .director {
+  font-size: 0.8rem;
+}
+
+.movie-details {
+  width: 45rem;
+  margin: 4rem auto;
+}
+
+.movie-details .poster {
+  float: left;
+  width: 11.5rem;
+  height: 17rem;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+}
+
+.movie-details .name {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.movie-details .genre:not(:last-child)::after {
+  color: #888;
+  content: ' | ';
+}
