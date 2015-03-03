@@ -31,23 +31,13 @@ module.exports = function (movieName, movieGenre, movieYear, directorName) {
                 this.attributes.playing = false;
             }
         },
-        setName: function (newName) {
-            this.attributes.name = newName;
+        set: function(parameter, value){
+            if(this.attributes.hasOwnProperty(parameter)) this.attributes[parameter] = value;
+            else console.log("No such parameter " + parameter);
         },
-        setGenre: function (newGenre) {
-            this.attributes.genre = newGenre;
-        },
-        setYear: function (newYear) {
-            this.attributes.year = newYear;
-        },
-        getName: function () {
-            return this.attributes.name;
-        },
-        getGenre: function () {
-            return this.attributes.genre;
-        },
-        getYear: function () {
-            return this.attributes.year;
+        get: function(parameter){
+            if(this.attributes.hasOwnProperty(parameter)) return this.attributes[parameter];
+            else console.log("No such parameter " + parameter);
         }
     };
 };
