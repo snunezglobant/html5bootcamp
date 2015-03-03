@@ -1,52 +1,3 @@
-(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
-function Director(attributes,quotes){
-	
-	this.attributes={
-		'name': "",
-		'quotes': []
-	};
-	this.set=function(key,value){
-		this.attributes[key]=value;
-	}
-	this.get = function(key){
-		return this.attributes[key];
-	}	
-	this.speak=function(){
-		var string;
-		for(var i=0; i<quotes.length; i++){
-			if(i==0){
-				string=string+JSON.stringify(quotes[i]);
-			}
-			else{
-				string=string+", "+JSON.stringify(quotes[i]);
-			}	
-		}
-		return console.log(this.attributes['name']+"says :"+string);
-	}
-};
-module.exports=Director;
-
-
-},{}],2:[function(require,module,exports){
-
-function Movie(){  
-	var director=require("./Director");
-	this.attributes={};
-	Movie.prototype.set=function(key,value){
-		 this.attributes[key]=value;
-	};
-	Movie.prototype.get=function(key){
-		return this.attributes[value];
-	};
-};
-module.exports=Movie; 
-
-},{"./Director":1}],3:[function(require,module,exports){
-$ = require('./jquery-bundle');
-$ = require('./Movie');
-
-},{"./Movie":2,"./jquery-bundle":4}],4:[function(require,module,exports){
-(function (global){
 (function(f){if(typeof exports==="object"&&typeof module!=="undefined"){module.exports=f()}else if(typeof define==="function"&&define.amd){define([],f)}else{var g;if(typeof window!=="undefined"){g=window}else if(typeof global!=="undefined"){g=global}else if(typeof self!=="undefined"){g=self}else{g=this}g.jquery = f()}})(function(){var define,module,exports;return (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({"jquery":[function(require,module,exports){
 /*!
  * jQuery JavaScript Library v2.1.3
@@ -9256,5 +9207,3 @@ return jQuery;
 
 },{}]},{},[])("jquery")
 });
-}).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}]},{},[3]);
