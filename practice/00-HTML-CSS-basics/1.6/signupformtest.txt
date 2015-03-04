@@ -1,0 +1,3 @@
+Works in the current browsers checked in W3C.
+
+Maybe it being deprecated in Seamonkey

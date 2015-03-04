@@ -1,0 +1,89 @@
+html{color:black;
+	font-family: Andale%20Mono;
+	font-size: 1rem;
+}
+
+#Section{	
+	background-color: lightgray;		
+	width: 45rem;
+	height: 31rem;
+	border-radius: 1rem 1rem 1rem 1rem;
+	padding: 0.07rem;
+	margin: 1rem;	
+}
+#header1{	
+	background-color: darkgray;			
+	margin: 1rem auto;
+	vertical-align: middle;
+	height: 3rem;
+	text-align: center;
+	width: 43rem;
+	border-radius: 1rem 1rem 1rem 1rem;
+	
+}
+#navigation{	
+	height: 20rem;
+	background-color: darkgray;
+	text-align: center;	
+	margin-left: 1rem;	
+	float: left;
+	width: 8rem;
+	border-radius: 1rem 1rem 1rem 1rem;
+	
+}
+
+#sidebar{
+	height: 20rem;
+	background-color: darkgray;
+	text-align: center;	
+	margin-right: 1rem;	
+	float: right;
+	width: 8rem;
+	border-radius: 1rem 1rem 1rem 1rem;
+	
+}
+#sectiona{
+	height: 20rem;
+	background-color: darkgray;
+	text-align: center;	
+	margin-top:1rem;
+	margin-left: 10rem;
+	margin-right: 10rem;
+	margin-bottom: 1rem;
+	width: 25rem;
+	border-radius: 1rem 1rem 1rem 1rem;
+		
+}
+#header2{		
+	margin: 1rem;
+	background-color: lightgray;
+	height: 3rem;
+	border-radius: 1rem 1rem 1rem 1rem;
+	
+}
+#article{		
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+	margin: 1rem;
+	background-color: lightgray;
+	height: 7rem;
+	border-radius: 1rem 1rem 1rem 1rem;
+	
+}
+#footer2{	
+	margin: 1rem;
+	background-color: lightgray;
+	height: 3rem;
+	border-radius: 1rem 1rem 1rem 1rem;
+
+}
+#footer1{		
+	margin: 1rem;
+	vertical-align: middle;
+	background-color: darkgray;
+	height: 2rem;
+	width: 43rem;
+	text-align: center;
+	border-radius: 1rem 1rem 1rem 1rem;
+	
+}
