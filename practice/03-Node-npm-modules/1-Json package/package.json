@@ -1,0 +1,12 @@
+{
+  "name": "json1",
+  "version": "1.0.0",
+  "description": "A chore for the bootcamp",
+  "main": "chore.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Gonzalo Roncedo",
+  "license": "ISC",
+  "dependencies": {}
+}
