@@ -1,0 +1,23 @@
+html{color:black;
+	font-family: sans-serif;
+	font-size: 1rem;
+}
+
+section{
+	text-align: center;
+	padding: 1rem;
+}
+
+#hidden{
+
+	display: none;
+}
+
+.wrapper {
+    text-align: center;
+}
+
+.button {
+    position: absolute:
+    top: 50%;
+}
