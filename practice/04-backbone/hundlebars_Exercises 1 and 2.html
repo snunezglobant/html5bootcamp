@@ -4,12 +4,9 @@
 <head>
     <meta charset="utf-8">
     <title>Hundle</title>
-    <script type="text/javascript" src="jquery-1.11.2.min.js"></script>
-    <script type="text/javascript" src="handlebars.js"></script>
-<!--   <script src="script.js" type="text/javascript"></script>-->
 </head>
 <body>
-    <script id="movies-tmp" type="text/x-handlebars-template">
+    <script id="movies-tmp" type="text/x-handlebars-template" />
     <div class="movies">
         
         <h1>{{title}}{{info.date}} in {{info.languages.1.lang}}</h1>
@@ -40,68 +37,10 @@
             
     </div>
     </script>
+    <script type="text/javascript" src="jquery-1.11.2.min.js"></script>
+    <script type="text/javascript" src="handlebars.js"></script>
+    <script src="script.js" type="text/javascript"></script>
 </body>
-</html>
-
-        <script>
-    Handlebars.registerHelper('length', function(list) {
-      return list.length;
-    });
-
-    //Information Object to show on template
-    var data = {
-        title : "The best movies",
-        description : "Based on IMDB page",
-        info: {
-            date: "",
-            languages : [
-                {"lang":"spanish"},
-                {"lang":"english"}
-            ]
-        },
-        movies: [
-            {
-                name: "Interstellar",
-                Year: "2014",
-                genre: "Cience Fiction",
-                description: "    ",
-                director:  "Christopher Nolan",
-               
-                
-            },
-            {
-                name: "Iron Man 3",
-                Year: "2014",
-                description:" ",
-                genre: "Cience Fiction",
-                
-            },
-            {
-                name: "Man of Steel",
-                Year: "2014",
-                genre: "Cience Fiction",
-                descrition:" ",
-                director: "Christopher Nolan",
-               
-               
-            }
-        ]
-    };
-
-    //Gets the template contents Declared Defined Tags script.
-    var template = document.getElementById("movies-tmp").innerHTML;
-
-    // Compile the template using the compile method.
-    var templateCompile = Handlebars.compile(template);
-
-    // Inject the information in the compiled template and make reemplados .
-    var result = templateCompile(data);
-
-    // We insert the result in the body of the document.
-    // Using jQuery would be: $ (" body" ) append (result ).
-    document.body.insertAdjacentHTML("beforeend", result);
-
-</script>
 </html>
 
 
