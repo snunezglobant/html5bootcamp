@@ -6,21 +6,13 @@
   <meta name="keywords" content="topic 4">
   <meta name="author" content="Gabriel Masclef">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
-  
-  <script type="text/javascript" src="http://code.jquery.com/jquery.js"></script>
-  <script src="handlebars-v3.0.0.js"></script>
-  <script src="Underscore 1.8.2.js"></script>
-  <script src="Backbone 1.0.0.js"></script>
-
-
 </head>
 
 <body>
 
-  
+
   <h1>Add movies:</h1>
-  
+
   <form id="new-movie">
     <label>Title:</label><input id="movie-title" name="movie-title" type="text" />
     <label>Year:</label><input id="movie-year" name="movie-year" type="text" />
@@ -34,6 +26,11 @@
   </section>
 
 
+  <script type="text/javascript" src="http://code.jquery.com/jquery.js"></script>
+  <script src="handlebars-v3.0.0.js"></script>
+  <script src="Underscore 1.8.2.js"></script>
+  <script src="Backbone 1.0.0.js"></script>
+
   <script type="text/javascript" src="moviejs.js"></script>
   <script type="text/template" id="movie-template">
   <span class="title"><%= title %>:</span>
@@ -42,7 +39,9 @@
   <a href="#" class="delete">[Delete movie]</a>
   </script>
 
-  
+
 </body>
+
+
 
 </html>
