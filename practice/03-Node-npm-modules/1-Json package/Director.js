@@ -1,9 +1,11 @@
-var Director= function(attributes,quotes){
-	
+var Director= function(name){
+	var string="";
 	this.attributes={
 		'name': '',
 		'quotes': []
 	};
+	this.attributes['name']=name;
+	
 	this.set=function(key,value){
 		this.attributes[key]=value;
 	}
@@ -11,7 +13,7 @@ var Director= function(attributes,quotes){
 		return this.attributes[key];
 	}	
 	this.speak=function(){
-		var string;
+		
 		for(var i=0; i<this.attributes['quotes'].length; i++){
 			if(i==0){
 				string=string+JSON.stringify(this.attributes['quotes'][i]);
@@ -20,7 +22,7 @@ var Director= function(attributes,quotes){
 				string=string+", "+JSON.stringify(this.attributes['quotes'][i]);
 			}	
 		}
-		return console.log(this.attributes['name']+"says :"+string);
+		return console.log(name+' says :'+string);
 	}
 };
 module.exports=Director;

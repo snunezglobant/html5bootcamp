@@ -1,10 +1,12 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
-var Director= function(attributes,quotes){
-	
+var Director= function(name){
+	var string="";
 	this.attributes={
 		'name': '',
 		'quotes': []
 	};
+	this.attributes['name']=name;
+	
 	this.set=function(key,value){
 		this.attributes[key]=value;
 	}
@@ -12,7 +14,7 @@ var Director= function(attributes,quotes){
 		return this.attributes[key];
 	}	
 	this.speak=function(){
-		var string;
+		
 		for(var i=0; i<this.attributes['quotes'].length; i++){
 			if(i==0){
 				string=string+JSON.stringify(this.attributes['quotes'][i]);
@@ -21,7 +23,7 @@ var Director= function(attributes,quotes){
 				string=string+", "+JSON.stringify(this.attributes['quotes'][i]);
 			}	
 		}
-		return console.log(this.attributes['name']+"says :"+string);
+		return console.log(name+' says :'+string);
 	}
 };
 module.exports=Director;
@@ -29,7 +31,7 @@ module.exports=Director;
 
 },{}],2:[function(require,module,exports){
 var Movie= function(){  
-	var Director=require("./Director");
+	var lib=require("./Director");
 	this.attributes={};
 	Movie.prototype.set=function(key,value){
 		 this.attributes[key]=value;
@@ -37,6 +39,7 @@ var Movie= function(){
 	Movie.prototype.get=function(key){
 		return this.attributes[key];
 	};
+
 };
 module.exports=Movie; 
 
