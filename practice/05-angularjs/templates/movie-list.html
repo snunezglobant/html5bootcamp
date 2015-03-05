@@ -1,24 +1,25 @@
 <section class="movie-list-container" ng-controller="MovieListCtrl">
+  <button class="add btn-default" ng-click="addItem()">Add movie</button>
   <h2>Movies you should definitely watch:</h2>
   <ul class="movie-list">
     <li class="movie-item" ng-repeat="movie in movieList" ng-mouseenter="mouseenter($index)" ng-mouseleave="mouseleave($index)" ng-click="showDetails(movie)">
       <div class="toolbox">
-        <button class="edit" ng-click="editBtnClick(movie); $event.stopPropagation();">Edit</button>
-        <button class="remove" ng-click="removeItem($index, movie); $event.stopPropagation();">Remove</button>
+        <button class="edit btn-default" ng-click="editItem(movie); $event.stopPropagation();">Edit</button>
+        <button class="remove btn-danger" ng-click="removeItem($index, movie); $event.stopPropagation();">Remove</button>
       </div>
-      <span class="name">
-        {{ movie.title }}
+      <span class="title">
+        {{ movie.title || 'Movie title not specified' }}
       </span>
       <span class="year" ng-if="movie.year">
         ({{ movie.year }})
       </span>
       <br>
-      <span class="director">
+      <span class="directors">
         Director{{movie.directors.length > 1 && 's' || ''}}:
-        <span ng-repeat="director in movie.directors" ng-if="movie.directors.length">
+        <span ng-repeat="director in movie.directors">
           {{ director.name }}<span ng-if="!$last">, </span>
         </span>
-        <span ng-if="!movie.directors.length">Not specified</span>
+        <span ng-if="!movie.directors.length || !movie.directors[0].name">Not specified</span>
       </span>
     </li>
   </ul>

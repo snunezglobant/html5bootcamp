@@ -1,0 +1,63 @@
+<section class="movie-edit-container" ng-controller="MovieEditCtrl">
+  <article class="movie-edit">
+    <div class="column-left">
+      <img class="poster" ng-src="{{ movie.imageUrl || 'http://movies-online.co/data/no_image.png' }}" alt="Movie poster">
+      <p class="section-name">
+        Poster:
+      </p>
+      <input type="url" class="image-url" placeholder="Poster URL" ng-model="movie.imageUrl">
+    </div>
+    <div class="column-right">
+      <div>
+        <p class="section-name">
+          Title and release year:
+        </p>
+        <input type="text" class="title" placeholder="Movie title" ng-model="movie.title"><input type="text" class="year" placeholder="Year" ng-model="movie.year">
+      </div>
+      <div class="genres">
+        <p class="section-name">
+          Genre{{ movie.genres.length > 1 && 's' || '' }}:
+          <button class="add btn-default" ng-click="addGenre()">+</button>
+        </p>
+        <ul>
+          <!-- https://docs.angularjs.org/error/ngRepeat/dupes -->
+          <li ng-repeat="genre in movie.genres track by $index">
+            <input type="text" class="genre" placeholder="Genre" ng-model="movie.genres[$index]"><button class="remove btn-danger" ng-click="removeItem(movie.genres, $index)" ng-if="!$first">&ndash;</button>
+          </li>
+        </ul>
+      </div>
+      <div class="directors">
+        <p class="section-name">
+          Director{{ movie.directors.length > 1 && 's' || '' }}:
+          <button class="add btn-default" ng-click="addPerson(movie.directors)">+</button>
+        </p>
+        <ul>
+          <li ng-repeat="director in movie.directors">
+            <input type="text" class="director-name" placeholder="Name" ng-model="director.name"><input type="text" class="director-url" placeholder="Website URL" ng-model="director.url"><button class="remove btn-danger" ng-click="removeItem(movie.directors, $index)" ng-if="!$first">&ndash;</button>
+          </li>
+        </ul>
+      </div>
+      <div class="stars">
+        <p class="section-name">
+          Stars:
+          <button class="add btn-default" ng-click="addPerson(movie.stars)">+</button>
+        </p>
+        <ul>
+          <li ng-repeat="star in movie.stars">
+            <input type="text" class="star-name" placeholder="Name" ng-model="star.name"><input type="text" class="star-url" placeholder="Website URL" ng-model="star.url"><button class="remove btn-danger" ng-click="removeItem(movie.stars, $index)" ng-if="!$first">&ndash;</button>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <p class="section-name">
+          Plot:
+        </p>
+        <textarea class="plot" placeholder="Plot" ng-model="movie.plot"></textarea>
+      </div>
+    </div>
+  </article>
+  <div class="nav-buttons">
+    <button class="save btn-default" ng-click="save()">Save</button>
+    <button class="cancel btn-default" ng-click="cancel()">Cancel</button>
+  </div>
+</section>
