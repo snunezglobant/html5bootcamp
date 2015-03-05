@@ -1,0 +1,11 @@
+{
+  "name": "nodemodules",
+  "version": "1.0.0",
+  "description": "nodejs and browserify",
+  "main": "scripts.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "marcos diaz",
+  "license": "ISC"
+}
