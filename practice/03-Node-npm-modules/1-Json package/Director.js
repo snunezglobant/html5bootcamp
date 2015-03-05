@@ -1,7 +1,7 @@
-function Director(attributes,quotes){
+var Director= function(attributes,quotes){
 	
 	this.attributes={
-		'name': "",
+		'name': '',
 		'quotes': []
 	};
 	this.set=function(key,value){
@@ -12,12 +12,12 @@ function Director(attributes,quotes){
 	}	
 	this.speak=function(){
 		var string;
-		for(var i=0; i<quotes.length; i++){
+		for(var i=0; i<this.attributes['quotes'].length; i++){
 			if(i==0){
-				string=string+JSON.stringify(quotes[i]);
+				string=string+JSON.stringify(this.attributes['quotes'][i]);
 			}
 			else{
-				string=string+", "+JSON.stringify(quotes[i]);
+				string=string+", "+JSON.stringify(this.attributes['quotes'][i]);
 			}	
 		}
 		return console.log(this.attributes['name']+"says :"+string);
