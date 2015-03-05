@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Bootcamp - Topic 4</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script type="text/javascript" src="js/handlebars-v3.0.0.js" defer></script>
+        <script type="text/javascript" src="js/jquery-2.1.3.js" defer></script>
+        <script type="text/javascript" src="js/movieRender.js" defer></script>
+    </head>
+    <body>
+        <script id="movieTemplate" type="text/x-handlebars-template">
+            <h1>Movie: {{movie.title}}</h1>
+            <p><b>Year:</b> {{movie.year}}</p>
+            <p><b>Genres:</b> 
+                {{#each movie.genreList}}
+                    {{genre}}, 
+                {{/each}}
+            </p>
+            <p><b>Director:</b> {{movie.director}}</p>
+            <p><b>Written by:</b> 
+                {{#each movie.writers}}
+                    {{name}}, 
+                {{/each}}
+            </p>
+            <p><b>Cast:</b> 
+                {{#each movie.actors}}
+                    {{name}}, 
+                {{/each}}
+            </p>
+            <p><b>Description:</b> {{movie.description}}</p>
+        </script>
+        <div id="movieRendering"></div>
+    </body>
+</html>
