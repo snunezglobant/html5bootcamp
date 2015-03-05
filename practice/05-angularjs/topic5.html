@@ -1,0 +1,36 @@
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Topic 5, AngularJS">
+  <meta name="keywords" content="Topic 5, AngularJS">
+  <meta name="author" content="Gabriel Masclef">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <title>My favorite movies</title>
+  <!--<link rel="stylesheet" href="movies5.css">-->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.3/angular.min.js"></script>
+  <script src="movies5.js"></script>
+</head>
+<body ng-app>
+
+  <h2>Movie list:</h2>
+  <div ng-controller="movieList">
+    <ul class="unstyled">
+      <li ng-repeat="movie in movies">
+        <span >{{movie.title}}</span>
+      </li>
+    </ul>
+  </div>
+
+  <h2>Movie Details:</h2>
+  <div ng-controller="movieList">
+    <ul class="unstyled">
+      <li ng-repeat="movie in movies">
+        <span>Title: {{movie.title}}, Year: {{movie.year}}</span>
+      </li>
+    </ul>
+  </div>
+
+</body>
+</html>
