@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html ng-app="movieStore">
+  <head>
+    <link rel="stylesheet" type="text/css" href="lib/css/bootstrap.min.css" />
+    <script type="text/javascript" src="lib/js/angular.min.js"></script>
+    <script type="text/javascript" src="lib/js/app.js"></script>
+  </head>
+  <body ng-controller="StoreController as store">
+    <header>
+      <h1 class="text-center">Movie data in separate details views</h1>
+    </header>
+    <div class="list-group">
+      <div class="list-group-item" ng-repeat="product in store.products">
+        <h3>{{product.name}} <em class="pull-right">{{product.year}}</em></h3>
+        <section ng-controller="ViewController as view" class="panel">
+          <ul class="nav nav-pills">
+            <li ng-class="{ active:view.isSet(1) }">
+              <a href="" ng-click="view.setView(1)">Description</a>
+            </li>
+            <li ng-class="{ active:view.isSet(2) }">
+              <a href="" ng-click="view.setView(2)">Score
+              </a>
+            </li>
+            <li ng-class="{ active:view.isSet(3) }">
+              <a href="" ng-click="view.setView(3)">Critics
+              </a>
+            </li>
+          </ul>
+          <div ng-show="view.isSet(1)">
+            <h4>Plot</h4>
+            <!--<img src="http://img.pandawhale.com/post-15061-Inception-movie-poster-Cinemag-jPLH.gif" width=70px height=70px>-->
+            <blockquote>{{product.plot}}</blockquote>
+          </div>
+          <div ng-show="view.isSet(2)">
+            <h4>Average rating of the movie according to IMDB</h4>
+            <blockquote>{{product.rating}}</blockquote>
+          </div>
+          <!--  View's Content  -->
+          <div ng-show="view.isSet(3)">
+            <!--  Product Critics
+              List -->
+            <ul>
+              <h4>Opinions of the movie</h4>
+              <li ng-repeat="critic in product.critics">
+                <form name="reviewForm">
+                  <blockquote>
+                    <strong> {{critic.stars}} Stars</strong>
+                    {{critic.body}}
+                    <cite class="clearfix">{{critic.author}}</cite>
+                  </blockquote>
+                  <select ng-model="critic.stars">
+                    <option value="1">1 star</option> 
+                    <option value="2">2 star</option> 
+                    <option value="3">3 star</option> 
+                    <option value="4">4 star</option> 
+                    <option value="5">5 star</option> 
+                  </select>  
+                  <p><textarea ng-model="critic.body"></textarea></p>
+                  <label>by:</label>
+                  <input ng-model="critic.author" type="email">
+                  <input type="submit" value="Submit">
+                
+                </form>  
+              </li>
+            </ul>
+          </div>
+        </section>
+      </div>
+    </div>
+  </body>
+</html>
