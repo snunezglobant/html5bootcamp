@@ -1,0 +1,30 @@
+.wrapper {
+  width: 90%;
+  margin: 2rem auto;
+}
+
+.textarea-content {
+  box-sizing: border-box;
+  width: 100%;
+  height: 10rem;
+
+  resize: none;
+}
+
+.buttons {
+  float: right;
+}
+
+.buttons button {
+  height: 1.5rem;
+}
+
+.message {
+  float: left;
+  margin: 0;
+
+  font-size: 0.9rem;
+  line-height: 1.5rem;
+
+  color: #444;
+}

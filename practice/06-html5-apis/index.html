@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="main.css">
+    <script src="main.js"></script>
+    <title>Topic 6: HTML5 APIs</title>
+  </head>
+  <body onload="setupDnDListener()">
+    <header>
+      <h1>HTML5 APIs</h1>
+    </header>
+    <section class="wrapper">
+      <textarea class="textarea-content" id="textarea-content" placeholder="Start typing, load previously saved content or drag and drop a text file."></textarea>
+      <div class="buttons">
+        <button class="load-bt" onclick="loadText()">Load</button>
+        <button class="save-bt" onclick="saveText()">Save</button>
+        <button class="clear-bt" onclick="clearText()">Clear</button>
+      </div>
+      <p class="message" id="message"></p>
+    </section>
+  </body>
+</html>
