@@ -1,0 +1,48 @@
+html{color:black;
+	font-family: sans-serif;
+	font-size: 1rem;
+}
+body{
+	background: URL("../img/music.jpg");
+	background-repeat: no-repeat;
+}
+#searchBox{
+	text-align: center;
+	padding: 1rem;
+}
+
+h3{
+	color:gray;
+}
+#search, #find{
+	font-size: 2rem;
+	font-family: sans-serif;
+	font-weight: bold;
+	border-radius: 1rem;
+
+}
+#link{
+	text-decoration: none;
+	color:red;
+}
+
+#contentalbum{
+	display: none;
+	text-align: left;
+	font-weight: bold;
+	background-color: black;
+	opacity: 0.75;
+	width: 50%;
+	color: white;
+	float: right;
+	border-radius: 1rem;
+}
+
+ul{
+list-style-type: none;
+}
+#image{
+	margin-top:0.85rem;
+	height: 27rem;
+	padding-left:4rem; 
+}

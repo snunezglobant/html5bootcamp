@@ -1,0 +1,51 @@
+h1{
+	font-family: sans-serif;
+}
+
+
+header{
+	font-weight: bold;
+	font-size: 2rem;	
+}
+
+.image{
+	opacity: 0.2;
+	display: inline-block;
+	z-index: -1;	
+	transition: all 0.25s ease-in-out;
+}
+
+p{
+	position:absolute;
+}
+/*#wrapper @media{
+	width: auto;
+	height: auto;
+	margin: auto;
+	position: relative;	
+}*/
+
+
+.image:hover{
+	opacity:0.8;	
+}
+	
+
+.image:hover .desc {
+	margin-left: 1rem;
+	opacity:0.8;
+}
+
+.desc {
+	padding-top:5%;
+	padding-left: 1%; 
+	margin-bottom:1rem;
+	font-size: 2em;
+	color: white;		
+	transition: 0.3s ease-in-out;
+	opacity:0.4;
+	font-family: Garamond;
+	text-shadow: 0.7rem 0.7rem 0.7rem black;
+	transform:rotate(-6deg);
+}
+
