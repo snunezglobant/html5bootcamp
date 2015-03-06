@@ -1,56 +1,72 @@
-/* Exercise 1 - Write one Handlebars template to show the details of a movie. */
-$(function () {
-	/* Data for Movie Description Template */ 
-	var movieDescription = {
-		name: '',
-		year: '',
-		duration: '',
-		rating: '',
-		director: ''
-	};
+/* Backbone - Model */
+Movie = Backbone.Model.extend({
+	initialize: function() {
+		console.log("Movie Object is created");
+	},
 
-	/* Saving Template in a variable */
-	var html = Handlebars.templates['movie-description-template'](movieDescription);
-	/* Inserting Template in the page*/
-	$(document.body).html(html);
+	defaults: {
+		name: 'default name',
+		year: 'default year',
+		duration: 'default duration',
+		rating: 'default rating',
+		director: 'default director'
+	}
+});
 
-	/* Exercise 2 - Create a second template to render a list of movies. */
-	/* Data for Movie List */
-	var movieList = {
-		//Movie List
-	};
+/* Instances of Movie */
+var movie1 = new Movie({
+	name: "Interstellar",
+	year: "2014",
+	duration: "169 min",
+	rating: "8,8/10",
+	director: "Christopher Nolan"
+});
 
-	/* Saving Template in a variable */
-	html = Handlebars.templates['movie-list-template'](movieList);
-	/* Inserting Template in the page*/
-	$(document.body).html(html);
+var movie2 = new Movie({
+	name: "Inception",
+	year: "2010",
+	duration: "148 min",
+	rating: "8,8/10",
+	director: "Christopher Nolan"
+});
 
-	/* Backbone */
-	var Movie = Backbone.Model.extend({
-		defaults: function() {
-			return {
-				name: '',
-				year: '',
-				duration: '',
-				rating: '',
-				director: ''
-			}
-		}
-	});
+/* Backbone - Collection */
+List = Backbone.Collection.extend({
+	model: Movie
+});
 
-	var MoviesList = Backbone.Collection.extend({
-		model: Movie
-	});
+/* Instance of List */
+var movieList = new List([movie1, movie2]); //Adding some instances of Movie in the List (Collection).
 
-	var movies = new MoviesList();
+/* Backbone - Views */
+MovieView = Backbone.View.extend({
+	initialize: function() {
+		console.log("A View of Movie was created");
+	},
 
-	var MovieView = Backbone.View.extend({
-		model: new Movie(),
-		tagName: 'div',
-		events: {
-			/* Events - (no specified in exercises) */
-		},
-	});
+	render: function( data ) {
+		var template = Handlebars.templates['movie-description-template'](data);
+		this.$el.html(template);
+	}
+});
 
+ListView = Backbone.View.extend({
+	el: $('#container'),
 
+	initialize: function() {
+		console.log("A View of List was created");
+		this.render();
+	},
+
+	render: function( data ) {
+		var template = Handlebars.templates['movie-list-template'](data);
+		this.$el.html(template);
+	},
+
+ events: {
+		"click .edit": 'edit',
+		"click .remove": 'remove' 
+	}
+	//edit method
+	//remove method
 });
