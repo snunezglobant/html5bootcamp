@@ -4,7 +4,7 @@ Handlebars.registerHelper('length', function(list) {
 
 var data = {
     title : "Best movie",
-    description : "According to IMDB data...",
+    description : "According to IMDB data....",
     info: {
         date: "the year",
         languages : [
