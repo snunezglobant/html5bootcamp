@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html ng-app="movieStore">
+  <head>
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <script type="text/javascript" src="angular.min.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+  </head>
+  <body ng-controller="StoreController as store">
+    <header>
+      <h1 class="text-center">Movies</h1>
+     
+    </header>
+    <div class="list-group">
+      <div class="list-group-item" ng-repeat="product in store.products">
+        <h3>{{product.name}} </h3>
+        
+        <section ng-controller="TabController as tab">
+          <ul class="nav nav-pills">
+            <li ng-class="{ active:tab.isSet(1) }">
+              <a href="" ng-click="tab.setTab(1)">Description</a>
+            </li>
+            <li ng-class="{ active:tab.isSet(2) }">
+              <a href="" ng-click="tab.setTab(2)">Director</a>
+            </li>
+            <li ng-class="{ active:tab.isSet(3) }">
+              <a href="" ng-click="tab.setTab(3)">Year</a>
+            </li>
+            <li ng-class="{ active:tab.isSet(4) }">
+              <a href="" ng-click="tab.setTab(4)">Genre</a>
+            </li>
+          </ul>
+          <div ng-show="tab.isSet(1)">
+            <h4>Description</h4>
+            <blockquote>{{product.description}}</blockquote>
+          </div>
+          <div ng-show="tab.isSet(2)">
+            <h4>Director</h4>
+            <blockquote>{{product.director}}</blockquote>
+          </div>
+           <div ng-show="tab.isSet(3)">
+            <h4>Year</h4>
+            <blockquote>{{product.year}}</blockquote>
+          </div>
+          <div ng-show="tab.isSet(4)">
+            <h4>Genre</h4>
+            <blockquote>{{product.genre}}</blockquote>
+          </div>
+
+
+          
+          
+
+        </section>
+      </div>
+    </div>
+  </body>
+</html>
