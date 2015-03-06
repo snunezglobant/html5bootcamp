@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+	<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>
+			Movie details handlebar
+		</title>
+		<link rel="stylesheet" type="text/css" href="lib/style.css">
+	</head>
+	<body>	
+	        <script id="movies-tmp" type="text/x-handlebars-template">
+			    <section class="moviesBox">
+			        <h1>{{title}}</h1>
+			        <p id="desc">{{description}}</p>		        
+			        <ul>	       
+			        	{{#each movies}}     
+				            <li>
+				                <p style="font-size:1.71rem">{{name}}</p>
+				                <p>Score: {{rating}}</p>
+				                {{#if director}}
+				                <p>Director: {{director}}</p>
+				                {{/if}}
+				                {{#unless director}}
+				                <p>There is no info about the director.</p>
+				                {{/unless}}
+				                <p>Genre: {{genre}}<p>
+				                <p>Plot: {{plot}}<p>
+				                <p>Year: {{year}}<p>
+				                <p<img id="image" src="#"></p>
+				                <hr>
+				            </li>
+			        	{{/each}}
+			        </ul>	
+		    	</section>        
+		    </script>
+		    <script type="text/javascript" src="lib/jquery-1.11.2.min"></script>
+			<script type="text/javascript" src="lib/handlebars.js"></script>
+			<script type="text/javascript" src="lib/scripts.js"></script>  	  
+	</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>
+		Movie details handlebar
+	</title>
+	<script type="text/javascript" src="lib/jquery-1.11.2.min"></script>
+	<script type="text/javascript" src="lib/handlebars.js"></script>
+	<!--<script type="text/javascript" src="lib/scripts.js">-->
+	 <link rel="stylesheet" type="text/css" href="lib/style.css">
+	
+
+<body>
+	
+        
+	    <div class="movies">
+	        <script id="movies-tmp" type="text/x-handlebars-template">
+		        <h1>{{title}} of {{info.date}} </h1>
+		        
+		        <h2>You know, Inception...</h2>
+		        
+		        <p id="desc">{{description}}</p>
+		        
+		        <ul>	       
+		        	{{#each movies}}     
+			            <li>
+			                <p>Title: {{name}}</p>
+			                <p>Score: {{rating}}</p>
+			                {{#if director}}
+			                <p>Director: {{director}}</p>
+			                {{/if}}
+			                {{#unless director}}
+			                <p>There is no info about the director.</p>
+			                {{/unless}}
+			                <p>Genre: {{genre}}<p>
+			                <p>Plot: {{plot}}<p>
+			                <p>Year: {{year}}<p>
+			            </li>
+		        	{{/each}}
+		        </ul>	
+	        </script>        
+	    </div>  	  
+		
+	<script id="fill">
+		Handlebars.registerHelper('length', function(list) {
+		  return list.length;
+		});
+
+		var data = {
+		    title : "Best movie",
+		    description : "According to IMDB...",
+		    info: {
+		        date: "2010",
+		        
+		    },
+		    movies: [
+		        
+		        {
+		            name: "Inception",
+		            rating: "8,8",
+		            director: "Christopher Nolan",
+		            genre: "Science Fiction",
+		            plot: "Dream stealers",
+		            year: "2010"
+		        }
+		    ]
+		};
+
+		var template = document.getElementById("movies-tmp").innerHTML;
+
+
+		var templateCompile = Handlebars.compile(template);
+
+
+		var result = templateCompile(data);
+
+		document.body.insertAdjacentHTML("beforeend", result);
+	</script>
+</body>
+</html>

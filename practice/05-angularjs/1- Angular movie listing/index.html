@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html ng-app="movieStore">
+  <head>
+    <link rel="stylesheet" type="text/css" href="lib/css/bootstrap.min.css" />
+    <script type="text/javascript" src="lib/js/angular.min.js"></script>
+    <script type="text/javascript" src="lib/js/app.js"></script>
+  </head>
+  <body ng-controller="StoreController as store">
+    <header>
+      <h1 class="text-center">Movie listing</h1>
+    </header>
+    <div class="list-group">
+      <div class="list-group-item" ng-repeat="product in store.products">
+        <h3>{{product.name}} <em class="pull-right">{{product.year}}</em></h3>
+        <section ng-controller="TabController as tab" class="panel">
+          <div>
+            <h4>Plot</h4>
+            <!--<img src="http://img.pandawhale.com/post-15061-Inception-movie-poster-Cinemag-jPLH.gif" width=70px height=70px>-->
+            <blockquote>{{product.plot}}</blockquote>
+          </div>
+          <div>
+            <h4>Average rating of the movie according to IMDB</h4>
+            <blockquote>{{product.rating}}</blockquote>
+          </div>
+          <!--  Review Tab's Content  -->
+          <div>
+            <!--  Product Critics
+              List -->
+            <ul>
+              <h4>Opinions of the movie</h4>
+              <li ng-repeat="critic in product.critics">
+                <blockquote>
+                  <strong> {{critic.stars}} Stars</strong>
+                  {{critic.body}}
+                  <cite class="clearfix">{{critic.author}}</cite>
+                </blockquote>
+              </li>
+            </ul>
+          </div>
+        </section>
+      </div>
+    </div>
+  </body>
+</html>
