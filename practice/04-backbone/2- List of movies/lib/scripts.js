@@ -5,7 +5,7 @@
 
         var data = {
             title : "Some movies you gotta see",
-            description : "according to IMDB...",
+            description : "according to IMDB....",
             info: {
                 date: "2010",
                 
