@@ -13,6 +13,6 @@ templates['movie-description-template'] = template({"compiler":[6,">= 2.0.0-beta
     + alias3(((helper = (helper = helpers.rating || (depth0 != null ? depth0.rating : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"rating","hash":{},"data":data}) : helper)))
     + "</div>\r\n	<div>Director: "
     + alias3(((helper = (helper = helpers.director || (depth0 != null ? depth0.director : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"director","hash":{},"data":data}) : helper)))
-    + "</div>\r\n	<input type=\"button\" value=\"Remove\" class=\"remove\" />\r\n	<input type=\"button\" value=\"Edit\" class=\"edit\" />\r\n</div>";
+    + "</div>\r\n	<input type=\"button\" value=\"Add\" class=\"add\" />\r\n	<input type=\"button\" value=\"Remove\" class=\"remove\" />\r\n	<input type=\"button\" value=\"Edit\" class=\"edit\" />\r\n</div>";
 },"useData":true});
 })();
