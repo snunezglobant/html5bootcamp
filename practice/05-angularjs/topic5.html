@@ -1,0 +1,59 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Topic 5, AngularJS">
+  <meta name="keywords" content="Topic 5, AngularJS">
+  <meta name="author" content="Gabriel Masclef">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>My favorite movies</title>
+  <!--<link rel="stylesheet" href="movies5.css">-->
+
+</head>
+<body ng-app>
+
+
+  <h2>Movie list:</h2>
+  <div ng-controller="movieList">
+    [ <a class="text-danger" href="" ng-click="deleteMovie()">Delete selected files</a> ]
+    <ul class="unstyled">
+      <li ng-repeat="movie in movies">
+        <input type="checkbox" ng-model="movie.marked">
+        <span>{{movie.title}}</span>
+      </li>
+    </ul>
+
+
+
+
+    <h2>Movie Details:</h2>
+
+    <ul class="unstyled">
+      <li ng-repeat="movie in movies">
+        <div ng-controller="ClickToEditCtrl">
+          <span ng-hide= "editorEnabled">Title: {{movie.title}}, Year: {{movie.year}}</span>
+          <a href="#" ng-click="enableEditor()">[Edit movie]</a>
+          <div ng-show="editorEnabled">
+            <input ng-model="editableTitle" ng-show="editorEnabled">
+            <input ng-model="editableYear" ng-show="editorEnabled">
+            <a href="#" ng-click="save()">Save</a>
+            or
+            <a href="#" ng-click="disableEditor()">cancel</a>.
+          </div>
+        </div>
+
+      </li>
+    </ul>
+
+    <form ng-submit="addMovie()">
+      <input type="text" size="30" placeholder="Add the title" ng-model="textNewMovieTitle">
+      <input type="text" size="30" placeholder="Add the year" ng-model="textNewMovieYear">
+      <button class="btn btn-primary" type="submit">Add movie!</button>
+    </form>
+  </div>
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.3/angular.min.js"></script>
+  <script src="movies5.js"></script>
+
+</body>
+</html>

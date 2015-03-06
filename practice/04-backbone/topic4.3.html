@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Topic 4, Backbone">
+  <meta name="keywords" content="topic 4">
+  <meta name="author" content="Gabriel Masclef">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+</head>
+
+<body>
+
+
+  <h1>Add movies:</h1>
+
+  <form id="new-movie">
+    <label>Title:</label><input id="movie-title" name="movie-title" type="text" />
+    <label>Year:</label><input id="movie-year" name="movie-year" type="text" />
+    <button>Add movie!</button>
+  </form>
+  <hr/>
+
+  <section class="content"><h1>Movies Details:</h1>
+    <p>Title: Year</p>
+    <div id="movies-container"></div>
+  </section>
+
+
+  <script type="text/javascript" src="http://code.jquery.com/jquery.js"></script>
+  <script src="handlebars-v3.0.0.js"></script>
+  <script src="Underscore 1.8.2.js"></script>
+  <script src="Backbone 1.0.0.js"></script>
+
+  <script type="text/javascript" src="moviejs.js"></script>
+  <script type="text/template" id="movie-template">
+  <span class="title"><%= title %>:</span>
+  <span class="year"><%= year %></span>
+  <a href="#" class="edit">[Edit movie]</a>
+  <a href="#" class="delete">[Delete movie]</a>
+  </script>
+
+
+</body>
+
+
+
+</html>
