@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+	<html ng-app="appMovies">
+	   <head>
+	   	  <title>ANGULAR JS EXERCISE</title>
+	   	  <link rel="stylesheet" type="text/css" href="css/style.css">
+	      <script src="http://code.angularjs.org/1.2.10/angular.min.js"></script>
+	      <script type="text/javascript" src="js/scripts.js"></script>
+	   </head>
+	   <body>
+			<div ng-controller="MoviesController">
+				<form id="myForm" ng-submit="add()">
+					<label>
+						ENTER A NEW MOVIE IN THE LIST:
+					</label>
+					<hr>
+					</hr>
+					<label class="bluewords">
+						MOVIE TITLE:
+					</label>
+					<input type="text" ng-model="new_movie"/> 
+					<label class="bluewords">
+						ACTOR:
+					</label>
+					<input type="text" ng-model="new_actor"/> 
+					<label class="bluewords">
+						DIRECTOR:
+					</label>
+					<input type="text" ng-model="new_director"/> 
+					<label class="bluewords">
+						TYPE:
+					</label>
+					<input type="text" ng-model="new_type"/> 
+					<input type="submit" name="button" value="NEW MOVIE"/>
+					<input type="reset" name="cancel-button" value="CANCEL"/>
+				</form>
+			    <hr>
+			    </hr>
+			    <label>
+			    	MOVIES LIST
+			    </label>
+			    <br>
+			    <br>
+			    <div>
+			    	<table class="table">
+				    	<thead>
+							<tr>
+								<td>
+									TITLE
+								</td>
+								<td>
+									ACTOR
+								</td>
+								<td>
+									DIRECTOR
+								</td>
+								<td>
+									TYPE
+								</td>
+								<td>
+									EDIT
+								</td>
+								<td>
+									DELETE
+								</td>
+							</tr>
+						</thead>
+						<tbody ng-repeat="m in movies">
+							<tr>
+								<td>
+									<span data-ng-hide="editMode">
+										{{m.title}}
+									</span>
+									<input type="text" data-ng-show="editMode" data-ng-model="m.title" data-ng-required />
+								</td>
+								<td>
+									<span data-ng-hide="editMode">
+										{{m.actor}}
+									</span>
+									<input type="text" data-ng-show="editMode" data-ng-model="m.actor" data-ng-required />
+								</td>
+								<td>
+									<span data-ng-hide="editMode">
+										{{m.director}}
+									</span>
+									<input type="text" data-ng-show="editMode" data-ng-model="m.director" data-ng-required />
+								</td>
+								<td>
+									<span data-ng-hide="editMode">
+										{{m.type}}
+									</span>
+									<input type="text" data-ng-show="editMode" data-ng-model="m.type" data-ng-required />
+								</td>
+								<td>
+									<span>
+										<a href="#" data-ng-hide="editMode" data-ng-click="editMode = true; edit(entry)">
+											[E]
+										</a>
+										<a href="#" data-ng-show="editMode" data-ng-click="editMode = false">
+											Save
+										</a>
+		            					<a href="#" data-ng-show="editMode" data-ng-click="editMode = false; cancel()">
+		            						Cancel
+		            					</a>
+									</span>
+								</td>
+								<td>
+									<span>
+										<a href="#" ng-click="delete($index)">
+											[X]
+										</a>
+									</span>
+								</td>
+							</tr>
+						</tbody>
+				</table>
+			</div>
+		   <br>
+		   <br>
+		   	<!--THIS PRINT THE SCOPE TO CHECK THE CHANGES-->
+		 	<!--<pre>MOVIES: {{movies|json}}</pre>-->
+			</div>
+	 	</body>
+	</html>
