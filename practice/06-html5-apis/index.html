@@ -5,21 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" href="main.css">
-    <script src="main.js"></script>
+    <script src="main.js" defer></script>
     <title>Topic 6: HTML5 APIs</title>
   </head>
-  <body onload="setupDnDListener()">
+  <body>
     <header>
       <h1>HTML5 APIs</h1>
     </header>
     <section class="wrapper">
-      <textarea class="textarea-content" id="textarea-content" placeholder="Start typing, load previously saved content or drag and drop a text file."></textarea>
+      <textarea class="textarea-content" placeholder="Start typing, load previously saved content or drag and drop a text file."></textarea>
       <div class="buttons">
-        <button class="load-bt" onclick="loadText()">Load</button>
-        <button class="save-bt" onclick="saveText()">Save</button>
-        <button class="clear-bt" onclick="clearText()">Clear</button>
+        <select id="storage-select">
+          <option>localStorage</option>
+          <option>IndexedDB</option>
+        </select>
+        <button class="load-bt">Load</button>
+        <button class="save-bt">Save</button>
+        <button class="clear-bt">Clear</button>
       </div>
-      <p class="message" id="message"></p>
+      <p class="message"></p>
+    </section>
+    <section class="wrapper">
+      <section class="column-half">
+        <button class="connect-bt">Connect</button>
+        <button class="disconnect-bt" disabled>Disconnect</button>
+        <br>
+        <input type="text" class="socket-message" placeholder="Message" disabled>
+        <button class="send-bt" disabled>Send</button>
+      </section>
+      <section class="column-half">
+        <textarea class="socket-output" readonly></textarea>
+      </section>
+    </section>
+    <section class="wrapper">
+      <canvas class="my-canvas" width="800" height="300"></canvas>
+    </section>
+    <section class="wrapper">
+      <svg with="300" height="200" class="svg-demo">
+        <circle cx="100" cy="60" r="40" stroke="#000" stroke-width="1" fill="#8af" />
+        <polygon points="200,30 100,60 150,80" fill="#006" />
+        <polyline points="30,140 190,140 240,90" fill="none" stroke="#000" stroke-width="2" />
+        <text x="30" y="180">This is an SVG image</text>
+      </svg>
     </section>
   </body>
 </html>
