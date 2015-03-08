@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="description" content="Topic 4">
+		<meta name="keywords" content="">
+		<meta name="author" content="Juan Pablo Abuin">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+   		<script type="text/javascript" src="http://code.jquery.com/jquery.js"></script>
+   		<script type="text/javascript" src="js/handlebars-v3.0.0.js"></script>
+		<script type="text/javascript" src="js/script1.js"></script>
+		<title>Topic4-Exercise1</title>
+ 	</head>
+
+	<body>
+
+		<section class="content"><h1>Movie Details:</h1>
+			<div id= "movie"></div>
+		</section>
+	</body>
+	<script id="movie-template" type="text/x-handlebars-template">
+	
+	{{#each movies}}
+	 	<li>
+	 		<strong>Title:</strong> {{title}} <strong>Year:</strong> {{year}} <strong>Description:</strong> {{description}} <strong>Genre:</strong> {{genre}}
+	 	</li>
+	{{/each}}
+	</script>
+</html>
