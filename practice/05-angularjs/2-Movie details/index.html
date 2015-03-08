@@ -21,10 +21,6 @@
               <a href="" ng-click="view.setView(2)">Score
               </a>
             </li>
-            <li ng-class="{ active:view.isSet(3) }">
-              <a href="" ng-click="view.setView(3)">Critics
-              </a>
-            </li>
           </ul>
           <div ng-show="view.isSet(1)">
             <h4>Plot</h4>
@@ -34,35 +30,7 @@
           <div ng-show="view.isSet(2)">
             <h4>Average rating of the movie according to IMDB</h4>
             <blockquote>{{product.rating}}</blockquote>
-          </div>
-          <!--  View's Content  -->
-          <div ng-show="view.isSet(3)">
-            <!--  Product Critics
-              List -->
-            <ul>
-              <h4>Opinions of the movie</h4>
-              <li ng-repeat="critic in product.critics">
-                <form name="reviewForm">
-                  <blockquote>
-                    <strong> {{critic.stars}} Stars</strong>
-                    {{critic.body}}
-                    <cite class="clearfix">{{critic.author}}</cite>
-                  </blockquote>
-                  <select ng-model="critic.stars">
-                    <option value="1">1 star</option> 
-                    <option value="2">2 star</option> 
-                    <option value="3">3 star</option> 
-                    <option value="4">4 star</option> 
-                    <option value="5">5 star</option> 
-                  </select>  
-                  <p><textarea ng-model="critic.body"></textarea></p>
-                  <label>by:</label>
-                  <input ng-model="critic.author" type="email">
-                  <input type="submit" value="Submit">
-                
-                </form>  
-              </li>
-            </ul>
+          </div>         
           </div>
         </section>
       </div>
