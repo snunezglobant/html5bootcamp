@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en" ng-app="movies">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Topic 5: MVC - AngularJS</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+</head>
+<body>
+	<script src="angular.min.js"></script>
+	<script src="app.js"></script>
+
+	<div class="movie-list" ng-controller="MovieCtrl">
+		My Favorite Movies:
+		<ul>
+			<li ng-repeat="details in movies.details">
+				<p>Name: {{ details.name }}</p>
+				<p>Year: {{ details.year }}</p>
+				<p>Director: {{ details.director }}</p>
+				<a href="" ng-click="deleteMovie($index)">Delete Movie</a>
+			</li>
+		</ul>
+	</div>
+	
+</body>
+</html>
