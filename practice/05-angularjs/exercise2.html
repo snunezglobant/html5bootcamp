@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Topic 5">
+  <meta name="keywords" content="">
+  <meta name="author" content="Juan Pablo Abuin">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+  <script src="https://code.angularjs.org/1.3.14/angular-route.min.js"></script>
+  <script src="js/script2.js"></script>
+  <title>Topic5-Exercise2</title>
+</head>
+<body ng-app="myApp">
+    <div>
+      <ul>
+        <li><a href="#/details/">Movie details</a></li>
+        <li><a href="#/movielist/">Movie list</a></li>
+      </ul>
+    </div>
+    <hr/>
+    <div class="container">
+      <div ng-view></div>
+    </div>
+</body>
+</html>

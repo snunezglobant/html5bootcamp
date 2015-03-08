@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Topic 5">
+  <meta name="keywords" content="">
+  <meta name="author" content="Juan Pablo Abuin">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+  <script src="https://code.angularjs.org/1.3.14/angular-route.min.js"></script>
+  <script src="js/script3.js"></script>
+  <title>Topic5-Exercise3</title>
+</head>
+<body ng-app="myApp">
+  <div ng-controller="MovieCtrl">
+    <form ng-submit="addMovie()">
+      <input type="text" size="30" placeholder="Add a new movie..." ng-model="newMovie">
+      <button type="submit">Add</button>
+    </form>
+    <ul>
+      <li ng-repeat="movie in movies">
+        <div ng-controller="ClickToEditCtrl">
+          <div ng-hide="editorEnabled">
+            <input type="checkbox" ng-model="movie.selected"> {{ movie.title }}
+            <a href="#" ng-click="enableEditor()">Edit movie</a>
+          </div>
+          <div ng-show="editorEnabled">
+            <input ng-model="editableTitle" ng-show="editorEnabled">
+            <a href="#" ng-click="save()">Save</a>
+            or
+            <a href="#" ng-click="disableEditor()">cancel</a>.
+          </div>
+        </div>
+      </li>
+    </ul>
+    [ <a class="text-danger" href="" ng-click="deleteMovie()">Delete</a> ]   
+  </div>
+</body>
+</html>
