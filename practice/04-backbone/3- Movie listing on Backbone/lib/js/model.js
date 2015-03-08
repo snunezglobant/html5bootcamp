@@ -107,7 +107,7 @@ var MovieView = Backbone.View.extend({
    },
 
    render: function(){
-    this.$el.html("<p id='movie'>"+this.model.get('name')+"</p><p id='rating'> Rating: "+ this.model.get('rating')+"</p> <p> Director: "+this.model.get('director')+"</p> <p> Genre: "+this.model.get('genre')+"</p> <p> Plot: "+this.model.get('plot')+"</p> <p> Year: "+this.model.get('year'));       
+    this.$el.html("<p id='movie'>"+this.model.get('name')+"</p><p id='rating'> Rating: "+ this.model.get('rating')+"</p> <p> Director: "+this.model.get('director')+"</p> <p> Genre: "+this.model.get('genre')+"</p> <p> Plot: "+this.model.get('plot')+"</p> <p> Year: "+this.model.get('year')+"<hr>");       
   }
 });
 

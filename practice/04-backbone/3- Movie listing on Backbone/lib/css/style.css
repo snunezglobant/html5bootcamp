@@ -19,9 +19,17 @@ body{
 
 }
 
+
+li{
+	font-weight: bold;
+	font-size: 1rem;
+	font-family: monospace;
+	text-align: justify;
+}
+
 ul{
 	display: inline-block;
-	text-align: left;
+	text-align: justify;
 	font-weight: bold;
 	background-color: black;
 	list-style-type: none;
