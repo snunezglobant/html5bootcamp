@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+  <meta charset="utf-8">
+  <meta name="description" content="Topic 5, AngularJS, 2 views with ngRoute">
+  <meta name="keywords" content="Topic 5, AngularJS">
+  <meta name="author" content="Gabriel Masclef">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>My favorite movies</title>
+  <!--<link rel="stylesheet" href="movies5.css">-->
+
+
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+    
+
+
+  
+
+
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+    <script src="https://code.angularjs.org/1.3.14/angular-route.min.js"></script>
+
+
+    <script src="movies-ctrl.js"></script>
+  </head>
+  <body ng-app="miAp">
+
+
+ <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><a href="#/list/">Movie List</a></li>
+        <li><a href="#/details/">Movie Details</a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </nav>
+
+
+    <div class="container">
+
+      
+      <div ng-view></div>
+      
+    </div>
+  </body>
+</html>

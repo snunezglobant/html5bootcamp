@@ -1,0 +1,12 @@
+
+
+  <h2>Movie list:</h2>
+
+    [ <a class="text-danger" href="" ng-click="deleteMovie()">Delete selected files</a> ]
+    <ul class="unstyled">
+      <li ng-repeat="movie in movies">
+        <input type="checkbox" ng-model="movie.marked">
+        <span>{{movie.title}}</span>
+      </li>
+    </ul>
+

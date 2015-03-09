@@ -1,0 +1,16 @@
+ #imgBox {
+  float:left;
+  width: 300px;
+  margin:30px;
+  border:1px solid red;
+ }
+
+ #box{
+  float:left;
+  width: : 500px;
+  height: 500px;
+  margin: 100px;
+  top: 300px;
+  border:5px solid blue;
+ }
+

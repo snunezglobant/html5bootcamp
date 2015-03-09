@@ -1,0 +1,17 @@
+<h2>Movie Details:</h2>
+
+    <ul class="unstyled">
+      <li ng-repeat="movie in movies">
+       
+          <span >
+            Title: {{movie.title}}, Year: {{movie.year}}
+          </span>
+        
+      </li>
+    </ul>
+
+    <form ng-submit="addMovie()">
+      <input type="text" size="30" placeholder="Add the title" ng-model="textNewMovieTitle">
+      <input type="text" size="30" placeholder="Add the year" ng-model="textNewMovieYear">
+      <button class="btn btn-primary" type="submit">Add movie!</button>
+    </form>
