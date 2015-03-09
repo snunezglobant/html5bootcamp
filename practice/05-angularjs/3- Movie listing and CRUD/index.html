@@ -17,10 +17,6 @@
                   <label> Name: </label>
                   <input id="onlythis" type="text" autofocus ng-model="name" />
                </div>
-               <div class="span4"> 
-                  <label> Description: </label>
-                  <input type="text" ng-model="desc" />
-               </div>
                <div class="span4">
                   <label> Year: </label>
                   <input type="text" ng-model="year" />
@@ -49,7 +45,6 @@
             <thead>
                <tr>
                   <th> Name </th>
-                  <th> Description </th>
                   <th> Year </th>
                   <th> Director </th>
                   <th> Genre </th>
@@ -60,7 +55,6 @@
             <tbody>
                <tr ng-repeat="item in movies">
                    <td> {{item.name}} </td>
-                   <td> {{item.desc}} </td>
                    <td> {{item.year}} </td>
                    <td> {{item.director}} </td>
                    <td> {{item.genre}} </td>

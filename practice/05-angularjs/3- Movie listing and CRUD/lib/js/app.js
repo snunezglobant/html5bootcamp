@@ -1,4 +1,5 @@
 var aplicacion = angular.module('aplication', []);
+var valName=document.getElementById("onlythis");
 aplicacion.controller('Movies', function($scope) {
    $scope._id = null;
    $scope.name = '';
@@ -37,24 +38,26 @@ aplicacion.controller('Movies', function($scope) {
 
 
    $scope.saveMovie = function() {
-      if ($scope._id == null) {
-         $scope.movies.push({
-            name: $scope.name,
-            desc: $scope.desc,
-            year: $scope.year,
-            director: $scope.director,
-            genre: $scope.genre
-         }); 
-      } else {
-         $scope.movies[$scope._id] = {
-            name: $scope.name,
-            desc: $scope.desc,
-            year: $scope.year,
-            director: $scope.director,
-            genre: $scope.genre
-         };
+      if(valName.value!=null){
+         if ($scope._id == null) {
+            $scope.movies.push({
+               name: $scope.name,
+               desc: $scope.desc,
+               year: $scope.year,
+               director: $scope.director,
+               genre: $scope.genre
+            }); 
+         } else {
+            $scope.movies[$scope._id] = {
+               name: $scope.name,
+               desc: $scope.desc,
+               year: $scope.year,
+               director: $scope.director,
+               genre: $scope.genre
+            };
+         }
+         $scope.cleanData();
       }
-      $scope.cleanData();
    }
    $scope.backMovies = function(index) {
       $scope._id = index;
