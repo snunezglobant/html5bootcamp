@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8" />
+      <title>Backbone Movie</title>
+      <script src="underscore-min.js"></script>
+      <script src="jquery-1.11.2.min.js"></script>
+      <script src="backbone-min.js"></script>
+   </head>
+   <body>
+      <h1>Backbone Movies</h1>
+      <form id="new-movie">
+         <p>Title:</p>
+         <input id="title" type="text"/>
+         <p>Description:</p>
+         <textarea id="description"></textarea>
+         <p>Duration:</p>
+         <input id="duration"  type="text"/>
+         <p></b>
+            <button id="new">Add Movie</button>         
+      </form>
+      <hr />
+      <div id="movie-container"></div>
+      <script src="Bb-Exercise 05.js"></script> 
+      <script type="text/template" id="movie-template">
+         <span class="title"><h2><%= title %></h2></span>
+         <span class="description"><p><%= description %></p></span>
+         <span class="duration"><p><%= duration %></p></span>
+         <a href="#" class="edit"><img src="http://4.bp.blogspot.com/-ZZomW2jz05g/URkOhfFri6I/AAAAAAAAAF0/Ge2QIM1x96A/s1600/b_edit.png"></a>
+         <a href="#" class="delete"><img src="http://documentacion.edex.es/imagenes/boton_borrar.gif"></a>    
+         <a href="#" class="save">Save Changes</a>             
+      </script>   
+   </body>
+</html>
