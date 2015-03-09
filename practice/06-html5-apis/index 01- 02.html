@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html ng-app="Listnames">
+   <head>
+      <meta charset="utf-8">
+      <title>List Name Local Storage</title>
+      <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.7/angular-route.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.7/angular-resource.min.js"></script>
+      <script src="angular-local-storage.min.js"></script>
+      <script type="text/javascript" src="controller.js"></script>
+   </head>
+   <body ng-controller="namesController">
+      <ul ng-repeat="name in names">
+         <li>
+            {{name.name}}
+         </li>
+      </ul>
+      <form ng-submit="addname()">
+         <p>Name: </p>
+         <textarea ng-model="newName.name"></textarea>
+         <input type="submit" value="Save Name">
+      </form>
+      <button ng-click="names = []">Clean</button>
+   </body>
+</html>
