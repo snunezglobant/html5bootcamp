@@ -1,0 +1,13 @@
+{
+  "name": "exercise1",
+  "version": "1.0.0",
+  "description": "A simple exercise",
+  "main": "exercise1.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Luis Villa",
+  "license": "ISC"
+}
+
+
