@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Topic 5">
+  <meta name="keywords" content="">
+  <meta name="author" content="Juan Pablo Abuin">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>Topic5-Exercise1</title>
+</head>
+<body ng-app="myApp">
+  <h2>Movies:</h2>
+  <div ng-controller="MovieCtrl">
+    <li ng-repeat="movie in movies">
+      <div>
+        <td><strong>Title: </strong>{{ movie.title }},  </td> 
+        <td><strong>Director: </strong> {{movie.director}}, </td>
+        <td><strong>Year: </strong> {{movie.year}}.</td> 
+      </div>
+    </li>
+  </div>
+  <script src="http://code.jquery.com/jquery.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+  <script src="js/script1.js"></script>
+</body>
+</html>
