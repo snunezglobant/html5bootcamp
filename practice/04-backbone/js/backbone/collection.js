@@ -13,6 +13,6 @@ var MovieCollection = Backbone.Collection.extend({
         });
     },
     
-    url: "/movie" // Don't know what is the correct value yet
+    url: "/04-backbone/movies.json"
     
 });

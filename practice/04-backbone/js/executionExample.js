@@ -22,3 +22,14 @@ var movie3 = new Movie({
 
 var view = new MovieView();
 var collection = new MovieCollection();
+collection.add([movie1, movie2, movie3]);
+
+collection.fetch({
+    success: function(){
+        console.log("Got data");
+    },
+    error: function(collection, response){
+        console.log("An error ocurred during fetch");
+        console.log(response);
+    }
+});

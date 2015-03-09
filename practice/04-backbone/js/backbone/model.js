@@ -1,10 +1,11 @@
 var Movie = Backbone.Model.extend({
+    idAttribute: 'id',
     defaults: {
         id: undefined,
-        title: 'A title for this movie',
-        year: 2015,
-        genre: 'Comedy',
-        director: 'Woody Allen'
+        title: '',
+        year: undefined,
+        genre: '',
+        director: ''
     },
     
     initialize: function(){
@@ -12,6 +13,5 @@ var Movie = Backbone.Model.extend({
         this.on('change', function(){
             console.log("The movie data changed");
         });
-    },
-    url: "/movie" // Don't know what is the correct value yet
+    }
 });
