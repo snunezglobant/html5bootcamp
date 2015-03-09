@@ -1,0 +1,297 @@
+.movie-list-container {
+  width: 50rem;
+  margin: 4rem auto;
+}
+
+.movie-list-container .add {
+  float: right;
+  margin-right: 1rem;
+}
+
+.movie-list {
+  margin: 2rem 0rem;
+  padding: 0rem;
+
+  list-style-type: none;
+}
+
+.movie-item {
+  position: relative;
+  margin: 0rem;
+  padding: 0.6rem 2rem;
+
+  background-color: #fff;
+
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.movie-item::before,
+.movie-item:last-child::after,
+.movie-item:hover::after {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  margin: auto -2rem;
+
+  background: -webkit-gradient(linear, left top, right top, color-stop(0, #fff), color-stop(2rem, #bbb), color-stop(48rem, #bbb), color-stop(50rem, #fff));
+  background: -webkit-linear-gradient(left, #fff 0, #bbb 2rem, #bbb 48rem, #fff 50rem);
+  background: linear-gradient(to right, #fff 0, #bbb 2rem, #bbb 48rem, #fff 50rem);
+
+  content: '';
+}
+
+.movie-item::before {
+  top: 0;
+}
+
+.movie-item:last-child::after,
+.movie-item:hover::after {
+  bottom: 0;
+}
+
+.movie-item:hover {
+  z-index: 1;
+
+  -webkit-transition: -webkit-transform 100ms;
+  transition: transform 100ms;
+  -webkit-transform: scale(1.04, 1.04);
+  -ms-transform: scale(1.04, 1.04);
+  transform: scale(1.04, 1.04);
+}
+
+.movie-item:active {
+  -webkit-transform: scale(1.03, 1.03);
+  -ms-transform: scale(1.03, 1.03);
+  transform: scale(1.03, 1.03);
+}
+
+.toolbox {
+  display: none;
+  position: absolute;
+  top: 50%;
+  right: 1rem;
+  height: 1.6rem;
+  margin-top: -0.8rem;
+}
+
+.toolbox.visible {
+  display: block;
+}
+
+button {
+  height: 1.6rem;
+
+  border-width: 1px;
+  border-style: solid;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+
+  font-size: 0.8rem;
+}
+
+.btn-default {
+  border-color: #ccc;
+
+  background-color: #fff;
+
+  color: #333;
+}
+
+.btn-default:hover,
+.btn-danger:hover {
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.btn-danger {
+  border-color: #d43f3a;
+
+  background-color: #d9534f;
+
+  color: #fff;
+}
+
+.btn-default:active,
+.btn-danger:active {
+  -webkit-transform: scale(1.07);
+  -ms-transform: scale(1.07);
+  transform: scale(1.07);
+}
+
+.movie-item .title {
+  font-size: 1.1rem;
+}
+
+.movie-item .year {
+  font-size: 0.9rem;
+}
+.movie-item .directors {
+  font-size: 0.8rem;
+}
+
+.movie-details-container,
+.movie-edit-container {
+  width: 45rem;
+  margin: 4rem auto;
+  padding: 1rem;
+  padding-top: 2rem;
+  overflow: auto; /* clearfix */
+  -webkit-box-shadow: 0 0 20px 2px #666;
+  box-shadow: 0 0 20px 2px #666;
+
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
+}
+
+.movie-details .section-name {
+  margin-top: 0;
+}
+
+.movie-details .poster,
+.movie-edit .poster {
+  float: left;
+  width: 11.5rem;
+  height: 17rem;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+}
+
+.movie-details .title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.movie-details .genre:not(:last-child)::after {
+  color: #888;
+  content: ' | ';
+}
+
+.movie-details-container button.back {
+  float: right;
+  width: 7rem;
+  height: 2rem;
+
+  font-size: 0.9rem;
+}
+
+.movie-edit .column-left,
+.movie-edit .column-right {
+  float: left;
+  margin: 0;
+}
+
+.movie-edit ul {
+  margin: 0;
+  padding: 0;
+
+  list-style-type: none;
+}
+
+.movie-edit li {
+  margin-bottom: 0.2rem;
+}
+
+.movie-edit div {
+  margin-bottom: 1rem;
+}
+
+.movie-edit .section-name {
+  margin-top: 0;
+  margin-bottom: 0.2rem;
+
+  font-weight: bold;
+}
+
+.movie-edit input,
+.movie-edit textarea {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.movie-edit .title {
+  width: 28.3rem;
+}
+
+.movie-edit .year {
+  width: 4rem;
+}
+
+.movie-edit .image-url {
+  width: 11.5rem;
+}
+
+.movie-edit .genre {
+  width: 30.9rem;
+}
+
+.movie-edit .director-name,
+.movie-edit .star-name {
+  width: 16rem;
+}
+
+.movie-edit .director-url,
+.movie-edit .star-url {
+  width: 14.7rem;
+}
+
+.movie-edit .title,
+.movie-edit .genre,
+.movie-edit .director-name,
+.movie-edit .director-url,
+.movie-edit .star-name,
+.movie-edit .star-url {
+  margin-right: 0.2rem;
+}
+
+.movie-edit .plot {
+  min-width: 32.5rem;
+  max-width: 32.5rem;
+  min-height: 8rem;
+}
+
+.movie-edit button.add,
+.movie-edit button.remove {
+  width: 1.4rem;
+  height: 1.2rem;
+
+  font-size: 0.85rem;
+}
+
+.movie-edit button.add {
+  margin-left: 0.4rem;
+}
+
+.clearfix {
+  clear: both;
+}
+
+.movie-edit-container button.save,
+.movie-edit-container button.cancel {
+  float: right;
+  height: 2rem;
+
+  font-size: 0.9rem;
+}
+
+.movie-edit-container button.save {
+  width: 7rem;
+
+  font-weight: bold;
+}
+
+.movie-edit-container button.cancel {
+  width: 5rem;
+  margin-right: 0.4rem;
+}
+
+.movie-details-container .nav-buttons,
+.movie-edit-container .nav-buttons {
+  clear: both;
+}

@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="underscore-min.js"></script>
+    <script src="backbone-min.js"></script>
+    <script src="backbone.localStorage-min.js"></script>
+    <script src="handlebars-v3.0.0.js"></script>
+    <script src="functions.js"></script>
+    <title>Topic 4: MVC - Backbone</title>
+  </head>
+  <body>
+    <header>
+      <h1>MVC - Backbone</h1>
+    </header>
+    <!-- 1) Write one Handlebars template to show the details of a movie. -->
+    <script id="movie-details-template" type="text/x-handlebars-template">
+      <div class="background"></div>
+      <article class="movie-details">
+        <img class="poster" src="{{imageUrl}}">
+        <p>
+          <span class="name">{{name}}</span>{{#if year}} <span class="year">({{year}}){{/if}}</span>
+        </p>
+        <p class="genres">
+          {{#each genres}}<span class="genre">{{this}}</span>{{/each}}
+        </p>
+        <p class="director">
+          Director: {{#if director}}<a href="{{director.url}}">{{director.name}}{{else}}Not specified{{/if}}</a>
+          {{!-- alternative: using the with block helper
+          Director: {{#with director}}<a href="{{url}}">{{name}}</a>{{/with}}
+          --}}
+        </p>
+        {{#if stars}}
+        <p class="stars">
+          Stars: {{#each stars}}<span class="star"><a href="{{url}}">{{name}}</a>{{#unless @last}}, {{/unless}}</span>{{/each}}
+        </p>
+        {{/if}}
+        <p class="plot">
+          {{plot}}
+        </p>
+      </article>
+    </script>
+    <section class="movie-details-container"></section>
+    <!-- 2) Create a second template to render a list of movies. -->
+    <script id="movie-list-template" type="text/x-handlebars-template">
+      <button class="add">Add movie</button> <!-- 5) -->
+      <h2>Movies you should definitely watch:</h2>
+      <ul class="movie-list">
+        {{#each this}}
+          <li class="movie-item" data-id="{{id}}">
+            <div class="toolbox"> <!-- 5) -->
+              <button class="edit">Edit</button>
+              <button class="remove">Remove</button>
+            </div>
+            <span class="name">{{name}}</span> {{#if year}} <span class="year">({{year}}){{/if}}<br>
+            <span class="director">Director: {{#if director}}{{director.name}}{{else}}Not specified{{/if}}</span>
+          </li>
+        {{/each}}
+      </ul>
+    </script>
+    <section class="movie-list-container"></section>
+    <!-- 5) Allow to add / edit / remove movies from the list. -->
+    <script id="movie-edition-template" type="text/x-handlebars-template">
+      <div class="background"></div>
+      <article class="movie-details">
+        <p class="title">{{title}}</p>
+        <div class="movie-data">
+          <textarea>{{movieData}}</textarea>
+        </div>
+        <div class="button-container">
+          <button class="cancel">Cancel</button>
+          <button class="done">Done</button>
+        </div>
+      </article>      
+    </script>
+    <section class="movie-edition-container"></section>
+  </body>
+</html>

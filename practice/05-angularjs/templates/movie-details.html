@@ -1,0 +1,27 @@
+<section class="movie-details-container" ng-controller="MovieDetailsCtrl">
+  <article class="movie-details">
+    <img class="poster" ng-src="{{ movie.imageUrl || 'http://movies-online.co/data/no_image.png' }}" alt="Movie poster">
+    <p class="section-name">
+      <span class="title">{{ movie.title || 'Movie title not specified' }}</span><span class="year" ng-if="year">({{ movie.year }})</span>
+    </p>
+    <p class="genres section-name" ng-if="movie.genres.length && movie.genres[0]">
+      <span class="genre" ng-repeat="genre in movie.genres track by $index">{{ genre }}</span>
+    </p>
+    <p class="directors section-name" ng-if="movie.directors.length && movie.directors[0].name">
+      Director{{ movie.directors.length > 1 && 's' || '' }}:
+      <span ng-repeat="director in movie.directors">
+        <a ng-href="{{ director.url }}">{{ director.name }}</a><span ng-if="!$last">, </span>
+      </span>
+    </p>
+    <p class="stars section-name" ng-if="movie.stars.length && movie.stars[0].name">
+      Stars:
+      <span class="star" ng-repeat="star in movie.stars"><a ng-href="{{ star.url }}">{{ star.name }}</a><span ng-if="!$last">, </span></span>
+    </p>
+    <p class="plot section-name" ng-if="movie.plot">
+      {{ movie.plot }}
+    </p>
+  </article>
+  <div class="nav-buttons">
+    <button class="back btn-default" ng-click="back()">Back</button>
+  </div>
+</section>
