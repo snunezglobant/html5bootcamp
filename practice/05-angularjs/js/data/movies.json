@@ -1,0 +1,42 @@
+[
+    {
+        "id": "BVwi1",
+        "name": "Terminator",
+        "averageRating": 4.6,
+        "releaseYear": 2010,
+        "url": "http://www.netflix.com/Movie/70153545",
+        "rating": "NR"
+    },
+    {
+        "id": "BW1Ss",
+        "name": "Robin Hood",
+        "averageRating": 4.6,
+        "releaseYear": 2009,
+        "url": "http://www.netflix.com/Movie/70171826",
+        "rating": "NR"
+    },
+    {
+        "id": "BW2K0",
+        "name": "Iron Man",
+        "averageRating": 4.6,
+        "releaseYear": 2010,
+        "url": "http://www.netflix.com/Movie./70175120",
+        "rating": "NR"
+    },
+    {
+        "id": "BWAhv",
+        "name": "Batman",
+        "averageRating": 4.6,
+        "releaseYear": 2009,
+        "url": "http://www.netflix.com/Movie/70207355",
+        "rating": "NR"
+    },
+    {
+        "id": "BWDSi",
+        "name": "Avatar",
+        "averageRating": 4.6,
+        "releaseYear": 2011,
+        "url": "http://www.netflix.com/Movie/70217944",
+        "rating": "TV-MA"
+    }
+]
