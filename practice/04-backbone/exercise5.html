@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Movie Panel</title>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.js">
+	</script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.2/underscore-min.js">
+	</script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.1.0/backbone-min.js">
+	</script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.16/require.js"></script>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script id="movieTemplate" type="text/template">
+  		<strong><%= title %></strong> </br>(<%= year %>) </br> <%= description %>
+	</script>
+
+</head>
+<body>
+
+	<article><section><form id="addMovie" action="">
+      <input type="text" placeholder="Movie Title">
+      <input type="submit" value="Add">
+</form></section></article>
+
+ 
+ <div id="movies">
+ </div>
+ <script>
+ </script>
+</body>
+
+<script type="text/javascript" src="exercise5.js"></script>
+</html>
