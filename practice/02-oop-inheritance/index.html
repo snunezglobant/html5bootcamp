@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+  <script>
+    /************************/
+    /*  Excercise 1, 4 - 8  */
+    function Movie(name, genre, year){
+      this.attributes ={
+        name    : name,
+        genre   : genre,
+        year    : year,
+        playing : false,
+        stopped  : true
+      };
+    }
+    
+    Movie.prototype = {
+      play: function(){
+        if (this.attributes.playing){
+          console.log("Already playing " + this.attributes.name);
+        }
+        else{
+          console.log("Now I'm seeing " + this.attributes.name);
+          this.attributes.playing = true;
+          this.attributes.stopped = false;
+        }
+      },
+      stop: function(){
+        if (this.attributes.stopped){
+          console.log(this.attributes.name + " it's already stopped");
+        }
+        else{
+          console.log("Enough of " + this.attributes.name);
+          this.attributes.stopped = true;
+          this.attributes.playing = false;
+        }
+      },
+      setName: function(newName){
+        this.attributes.name = newName;
+      },
+      setGenre: function(newGenre){
+        this.attributes.genre = newGenre;
+      },
+      setYear: function(newYear){
+        this.attributes.year = newYear;
+      },
+      getName: function(){
+        return this.attributes.name;
+      },
+      getGenre: function(){
+        return this.attributes.genre;
+      },
+      getYear: function(){
+        return this.attributes.year;
+      }
+    };
+    
+    // Just for make sure
+    console.log(Movie);
+    console.log(Movie.prototype);
+    
+  
+    /*****************/
+    /*  Excercise 2  */
+    var movie1 = new Movie("Nueve Reinas", "Thriller", 2000);
+    var movie2 = new Movie("Black Hawk Down", "War", 2002);
+    var movie3 = new Movie("Toy Story", "Animation", 1995);
+    
+    console.log(movie1);
+    console.log(movie2);
+    console.log(movie3);
+    
+    console.log(movie1.getName());
+    console.log(movie2.getGenre());
+    console.log(movie3.getYear());
+    
+    movie3.setName("Toy Story 2");
+    movie3.setYear(1999); //Don't know if that's correct, but...
+    console.log(movie3);
+    
+    movie1.play();
+    movie1.play();
+    movie1.stop();
+    movie2.stop();
+    
+    
+    /*****************/
+    /*  Excercise 3  */
+    function MovieObserver (){}
+    MovieObserver.prototype = {
+      isPlaying : function(movie){
+        movie.attributes.playing ?
+          console.log("Playing " + movie.attributes.name) : 
+          console.log("Not playing " + movie.attributes.name);
+      },
+      isStopped : function(movie){
+        movie.attributes.stopped ?
+          console.log(movie.attributes.name + " is stopped") : 
+          console.log(movie.attributes.name + " is not stopped");
+      }
+    };
+    var mo = new MovieObserver();
+    mo.isPlaying(movie1);
+
+    /*****************/
+    /*  Excercise 8  */
+    // inherit() returns a newly created object that inherits properties from the
+    // prototype object p.  It uses the ECMAScript 5 function Object.create() if
+    // it is defined, and otherwise falls back to an older technique.
+    function inherit(p) {
+        if (p == null) throw TypeError(); // p must be a non-null object
+        if (Object.create)                // If Object.create() is defined...
+            return Object.create(p);      //    then just use it.
+        var t = typeof p;                 // Otherwise do some more type checking
+        if (t !== "object" && t !== "function") throw TypeError();
+        function f() {};                  // Define a dummy constructor function.
+        f.prototype = p;                  // Set its prototype property to p.
+        return new f();                   // Use f() to create an "heir" of p.
+    }
+
+    function DownloadableMovie(name, genre, year){
+      Movie.call(this, name, genre, year); //Calling the superclass constructor
+    }
+    //Inheritance on the prototype
+    DownloadableMovie.prototype = inherit(Movie.prototype);
+    DownloadableMovie.prototype.constructor = DownloadableMovie;
+
+    //Adding required method
+    DownloadableMovie.prototype = {
+      download: function(){
+        console.log(this.attributes.name + " is downloading right now");
+      }
+    };
+
+    var dm = new DownloadableMovie("Pirates of the Caribean", "Adventure", 2005);
+    console.log(dm);
+    dm.download();
+    
+    
+    /*****************/
+    /*  Excercise 9  */
+    var Social = {
+      share: function(friendName){
+        console.log("Sharing " + this.getName() + " with " + friendName);
+      },
+      like: function(){
+        console.log("I like " + this.getName());
+      }
+    };
+    
+    
+    /******************/
+    /*  Excercise 10  */
+    function merge(target, source) {
+      /* Merges two (or more) objects,
+      giving the last one precedence */
+      if ( typeof target !== 'object' ) target = {};
+      for (var property in source) {
+        if ( source.hasOwnProperty(property) ) {
+          var sourceProperty = source[ property ];
+          if ( typeof sourceProperty === 'object' ) {
+            target[ property ] = util.merge( target[ property ], sourceProperty );
+            continue;
+          }
+          target[ property ] = sourceProperty;
+        }
+      }
+      for (var a = 2, l = arguments.length; a < l; a++) merge(target, arguments[a]);
+      return target;
+    };
+    merge(Movie.prototype, Social);
+    socialMovie = new Movie("The Godfather", "Suspense", 1985);
+    //Testing
+    socialMovie.like();
+    movie1.share("Alvaro");
+    
+    
+    /******************/
+    /*  Excercise 11  */
+    function Actor(name){
+      this.name = name;
+    }
+    var pacino = new Actor("Al Pacino");
+    var brando = new Actor("Marlon Brando");
+    var darin = new Actor("Ricardo Darin");
+    var pauls = new Actor("Gaston Pauls");
+    var depp = new Actor("Johnny Depp");
+  </script>
+</html>

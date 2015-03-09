@@ -1,0 +1,137 @@
+{
+    "movies":[
+        {
+            "id": 1,
+            "title": "12 Monkeys",
+            "year": 1995,
+            "genre": "Science fiction",
+            "director": "Terry Gilliam",
+            "cast":[
+                {"name": " Bruce Willis"},
+                {"name": "Madeleine Stowe"},
+                {"name": "Brad Pitt"},
+                {"name": "Christopher Plummer"}
+            ],
+            "description": "A deadly virus wipes out almost all of humanity in the years 1996 and 1997, forcing the survivors to live underground. James Cole is a prisoner living in a facility beneath Philadelphia circa 2027. Cole is selected for \"volunteer duty\", where scientists train him and send him through time on a mission to collect information on the virus, thought to have been released by an organization known as the Army of the Twelve Monkeys. If he is successful at locating the virus, a scientist will be sent to study the original virus in the \"past\" and develop a cure in the \"present\". Cole is troubled by recurring dreams involving a chase and an airport shooting."
+        },
+        {
+            "id": 2,
+            "title": "La Patagonia Rebelde",
+            "year": 1974,
+            "genre": "History",
+            "director": "Héctor Olivera",
+            "cast":[
+                {"name": "Héctor Alterio"},
+                {"name": "Luis Brandoni"},
+                {"name": "Federico Luppi"},
+                {"name": "Pepe Soriano"},
+                {"name": "Osvaldo Terranova"},
+                {"name": "José María Gutiérrez"},
+                {"name": "Pedro Aleandro"},
+                {"name": "Fernando Iglesias"}
+            ],
+            "description": "La historia se desarrolla en un período estimado entre 1920 y 1923. Ante la injusta situación económica reinante, las sociedades obreras de Puerto San Julián y Río Gallegos, afiliadas a la llamada FORA comunista, la cual es dominada por los anarcosindicalistas (para distinguirla de la \"FORA del 9º Congreso\") y los sindicalistas revolucionarios, deciden impulsar una campaña de sindicalización de peones de la Patagonia argentina, esquiladores y otros asalariados. La respuesta de los estancieros y terratenientes es extremadamente dura, con despidos, violencia y amenazas. La simple elaboración de petitorios por parte de los peones da lugar a represalias. Esto conduce a la intensificación del conflicto, lo cual conduce a la rebelión de los trabajadores hacia los patrones y las instituciones estatales."
+        },
+        {
+            "id": 3,
+            "title": "The Goodfather",
+            "year": 1972,
+            "genre": "Crime/Drama",
+            "director": "Francis Ford Coppola",
+            "cast":[
+                {"name": "Marlon Brando"},
+                {"name": "Al Pacino"},
+                {"name": "James Caan"},
+                {"name": "Richard Castellano"},
+                {"name": "Robert Duvall"},
+                {"name": "Sterling Hayden"},
+                {"name": "John Marley"},
+                {"name": "Richard Conte"},
+                {"name": "Diane Keaton"}
+            ],
+            "description": "On the day of his only daughter's wedding, Vito Corleone hears requests in his role as the Godfather, the Don of a New York crime family. Vito's youngest son, Michael, in a Marine Corps uniform, introduces his girlfriend, Kay Adams, to his family at the sprawling reception. Vito's godson Johnny Fontane, a popular singer, pleads for help in securing a coveted movie role, so Vito dispatches his consigliere, Tom Hagen, to Los Angeles to influence the abrasive studio head, Jack Woltz. Woltz is unmoved until the morning he wakes up in bed with the severed head of his prized stallion..."
+        },
+        {
+            "id": 4,
+            "title": "El Romance del Aniceto y la Francisca",
+            "year": 1966,
+            "genre": "drama",
+            "director": "Leonardo Favio",
+            "cast":[
+                {"name": "Elsa Daniel"},
+                {"name": "Federico Luppi"},
+                {"name": "María Vaner"}
+            ],
+            "description": "Es la historia de una seducción y enamoramiento entre dos personas de pueblo, en la provincia de Mendoza: el Aniceto (Luppi) y la Francisca (Elsa Daniel), una chica \"decente\" y dulce, \"la santita\" del Aniceto. Pero el Aniceto también seduce a Lucía (María Vaner), apasionada, sexual, \"la putita\" del Aniceto. Las dos mujeres se enfrentarán como en una riña de gallos (el Aniceto es gallero). Cuando el romance se rompe, el Aniceto comienza a darse cuenta de lo que perdió."
+        },
+        {
+            "id": 5,
+            "title": "The Hunger Games",
+            "year": 2012,
+            "genre": "Adventure",
+            "director": "Gary Ross",
+            "cast":[
+                {"name": "Jennifer Lawrence"},
+                {"name": "Josh Hutcherson"},
+                {"name": "Liam Hemsworth"},
+                {"name": "Woody Harrelson"},
+                {"name": "Elizabeth Banks"},
+                {"name": "Lenny Kravitz"},
+                {"name": "Stanley Tucci"},
+                {"name": "Donald Sutherland"}
+            ],
+            "description": "The dystopian nation of Panem consists of a wealthy, glamorous Capitol, ruled by President Snow, ruling twelve poorer districts. As punishment for a past rebellion and as a way to demoralize the districts to quell social uprising, each district must provide two \"tributes\"—one boy and one girl between the ages of 12 and 18 selected by lottery (the \"Reaping\")—every year to compete in the televised Hunger Games; they must fight to the death in a vast arena, with the sole survivor rewarded with fame and wealth."
+        },
+        {
+            "id": 6,
+            "title": "El Secreto de Sus Ojos",
+            "year": 2009,
+            "genre": "Drama/Suspenso",
+            "director": "Juan José Campanella",
+            "cast":[
+                {"name": "Ricardo Darín"},
+                {"name": "Soledad Villamil"},
+                {"name": "Guillermo Francella"},
+                {"name": "Pablo Rago"},
+                {"name": "Javier Godino"},
+                {"name": "José Luis Gioia"},
+                {"name": "Mariano Argento"},
+                {"name": "Carla Quevedo"}
+            ],
+            "description": "En 1999, Benjamín Espósito (Ricardo Darín), un agente judicial retirado, decide escribir una novela acerca de un asesinato ocurrido en 1974, en cuya investigación se había involucrado. A continuación ocurre un flashback: en junio de 1974, Benjamín Espósito, empieza a investigar el crimen de una joven mujer, Liliana Colotto de Morales (Carla Quevedo), brutalmente violada y asesinada dentro de su casa en un barrio de la ciudad de Buenos Aires. Su esposo, ahora viudo, Ricardo Morales (Pablo Rago), queda devastado por la noticia; Espósito le promete encontrar al asesino y llevarlo ante la justicia. Éste es ayudado por su asistente alcohólico, Pablo Sandoval (Guillermo Francella), y la recién llegada Irene Menéndez-Hastings (Soledad Villamil), una joven de clase acomodada que es la nueva jefa del departamento."
+        },
+        {
+            "id": 7,
+            "title": "Psycho",
+            "year": 1960,
+            "genre": "Terror",
+            "director": "Alfred Hitchcock",
+            "cast":[
+                {"name": "Anthony Perkins"},
+                {"name": "Vera Miles"},
+                {"name": "John Gavin"},
+                {"name": "Martin Balsam"},
+                {"name": "John McIntire"},
+                {"name": "Janet Leigh"}
+            ],
+            "description": "Marion Crane and her boyfriend Sam Loomis meet for a secret romantic assignation during a Friday lunch hour at a hotel in downtown Phoenix, Arizona. They discuss how they can barely afford to get married due to Sam's debts. Marion returns to work at a realtor's office. A client comes in with $40,000 in cash to purchase a house as a wedding gift for his daughter. The client flirts with Marion. Her boss instructs her to promptly deposit the money in the bank, and she puts the money envelope in her purse. Marion then asks her boss if she can take the rest of the afternoon off, and that she was not feeling well. Back at her room, Marion starts packing to leave for an undetermined time while contemplating taking the money. She ultimately decides to steal it, leave Phoenix, and drive to (mythical) Fairvale, California, to give it to Sam. However, upon passing through downtown Phoenix on her way out of town, she is spotted by her boss as he crosses the street at a stopped traffic light, which unsettles her."
+        },
+        {
+            "id": 8,
+            "title": "Relatos salvajes",
+            "year": 2014,
+            "genre": "Comedia negra",
+            "director": "Damian Szifron",
+            "cast":[
+                {"name": "Ricardo Darín"},
+                {"name": "Oscar Martínez"},
+                {"name": "Leonardo Sbaraglia"},
+                {"name": "Érica Rivas"},
+                {"name": "Rita Cortese"},
+                {"name": "Julieta Zylberberg"},
+                {"name": "Darío Grandinetti"}
+            ],
+            "description": "Relatos salvajes es una antología compuesta por 6 historias autoconclusivas unidas por su temática. En origen, cada una de ellas era una narración breve, pero cuando Szifron las reunió en un único volumen, advirtió que estaban vinculadas por un conjunto de temas que les conferían unidad y cohesión. Decidió entonces «reducir los conflictos a su mínima expresión y encontrarles el clímax», para transformar los relatos en cortos."
+        }
+    ]
+}
