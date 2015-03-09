@@ -1,12 +1,41 @@
-var app = angular.module('aplication', []);
-app.controller('Movies', function($scope) {
+var aplicacion = angular.module('aplication', []);
+aplicacion.controller('Movies', function($scope) {
    $scope._id = null;
    $scope.name = '';
-   $scope.plot = ''
+   $scope.desc = ''
    $scope.year = '';
    $scope.director = '';
    $scope.genre = '';
-   $scope.movies = [];
+   $scope.movies = [{
+      id:1,
+      name: 'Inception',
+      plot: "A thief who steals corporate secrets through use of dream-sharing technology is given the inverse task of planting an idea into the mind of a CEO.",
+      rating: 8.8,
+      director: "Christopher Nolan",
+      genre: "Science Fiction",
+      year: "2010"
+      }, 
+      {
+      id:2,   
+      name: 'The Dark Knight',
+      rating: 9.0,
+      director: "Christopher Nolan",
+      genre: "Drama",
+      plot: "When the menace known as the Joker wreaks havoc and chaos on the people of Gotham, the caped crusader must come to terms with one of the greatest psychological tests of his ability to fight injustice.",
+      year: "2008"
+      },
+      {
+      id:3,  
+      name: "Waking Life",
+      rating: "7.8",
+      director: "Richard Linklater",
+      genre: "Drama",
+      plot: "A man shuffles through a dream meeting various people and discussing the meanings and purposes of the universe.",
+      year: "2001"
+   }];
+
+
+
    $scope.saveMovie = function() {
       if ($scope._id == null) {
          $scope.movies.push({
@@ -27,7 +56,7 @@ app.controller('Movies', function($scope) {
       }
       $scope.cleanData();
    }
-   $scope.changeMovies = function(index) {
+   $scope.backMovies = function(index) {
       $scope._id = index;
       $scope.name = $scope.movies[index].name;
       $scope.desc = $scope.movies[index].desc;
@@ -51,6 +80,18 @@ app.controller('Movies', function($scope) {
       $scope.year = '';
       $scope.director = '';
       $scope.genre = '';
-      document.getElementsByClassName("name")focus();
+      document.getElementById("onlythis").focus();
    };
+});
+
+app.controller('TabController', function(){
+    this.tab = 1;
+
+    this.setTab = function(newValue){
+      this.tab = newValue;
+    };
+
+    this.isSet = function(tabName){
+      return this.tab === tabName;
+    };
 });
