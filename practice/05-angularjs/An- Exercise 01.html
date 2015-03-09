@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html ng-app ="MyApp">
+   <head>
+      <meta charset="utf-8">
+      <title>Movies AngluarJS</title>
+      <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.7/angular-route.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.7/angular-resource.min.js"></script>
+      <script type="text/javascript" src="An-controller01.js"></script>
+   </head>
+   <body ng-controller="TheController">
+      <input type="text" ng-model="newMovie.title"></input>
+      <input type="text" ng-model="newMovie.duration"></input>
+      <button ng-click="addMovie()">Add Movie</button>
+      <h3>
+      Movies
+      <h3>
+      <ul>
+         <li ng-repeat="movie in movies">
+            {{movie.title}} - {{movie.duration}}
+            <a href="#" ng-click="deleteMovie($index)">Delete movie</a>
+            <br>
+         </li>
+      </ul>
+   </body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html ng-app="app">
+   <head>
+      <meta charset="utf-8" />
+      <title> Movies </title>
+      <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+      <script src="angular-local-storage.min.js"></script>
+      <script type="text/javascript" src="An-script03.js"></script>
+   </head>
+   <body>
+      <div class="container" ng-controller="Movies">
+         <h1> Movies </h1>
+         <form>
+            <p> Title </p>
+            <input type="text" ng-model="title" />
+            <p> Director </p>
+            <input type="text" ng-model="director" />
+            <p> Description </p>
+            <textarea ng-model="description"></textarea>
+            <br>
+            <button ng-click="saveMovie()">Save</button>
+            <button ng-click="cleanData()">Clean</button>
+         </form>
+         <h2>List Movies</h2>
+         <ul ng-repeat="movie in movies">
+            <li>
+               <h3>{{movie.title}}</h3>
+               <p>{{movie.director}}</p>
+               <p>{{movie.description}}</p>
+            </li>
+            <a href="#"  ng-click="recMovie($index)">Edit</a>      
+            <a href="#"  ng-click="delete($index)">Delete </a> 
+         </ul>
+      </div>
+   </body>
+</html>
