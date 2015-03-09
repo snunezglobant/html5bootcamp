@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html ng-app="appMovies">
+   <head>
+      <title>ANGULAR JS</title>
+      <meta charset="UTF-8">
+      <link rel="stylesheet" type="text/css" href="css/main.css">
+      <script src="http://code.angularjs.org/1.2.10/angular.min.js"></script>
+      <script type="text/javascript" src="js/scripts.js"></script>
+   </head>
+   <body>
+      <section ng-controller="MoviesController" id="content">
+         <form id="myForm" ng-submit="add()">
+            <table>
+               <tr>
+                  <td>
+                     <label>
+                     MOVIE TITLE:
+                     </label>
+                  </td>
+                  <td>                     
+                     <input type="text" ng-model="new_movie" required="required" placeholder="type the title"/>                      
+                  </td>
+               </tr>
+               <tr>
+                  <td>     
+                     <label>
+                     ACTOR:
+                     </label>
+                  </td>
+                  <td>              
+                     <input type="text" ng-model="new_actor" required="required" placeholder="type a actor"/>              
+                  </td>
+               </tr>
+               <tr>
+                  <td>
+                     <label>
+                     DIRECTOR:
+                     </label>
+                  </td>
+                  <td>
+                     <input type="text" ng-model="new_director" required="required" placeholder="type a director"/> 
+                  </td>
+               </tr>
+               <tr>
+                  <td>
+                     <label>
+                     TYPE:
+                     </label>
+                  </td>
+                  <td>
+                     <input type="text" ng-model="new_type" required="required"/ placeholder="enter the type of movie"> 
+                  </td>
+               </tr>
+               <tr>
+                  <td>
+                     <input type="submit" name="button" value="ADD MOVIE"/>
+                  </td>
+                  <td>
+                     <input type="reset" name="cancel-button" value="CANCEL"/>
+                  <td>
+               </tr>
+            </table>
+         </form>
+         <hr>
+         </hr>
+         <label>
+         MOVIES LIST
+         </label>
+         <br>
+         <br>
+         <div>
+            <table class="table">
+               <thead>
+                  <tr>
+                     <td>
+                        TITLE
+                     </td>
+                     <td>
+                        ACTOR
+                     </td>
+                     <td>
+                        DIRECTOR
+                     </td>
+                     <td>
+                        TYPE
+                     </td>
+                     <td>
+                        EDIT
+                     </td>
+                     <td>
+                        DELETE
+                     </td>
+                  </tr>
+               </thead>
+               <tbody ng-repeat="mov in movies">
+                  <tr>
+                     <td>
+                        <span data-ng-hide="editMode">
+                        {{mov.title}}
+                        </span>
+                        <input type="text" data-ng-show="editMode" data-ng-model="mov.title" data-ng-required />
+                     </td>
+                     <td>
+                        <span data-ng-hide="editMode">
+                        {{mov.actor}}
+                        </span>
+                        <input type="text" data-ng-show="editMode" data-ng-model="mov.actor" data-ng-required />
+                     </td>
+                     <td>
+                        <span data-ng-hide="editMode">
+                        {{mov.director}}
+                        </span>
+                        <input type="text" data-ng-show="editMode" data-ng-model="mov.director" data-ng-required />
+                     </td>
+                     <td>
+                        <span data-ng-hide="editMode">
+                        {{mov.type}}
+                        </span>
+                        <input type="text" data-ng-show="editMode" data-ng-model="mov.type" data-ng-required />
+                     </td>
+                     <td>
+                        <span>
+                        <a href="#" data-ng-hide="editMode" data-ng-click="editMode = true; edit(entry)">
+                        [Edit]
+                        </a>
+                        <a href="#" data-ng-show="editMode" data-ng-click="editMode = false">
+                        Save
+                        </a>
+                        <a href="#" data-ng-show="editMode" data-ng-click="editMode = false; cancel()">
+                        Cancel
+                        </a>
+                        </span>
+                     </td>
+                     <td>
+                        <span>
+                        <a href="#" ng-click="delete($index)">
+                        [Delete]
+                        </a>
+                        </span>
+                     </td>
+                  </tr>
+               </tbody>
+            </table>
+         </div>
+         <br>
+         <br>           
+      </section>
+   </body>
+</html>
