@@ -14,6 +14,7 @@ var Movie = Backbone.Model.extend({
      
 
 var MoviesList = Backbone.Collection.extend({
+   localStorage: new Backbone.LocalStorage("MoviesList"),
     model: Movie,
      initialize: function(){
         console.log("New collection created");
