@@ -13,6 +13,9 @@
   overflow: auto;  
 }
 
+h1{
+	font-family: Impact;
+}
 
 body{
 	background: URL("../img/movie.jpg");
