@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Topic 1: JavaScript Intro and jQuery</title>
+  <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css">
+  <link rel="stylesheet" type="text/css" href="stylesheets/main.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> <script type="text/javascript" src="scripts/handlebars-v3.0.0.js"></script>
+</head>
+<body>
+  
+<header>Buscar artistas - Spotify</header>
+  <form id="search-form">
+    
+      <input type="text" id="query" value="" class="form-control" />
+      <input type="submit" id="search" class="btn btn-primary" value="Buscar" />
+    
+  </form>
+  <article id="results">
+
+<script id="results-template" type="text/x-handlebars-template">
+  
+    {{#each tracks.items}}
+    <div >        
+        <br/> 
+          {{name}} 
+        <br/>
+    </div>
+    <div style="border:1px solid black; background-image:url({{album.images.2.url}})" data-album-id="{{id}}" class="cover"></div>
+    <div style="border:1px solid black;">
+      Artista= {{artists.0.name}} 
+    </div>
+    <div style="border:1px solid black;">
+      Album = {{album.name}} 
+    </div>
+    <div style="border:1px solid black;">
+     Album Type = {{album.album_type}} 
+    </div>
+    <div style="border:1px solid black;">
+     URL = {{album.href}} 
+    </div>
+    {{/each}}
+  
+</script>
+
+	</article>
+ <footer>
+ </footer>
+ <script src="scripts/search.js">
+</script>
+
+</body>
+
+
+</html>
