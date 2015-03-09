@@ -40,7 +40,7 @@ aplicacion.controller('Movies', function($scope) {
 
 
    $scope.saveMovie = function() {
-      if(valName.value!=null){
+      
          if ($scope._id == null) {
             $scope.movies.push({
                name: $scope.name,
@@ -59,7 +59,7 @@ aplicacion.controller('Movies', function($scope) {
             };
          }
          $scope.cleanData();
-      }
+      
    }
    $scope.backMovies = function(index) {
       $scope._id = index;
