@@ -5,7 +5,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Topic 5: MVC - AngularJS</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	
+		
 </head>
 <body>
 	<script src="angular.min.js"></script>
@@ -21,9 +21,9 @@
 		My Favorite Movies:
 		<ul>
 			<li ng-repeat="movie in movies">
-				<p>Title: {{ movie.title }}</p>
-				<p>Year: {{ movie.year }}</p>
-				<p>Director: {{ movie.director }}</p>
+				<div>Title: {{ movie.title }}</div>
+				<div>Year: {{ movie.year }}</div>
+				<div>Director: {{ movie.director }}</div>
 				<a href="" ng-click="removeMovie($index)">Remove Movie</a>
 			</li>
 		</ul>

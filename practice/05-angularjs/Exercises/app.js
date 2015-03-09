@@ -1,4 +1,4 @@
-var app = angular.module('movies', [ ]);
+var app = angular.module('movies', []);
 
 app.controller('MovieList', ['$scope', function($scope) { 
 	$scope.movies = [];
