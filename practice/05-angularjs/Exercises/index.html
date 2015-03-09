@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en" ng-app="movies">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Topic 5: MVC - AngularJS</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+</head>
+<body>
+	<script src="angular.min.js"></script>
+	<script src="app.js"></script>
+
+	<div class="movie-list" ng-controller="MovieList">
+		<form name="movie-frm" ng-submit="addMovie()">
+			<input type="text" name="title" ng-model="title" required placeholder="Movie title"/>
+			<input type ="text" name="year" ng-model="year" required placeholder="Year" />
+			<input type="text" name="director" ng-model="director" required placeholder="Director" />
+			<button ng-disabled="movie-frm.$invalid">Add Movie</button> 
+		</form>
+		My Favorite Movies:
+		<ul>
+			<li ng-repeat="movie in movies">
+				<div>Title: {{ movie.title }}</div>
+				<div>Year: {{ movie.year }}</div>
+				<div>Director: {{ movie.director }}</div>
+				<a href="" ng-click="removeMovie($index)">Remove Movie</a>
+			</li>
+		</ul>
+	</div>
+	
+</body>
+</html>
