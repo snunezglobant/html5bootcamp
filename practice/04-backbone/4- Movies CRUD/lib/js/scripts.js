@@ -27,7 +27,9 @@
         },
         edit: function(ev) {
             ev.preventDefault();
-            this.$('.score').attr('contenteditable', true).focus();
+            this.$('.title').attr('contenteditable', true).focus();
+            this.$('.score').attr('contenteditable', true);
+            
         },
         close: function(ev) {
             var score = this.$('.score').text();
