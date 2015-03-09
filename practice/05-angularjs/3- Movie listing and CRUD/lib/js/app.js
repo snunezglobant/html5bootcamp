@@ -1,4 +1,4 @@
-var aplicacion = angular.module('aplication', []);
+var aplicacion = angular.module('aplication' ,['LocalStorageModule']);
 var valName=document.getElementById("onlythis");
 aplicacion.controller('Movies', function($scope) {
    $scope._id = null;
@@ -34,6 +34,8 @@ aplicacion.controller('Movies', function($scope) {
       plot: "A man shuffles through a dream meeting various people and discussing the meanings and purposes of the universe.",
       year: "2001"
    }];
+
+   
 
 
 
@@ -98,3 +100,16 @@ app.controller('TabController', function(){
       return this.tab === tabName;
     };
 });
+
+
+
+if(localStorageService.get("name")){
+      $scope.todo= localStorageService.get("name");
+   }
+   else{
+      $scope.movies=[{}];
+   }
+   
+   $scope.$watchCollection('name', function(newValue,oldValue){
+      localStorageService.set("name", $scope.movies);
+   });
