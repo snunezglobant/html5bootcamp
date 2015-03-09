@@ -1,0 +1,48 @@
+html{
+	font-family: sans-serif;
+	font-size: 1rem;
+	text-align: justify;
+	font-weight: bolder;
+	color: white;
+	
+}/**/
+body{
+	background: URL("mov.jpg");
+	background-repeat: no-repeat;
+}
+h1{
+	color:white;
+	font-family: Impact;
+	font-weight: bold;
+	font-size: 3.71rem;
+	text-align: left;
+
+}
+
+#desc{
+	font-weight: bold;
+	font-size: 2rem;
+	font-family: monospace;
+}
+
+
+#image{
+	
+	height: 21rem;
+	padding-left:4rem; 
+}
+
+ul{
+	display: inline-block;
+	text-align: left;
+	font-weight: bold;
+	background-color: black;
+	list-style-type: none;
+	color: white;
+	opacity: 0.82;
+	width: 30%;
+	color: white;
+	float: left;
+	border-radius: 1rem;
+	
+}

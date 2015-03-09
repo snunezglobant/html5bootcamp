@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8" />
+      <title>Movies' CRUD</title>
+      <script src="lib/js/underscore-min.js"></script>
+      <script src="lib/js/jquery-1.11.2.min.js"></script>
+      <script src="lib/js/backbone-min.js"></script>
+     <link rel="stylesheet" type="text/css" href="lib/css/style.css">
+   </head>
+   <body>
+      <h1>Movie's CRUD</h1>
+      <form id="new-movie">
+         <label>Title:</label><input id="title-name" autofocus name="title-name" type="text" placeholder="Insert a movie"/>
+
+         <label>Score:</label><input id="score-update" name="score-update" step="0.1" value="10" min="0" max="10" type="number" placeholder="Insert score" />
+         <button id="new" type="submit">New</button>         
+      </form>
+      <hr />
+      <div id="movie-container"></div>
+      <script src="lib/js/scripts.js"></script>	
+      <script type="text/template" id="movie-template">
+        <p>Title:<span class="title"><%= title %></p></span>
+         <p>Score:<span class="score"><%= score %></p></span>
+         <a href="#" class="edit">[edit]</a>
+         <a href="#" class="delete">[delete]</a>         		
+      </script>	
+   </body>
+</html>

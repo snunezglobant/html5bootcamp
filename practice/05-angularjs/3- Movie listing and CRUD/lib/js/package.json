@@ -1,0 +1,11 @@
+{
+  "name": "data",
+  "version": "1.0.0",
+  "description": "movie_details",
+  "main": "angular.min.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Gonzalo Roncedo",
+  "license": "ISC"
+}
