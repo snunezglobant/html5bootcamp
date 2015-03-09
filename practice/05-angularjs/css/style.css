@@ -1,0 +1,24 @@
+.table{
+	display: block;	
+	width: 74rem;
+	border: 0.1rem solid #000;
+	float: left;
+}
+thead{
+	background-color: blue;
+	color: white;
+}
+.table tr, .table td{
+	border: 0.1rem solid #000;
+	width: 50.5rem;
+	text-align: center;	   
+}
+
+hr{
+	width: 74rem;
+	margin-left: 0rem;
+}
+
+.bluewords{
+	color: blue;
+}
