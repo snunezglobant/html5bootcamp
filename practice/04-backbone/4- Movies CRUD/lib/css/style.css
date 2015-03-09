@@ -18,7 +18,8 @@ body{
 	text-align: left;
 
 }
-a{
+.edit{text-decoration: none;}
+a:link{
     text-decoration: none;
 }
 

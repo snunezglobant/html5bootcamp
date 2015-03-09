@@ -1,9 +1,10 @@
 (function($) {
+    var valName=document.getElementById("title-name");
     var modelMovie = Backbone.Model.extend({
         defaults: function() {
             return {
                 title: '',
-                year: ''
+                score: ''
             }
         }
     });
@@ -18,27 +19,27 @@
         events: {
             'click .edit': 'edit',
             'click .delete': 'delete',
-            'blur .year': 'close',
-            'keypress .year': 'onEnterUpdate'
+            'blur .score': 'close',
+            'keypress .score': 'onEnterUpdate'
         },
         initialize: function() {
             this.template = _.template($('#movie-template').html());
         },
         edit: function(ev) {
             ev.preventDefault();
-            this.$('.year').attr('contenteditable', true).focus();
+            this.$('.score').attr('contenteditable', true).focus();
         },
         close: function(ev) {
-            var year = this.$('.year').text();
-            this.model.set('year', year);
-            this.$('.year').removeAttr('contenteditable');
+            var score = this.$('.score').text();
+            this.model.set('score', score);
+            this.$('.score').removeAttr('contenteditable');
         },
         onEnterUpdate: function(ev) {
             var self = this;
             if (ev.keyCode === 13) {
                 this.close();
                 _.delay(function() {
-                    self.$('.year').blur()
+                    self.$('.score').blur()
                 }, 100);
             }
         },
@@ -71,17 +72,30 @@
             return this;
         }
     });
-    $(document).ready(function() {
 
-        var moviesample = new modelMovie({});
-        movies.add(moviesample);
+    String.prototype.isEmpty = function() {
+    return (this.length === 0 || !this.trim());
+    };
+
+    $(document).ready(function() {
+        var moviesample = new modelMovie({});    
         var appView = new MoviesView();
         appView.render();
         $('#new-movie').submit(function(ev) {
-            var m = new modelMovie({
-                title: $('#title-name').val(),
-                year: $('#year-update').val()
-            });
+            if(valName.text==null){ 
+                var m = new modelMovie({       
+                          
+                        title: $('#title-name').val(),
+                        score: $('#score-update').val()+'points'
+                    
+                });
+            }else{
+                var m = new modelMovie({       
+                          
+                        title: 'Inception',
+                        score: '8.8'                    
+                });
+            }
             movies.add(m);
             console.log(movies.toJSON());
             return false;

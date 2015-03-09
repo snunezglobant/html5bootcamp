@@ -13,15 +13,15 @@
       <form id="new-movie">
          <label>Title:</label><input id="title-name" autofocus name="title-name" type="text" placeholder="Insert a movie"/>
 
-         <label>Year:</label><input id="year-update" name="year-update" value="2015" min="1900" max="2015" type="number" placeholder="Insert year" />
+         <label>Score:</label><input id="score-update" name="score-update" step="0.1" value="10" min="0" max="10" type="number" placeholder="Insert score" />
          <button id="new" type="submit">New</button>         
       </form>
       <hr />
       <div id="movie-container"></div>
       <script src="lib/js/scripts.js"></script>	
       <script type="text/template" id="movie-template">
-         <span class="title"><%= title %>:</span>
-         <span class="year"><%= year %></span>
+         <span class="title"><p>Title:<%= title %></p></span>
+         <span class="score"><p>Score:<%= score %></p></span>
          <a href="#" class="edit">[edit]</a>
          <a href="#" class="delete">[delete]</a>         		
       </script>	
