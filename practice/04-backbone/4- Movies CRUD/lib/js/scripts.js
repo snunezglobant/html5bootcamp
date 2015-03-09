@@ -12,7 +12,6 @@
     });
 
     var movies = new MovieList();
-
     var MovieView = Backbone.View.extend({
         model: new modelMovie(),
         tagName: 'div',
@@ -46,6 +45,8 @@
         delete: function(ev) {
             ev.preventDefault();
             movies.remove(this.model);
+            $('#title-name').focus();
+
         },
         render: function() {
             this.$el.html(this.template(this.model.toJSON()));
@@ -72,10 +73,7 @@
     });
     $(document).ready(function() {
 
-        var moviesample = new modelMovie({
-            title: "0000"
-            year: "0000"
-        });
+        var moviesample = new modelMovie({});
         movies.add(moviesample);
         var appView = new MoviesView();
         appView.render();

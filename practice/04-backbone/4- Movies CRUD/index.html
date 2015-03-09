@@ -3,21 +3,22 @@
    <head>
       <meta charset="utf-8" />
       <title>Movies' CRUD</title>
-      <script src="underscore-min.js"></script>
-      <script src="jquery-1.11.2.min.js"></script>
-      <script src="backbone-min.js"></script>
+      <script src="lib/js/underscore-min.js"></script>
+      <script src="lib/js/jquery-1.11.2.min.js"></script>
+      <script src="lib/js/backbone-min.js"></script>
      <link rel="stylesheet" type="text/css" href="lib/css/style.css">
    </head>
    <body>
       <h1>Movie's CRUD</h1>
       <form id="new-movie">
          <label>Title:</label><input id="title-name" autofocus name="title-name" type="text" placeholder="Insert a movie"/>
-         <label>Year:</label><input id="year-update" name="year-update" type="text" placeholder="Insert year" />
+
+         <label>Year:</label><input id="year-update" name="year-update" value="2015" min="1900" max="2015" type="number" placeholder="Insert year" />
          <button id="new" type="submit">New</button>         
       </form>
       <hr />
       <div id="movie-container"></div>
-      <script src="scripts.js"></script>	
+      <script src="lib/js/scripts.js"></script>	
       <script type="text/template" id="movie-template">
          <span class="title"><%= title %>:</span>
          <span class="year"><%= year %></span>
