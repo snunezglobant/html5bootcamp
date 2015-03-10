@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-18">
+<title>Topic 04-Backbone.js</title>
+<head>
+  <script type="text/javascript" src="scripts/handlebars-v3.0.0.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+</head>
+<body>
+  <script id="main-template" type="text/x-handlebars-template">
+    <div class="container">
+        <h1>{{movie.title}}</h1>
+        <div class="body">
+              Year: <strong>{{movie.year}}</strong> <br>
+               Rating: <strong>{{movie.rating}}</strong>
+        </div>
+    </div>
+  </script> 
+  <script type="text/javascript">
+    $( document ).ready(function() {
+
+    var movie = { 
+    movie:{ 
+        title: "The Terminator",
+        year: "2000",
+        rating: "E" 
+    
+            }
+          };
+    var source   = $("#main-template").html();
+    var template = Handlebars.compile(source);
+    $('body').append(template(movie));
+    });
+  </script>
+
+
+
+</body>
+</html>
